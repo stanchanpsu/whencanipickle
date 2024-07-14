@@ -131,7 +131,7 @@
 
     <div class="container">
       <h1>When can I play pickleball in NYC?</h1>
-      <h2>the next time it will be under 85°F and 55% humidity</h2>
+      <h2>the next time the weather is good for pickleball</h2>
       <p id="result" class="loading">Checking weather forecast...</p>
     </div>
 
@@ -158,6 +158,9 @@
                 forecast.shortForecast.toLowerCase().includes("rain") ||
                 forecast.shortForecast.toLowerCase().includes("shower");
               const humidity = forecast.relativeHumidity.value;
+              const windSpeed = parseInt(
+                forecast.windSpeed.replace(/ mph/, "")
+              );
 
               if (
                 temp >= 60 &&
@@ -165,6 +168,7 @@
                 hours >= 8 &&
                 hours <= 22 &&
                 humidity <= 55 &&
+                windSpeed < 14 &&
                 !isRainy
               ) {
                 goodTime = forecast;
