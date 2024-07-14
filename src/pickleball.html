@@ -8,6 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="cities.js"></script>
     <script src="pickleball.js"></script>
 
     <title>whencanipickle.nyc</title>
@@ -39,8 +40,20 @@
     ></div>
 
     <div class="container">
-      <h1>When can I play pickleball in NYC?</h1>
-      <h2>the next time the weather is good for pickleball</h2>
+      <h1>
+        When can I play pickleball in
+        <div class="custom-select">
+          <input
+            type="text"
+            id="locationInput"
+            placeholder="Enter a city"
+            autocomplete="off"
+          />
+          <ul id="locationDropdown" class="dropdown-list"></ul>
+        </div>
+        ?
+      </h1>
+      <h2>the next time the weather is good for outdoor pickleball</h2>
       <p id="result" class="loading">Checking weather forecast...</p>
     </div>
 
