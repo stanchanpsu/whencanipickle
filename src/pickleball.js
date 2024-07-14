@@ -33,18 +33,18 @@ function initializeLocationInput() {
   fetch("cities.json")
     .then((response) => response.json())
     .then((data) => {
-      citiesData = data; // Store the data in citiesData
+      citiesData = data;
     });
 
   // Initialize with New York City
-  input.value = "New York City";
-  selectedLocation = { name: "New York City", lat: 40.7128, lon: -74.006 };
+  input.value = "New York";
+  selectedLocation = { name: "New York", lat: 40.7128, lon: -74.006 };
   searchLocation(selectedLocation);
 }
 
 function fetchLocationSuggestions(query) {
   const dropdown = document.getElementById("locationDropdown");
-  dropdown.innerHTML = ""; // Clear previous suggestions
+  dropdown.innerHTML = "";
 
   // Fuzzy search through citiesData
   const matches = fuzzySearch(query, citiesData);
@@ -52,13 +52,12 @@ function fetchLocationSuggestions(query) {
   if (matches.length > 0) {
     matches.forEach((result) => {
       const li = document.createElement("li");
-      // Use result.city instead of result.name
       li.textContent = result.city;
       li.addEventListener("click", function () {
-        document.getElementById("locationInput").value = result.city; // Use result.city
+        document.getElementById("locationInput").value = result.city;
         dropdown.style.display = "none";
         selectedLocation = {
-          name: result.city, // Use result.city
+          name: result.city,
           lat: result.latitude,
           lon: result.longitude,
         };
@@ -78,13 +77,11 @@ function fetchLocationSuggestions(query) {
 
 function fuzzySearch(query, data) {
   const matches = data.filter((city) => {
-    // Check if the 'name' property exists
     if (city.city) {
       return city.city.toLowerCase().includes(query.toLowerCase());
     } else {
-      // Handle cases where 'name' is missing (e.g., log a warning)
       console.warn("City object missing 'name' property:", city);
-      return false; // Exclude this city from the matches
+      return false;
     }
   });
   return matches;
@@ -98,15 +95,10 @@ function searchLocation() {
     );
   } else {
     console.error("No location selected");
-    // Optionally, you can show an error message to the user
   }
 }
 
 function checkPickleballWeather(latitude, longitude) {
-  // Central Park's lat/lon
-  // const latitude = 40.7829;
-  // const longitude = -73.9654;
-
   fetch(`https://api.weather.gov/points/${latitude},${longitude}`)
     .then((response) => response.json())
     .then((data) => {
@@ -141,13 +133,13 @@ function checkPickleballWeather(latitude, longitude) {
         resultText += `📅 ${relativeDay} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
           [],
           {
-            hour: "2-digit",
+            hour: "numeric",
           }
         )}\n\n`;
         resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
         resultText += `💧 Humidity: ${goodTime.relativeHumidity.value}%\n`;
+        resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}\n`;
         resultText += `☁️ Conditions: ${goodTime.shortForecast}\n`;
-        resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}`;
         resultElement.innerText = resultText;
       } else {
         resultElement.innerText =
@@ -168,7 +160,7 @@ function findGoodPickleballTime(forecasts) {
   const startHour = 8;
   const endHour = 22;
   const humidityThreshold = 55;
-  const windSpeedThreshold = 14;
+  const windSpeedThreshold = 12;
 
   for (let forecast of forecasts) {
     const temp = forecast.temperature;
