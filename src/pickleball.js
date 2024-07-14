@@ -158,6 +158,10 @@ function findGoodPickleballTime(forecasts) {
   for (let forecast of forecasts) {
     const temp = forecast.temperature;
     const startTime = new Date(forecast.startTime);
+    // Don't consider foracasts in the past.
+    if (startTime < new Date()) {
+      continue;
+    }
     const hours = startTime.getHours();
     const isRainy =
       forecast.shortForecast.toLowerCase().includes("rain") ||
