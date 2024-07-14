@@ -76,14 +76,10 @@ h2 {
 .paddle.pink {
   background: url("pinkpad.png") no-repeat center/contain;
 }
-.paddle.yellow {
-  background: url("yellowpad.png") no-repeat center/contain; /* Assuming you have a fifth paddle image */
-}
 .social-icon {
   position: absolute;
   bottom: 100px;
   left: 50%;
-  /* transform: translateX(-50%); */
   font-size: 2rem;
   color: #0077b5;
   transition: color 0.3s ease;
