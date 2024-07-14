@@ -38,7 +38,6 @@ function checkPickleballWeather() {
           [],
           {
             hour: "2-digit",
-            minute: "2-digit",
           }
         )}\n\n`;
         resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
