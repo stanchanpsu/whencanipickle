@@ -45,12 +45,12 @@ function fetchLocationSuggestions(query) {
   if (matches.length > 0) {
     matches.forEach((result) => {
       const li = document.createElement("li");
-      li.textContent = result.city;
+      li.textContent = result.city + ", " + result.state;
       li.addEventListener("click", function () {
         document.getElementById("locationInput").value = result.city;
         dropdown.style.display = "none";
         selectedLocation = {
-          name: result.city,
+          name: result.city + ", " + result.state,
           lat: result.latitude,
           lon: result.longitude,
         };
