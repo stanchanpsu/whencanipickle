@@ -1,4 +1,5 @@
 function checkPickleballWeather() {
+  // Central Park's lat/lng
   const latitude = 40.7829;
   const longitude = -73.9654;
 
