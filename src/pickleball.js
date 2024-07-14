@@ -30,11 +30,11 @@ function initializeLocationInput() {
   });
 
   // Load cities.json
-  fetch("cities.json")
-    .then((response) => response.json())
-    .then((data) => {
-      citiesData = data;
-    });
+  // fetch("cities.json")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     citiesData = data;
+  //   });
 
   // Initialize with New York City
   input.value = "New York";
