@@ -39,7 +39,18 @@
     ></div>
 
     <div class="container">
-      <h1>When can I play pickleball in NYC?</h1>
+      <h1>
+        When can I play pickleball in
+        <div class="custom-select">
+          <input
+            type="text"
+            id="locationInput"
+            placeholder="Enter a city"
+            autocomplete="off"
+          />
+          <ul id="locationDropdown" class="dropdown-list"></ul>
+        </div>
+      </h1>
       <h2>the next time the weather is good for pickleball</h2>
       <p id="result" class="loading">Checking weather forecast...</p>
     </div>

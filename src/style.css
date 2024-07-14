@@ -26,6 +26,7 @@ h1 {
   color: #3498db;
   margin-bottom: 0.5rem;
   font-size: 2rem;
+  display: inline-block;
 }
 h2 {
   color: #777;
@@ -76,6 +77,59 @@ h2 {
 .paddle.pink {
   background: url("pinkpad.png") no-repeat center/contain;
 }
+
+/* location input */
+
+.custom-select {
+  display: inline-block;
+  position: relative;
+}
+
+#locationInput {
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #3498db;
+  outline: none;
+  padding: 0 5px;
+  width: 200px;
+  display: inline-block;
+}
+
+#locationInput:focus {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  border: 1px solid #555;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 1000;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.dropdown-list li:hover {
+  background-color: #555;
+}
+
+/* social media */
 .social-icon {
   position: absolute;
   bottom: 5%;
