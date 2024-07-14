@@ -29,13 +29,6 @@ function initializeLocationInput() {
     }
   });
 
-  // Load cities.json
-  // fetch("cities.json")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     citiesData = data;
-  //   });
-
   // Initialize with New York City
   input.value = "New York";
   selectedLocation = { name: "New York", lat: 40.7128, lon: -74.006 };
@@ -187,6 +180,6 @@ function findGoodPickleballTime(forecasts) {
   return null;
 }
 
-window.onload = function () {
-  initializeLocationInput();
-};
+window.addEventListener
+  ? window.addEventListener("load", initializeLocationInput, false)
+  : window.attachEvent && window.attachEvent("onload", initializeLocationInput);
