@@ -132,7 +132,7 @@ function checkPickleballWeather(latitude, longitude) {
         resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
         resultText += `💧 Humidity: ${goodTime.relativeHumidity.value}%\n`;
         resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}\n`;
-        resultText += `☁️ Conditions: ${goodTime.shortForecast}\n`;
+        resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${goodTime.shortForecast}\n`;
         resultElement.innerText = resultText;
       } else {
         resultElement.innerText =
@@ -182,6 +182,28 @@ function findGoodPickleballTime(forecasts) {
     }
   }
   return null;
+}
+
+function getWeatherEmoji(description) {
+  description = description.toLowerCase();
+  switch (true) {
+    case description.includes('clear') || description.includes('sunny'):
+      return '☀️';
+    case description.includes('cloud'):
+      return '☁️';
+    case description.includes('rain') || description.includes('drizzle'):
+      return '🌧️';
+    case description.includes('thunderstorm'):
+      return '⛈️';
+    case description.includes('snow'):
+      return '❄️';
+    case description.includes('mist') || description.includes('fog'):
+      return '🌫️';
+    case description.includes('wind'):
+      return '💨';
+    default:
+      return '☁️'; // Default emoji for unknown weather conditions
+  }
 }
 
 window.addEventListener
