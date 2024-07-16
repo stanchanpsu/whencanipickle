@@ -119,7 +119,8 @@ function checkPickleballWeather(latitude, longitude) {
         } else if (dayDifference === 1) {
           relativeDay = "Tomorrow";
         } else {
-          relativeDay = "in " + dayDifference + " days";
+          relativeDay = "In " + dayDifference + " days";
+
         }
 
         let resultText = "🎾 Good news! You can play pickleball:\n";
