@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-/>
-    <link rel="stylesheet" href="style.css"/>
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="cities.js"></script>
     <script src="pickleball.js"></script>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <title>whencanipickle.nyc</title>
   </head>
 
   <body>
-
     <main>
       <div class="scene">
         <!-- Pickleballs -->
@@ -26,42 +36,58 @@
 
         <!-- Paddles -->
         <div
-        class="paddle blue"
-        style="top: 15%; left: 20%; transform: rotate(45deg)"></div>
+          class="paddle blue"
+          style="top: 15%; left: 20%; transform: rotate(45deg)"
+        ></div>
         <div
-        class="paddle green"
-        style="top: 70%; left: 20%; transform: rotate(20deg)"></div>
+          class="paddle green"
+          style="top: 70%; left: 20%; transform: rotate(20deg)"
+        ></div>
         <div
-        class="paddle peach"
-        style="top: 45%; right: 15%; transform: rotate(15deg)"></div>
+          class="paddle peach"
+          style="top: 45%; right: 15%; transform: rotate(15deg)"
+        ></div>
         <div
-        class="paddle pink"
-        style="top: 5%; right: 30%; transform: rotate(-35deg)"></div>
+          class="paddle pink"
+          style="top: 5%; right: 30%; transform: rotate(-35deg)"
+        ></div>
       </div>
 
       <div class="content">
         <div class="container">
           <h1>
-        When can I play pickleball in
-        <div class="custom-select">
+            When can I play pickleball in
+            <div class="custom-select">
               <input
-            type="text"
-            id="locationInput"
-            placeholder="Enter a city"
-            autocomplete="off"
-/>
+                type="text"
+                id="locationInput"
+                placeholder="Enter a city"
+                autocomplete="off"
+              />
               <ul id="locationDropdown" class="dropdown-list"></ul>
             </div>
-        ?
-      </h1>
+            ?
+          </h1>
           <h2>the next time the weather is good for outdoor pickleball</h2>
           <p id="result" class="loading">Checking weather forecast...</p>
+
+          <iframe
+            id="map"
+            width="600"
+            height="450"
+            style="border: 0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
         </div>
 
         <a
-      href="https://www.linkedin.com/in/chanstan"
-      target="_blank"
-      class="social-icon">
+          href="https://www.linkedin.com/in/chanstan"
+          target="_blank"
+          class="social-icon"
+        >
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
