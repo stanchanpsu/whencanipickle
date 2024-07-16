@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+/>
+    <link rel="stylesheet" href="style.css"/>
     <script src="cities.js"></script>
     <script src="pickleball.js"></script>
 
@@ -15,54 +15,56 @@
   </head>
 
   <body>
-    <!-- Pickleballs -->
-    <div class="pickleball" style="top: 10%; left: 10%"></div>
-    <div class="pickleball" style="top: 75%; right: 15%"></div>
-    <div class="pickleball" style="top: 30%; right: 15%"></div>
-    <div class="pickleball" style="bottom: 15%; left: 10%"></div>
 
-    <!-- Paddles -->
-    <div
-      class="paddle blue"
-      style="top: 15%; left: 20%; transform: rotate(45deg)"
-    ></div>
-    <div
-      class="paddle green"
-      style="top: 70%; left: 20%; transform: rotate(20deg)"
-    ></div>
-    <div
-      class="paddle peach"
-      style="top: 45%; right: 15%; transform: rotate(15deg)"
-    ></div>
-    <div
-      class="paddle pink"
-      style="top: 5%; right: 30%; transform: rotate(-35deg)"
-    ></div>
+    <main>
+      <div class="scene">
+        <!-- Pickleballs -->
+        <div class="pickleball" style="top: 10%; left: 10%"></div>
+        <div class="pickleball" style="top: 75%; right: 15%"></div>
+        <div class="pickleball" style="top: 30%; right: 15%"></div>
+        <div class="pickleball" style="bottom: 15%; left: 10%"></div>
 
-    <div class="container">
-      <h1>
+        <!-- Paddles -->
+        <div
+        class="paddle blue"
+        style="top: 15%; left: 20%; transform: rotate(45deg)"></div>
+        <div
+        class="paddle green"
+        style="top: 70%; left: 20%; transform: rotate(20deg)"></div>
+        <div
+        class="paddle peach"
+        style="top: 45%; right: 15%; transform: rotate(15deg)"></div>
+        <div
+        class="paddle pink"
+        style="top: 5%; right: 30%; transform: rotate(-35deg)"></div>
+      </div>
+
+      <div class="content">
+        <div class="container">
+          <h1>
         When can I play pickleball in
         <div class="custom-select">
-          <input
+              <input
             type="text"
             id="locationInput"
             placeholder="Enter a city"
             autocomplete="off"
-          />
-          <ul id="locationDropdown" class="dropdown-list"></ul>
-        </div>
+/>
+              <ul id="locationDropdown" class="dropdown-list"></ul>
+            </div>
         ?
       </h1>
-      <h2>the next time the weather is good for outdoor pickleball</h2>
-      <p id="result" class="loading">Checking weather forecast...</p>
-    </div>
+          <h2>the next time the weather is good for outdoor pickleball</h2>
+          <p id="result" class="loading">Checking weather forecast...</p>
+        </div>
 
-    <a
+        <a
       href="https://www.linkedin.com/in/chanstan"
       target="_blank"
-      class="social-icon"
-    >
-      <i class="fab fa-linkedin"></i>
-    </a>
+      class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </main>
   </body>
 </html>
