@@ -91,6 +91,32 @@ function searchLocation() {
   }
 }
 
+function timeUntil(date) {
+  const formatter = new Intl.RelativeTimeFormat(undefined, {
+    numeric: "auto",
+  });
+
+  const DIVISIONS = [
+    { amount: 60, name: "seconds" },
+    { amount: 60, name: "minutes" },
+    { amount: 24, name: "hours" },
+    { amount: 7, name: "days" },
+    { amount: 4.34524, name: "weeks" },
+    { amount: 12, name: "months" },
+    { amount: Number.POSITIVE_INFINITY, name: "years" },
+  ];
+
+  let duration = (date - new Date()) / 1000;
+
+  for (let i = 0; i < DIVISIONS.length; i++) {
+    const division = DIVISIONS[i];
+    if (Math.abs(duration) < division.amount) {
+      return formatter.format(Math.round(duration), division.name)
+    }
+    duration /= division.amount;
+  }
+}
+
 function checkPickleballWeather(latitude, longitude) {
   fetch(`https://api.weather.gov/points/${latitude},${longitude}`)
     .then((response) => response.json())
@@ -110,20 +136,9 @@ function checkPickleballWeather(latitude, longitude) {
       if (goodTime) {
         const date = new Date(goodTime.startTime);
         const weekday = date.toLocaleDateString("en-US", { weekday: "long" });
-        const now = new Date();
-        const dayDifference = Math.floor((date - now) / (1000 * 60 * 60 * 24));
-
-        let relativeDay;
-        if (dayDifference === 0) {
-          relativeDay = "Today";
-        } else if (dayDifference === 1) {
-          relativeDay = "Tomorrow";
-        } else {
-          relativeDay = dayDifference + " days from now";
-        }
 
         let resultText = "🎾 Good news! You can play pickleball:\n";
-        resultText += `📅 ${relativeDay} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
+        resultText += `📅 ${timeUntil(date)} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
           [],
           {
             hour: "numeric",
