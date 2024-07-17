@@ -165,6 +165,10 @@ main {
   background-color: #555;
 }
 
+#map {
+  height: 400px;
+}
+
 /* social media */
 .social-icon {
   font-size: 2rem;
