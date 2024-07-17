@@ -96,7 +96,9 @@ function searchLocation() {
 }
 
 function sentenceCase(str) {
-  return str.toLowerCase().replace(/\.\s*([a-z])|^[a-z]/gm, s => s.toUpperCase());
+  return str
+    .toLowerCase()
+    .replace(/\.\s*([a-z])|^[a-z]/gm, (s) => s.toUpperCase());
 }
 
 function timeUntil(date) {
@@ -119,7 +121,7 @@ function timeUntil(date) {
   for (let i = 0; i < DIVISIONS.length; i++) {
     const division = DIVISIONS[i];
     if (Math.abs(duration) < division.amount) {
-      return formatter.format(Math.round(duration), division.name)
+      return formatter.format(Math.round(duration), division.name);
     }
     duration /= division.amount;
   }
@@ -145,7 +147,9 @@ function checkPickleballWeather(latitude, longitude) {
         const date = new Date(goodTime.startTime);
         const weekday = date.toLocaleDateString("en-US", { weekday: "long" });
         let resultText = "🎾 Good news! You can play pickleball:\n";
-        resultText += `📅 ${sentenceCase(timeUntil(date))} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
+        resultText += `📅 ${sentenceCase(
+          timeUntil(date)
+        )} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
           [],
           {
             hour: "numeric",
