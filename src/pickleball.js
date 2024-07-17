@@ -1,7 +1,8 @@
 let debounceTimer;
 let selectedLocation = null;
+const googleApiKey = "";
 
-function initializeLocationInput() {
+function initPage() {
   const input = document.getElementById("locationInput");
   const dropdown = document.getElementById("locationDropdown");
 
@@ -31,8 +32,10 @@ function initializeLocationInput() {
 
   // Initialize with New York City
   input.value = "New York";
-  selectedLocation = { name: "New York", lat: 40.7128, lon: -74.006 };
+  selectedLocation = { name: "New York, New York", lat: 40.7128, lon: -74.006 };
   searchLocation(selectedLocation);
+
+  updateMap(selectedLocation.name);
 }
 
 function fetchLocationSuggestions(query) {
@@ -86,6 +89,7 @@ function searchLocation() {
       parseFloat(selectedLocation.lat),
       parseFloat(selectedLocation.lon)
     );
+    updateMap(selectedLocation.name);
   } else {
     console.error("No location selected");
   }
@@ -140,7 +144,6 @@ function checkPickleballWeather(latitude, longitude) {
       if (goodTime) {
         const date = new Date(goodTime.startTime);
         const weekday = date.toLocaleDateString("en-US", { weekday: "long" });
-
         let resultText = "🎾 Good news! You can play pickleball:\n";
         resultText += `📅 ${sentenceCase(timeUntil(date))} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
           [],
@@ -151,7 +154,9 @@ function checkPickleballWeather(latitude, longitude) {
         resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
         resultText += `💧 Humidity: ${goodTime.relativeHumidity.value}%\n`;
         resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}\n`;
-        resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${goodTime.shortForecast}\n`;
+        resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${
+          goodTime.shortForecast
+        }\n`;
         resultElement.innerText = resultText;
       } else {
         resultElement.innerText =
@@ -206,25 +211,40 @@ function findGoodPickleballTime(forecasts) {
 function getWeatherEmoji(description) {
   description = description.toLowerCase();
   switch (true) {
-    case description.includes('clear') || description.includes('sunny'):
-      return '☀️';
-    case description.includes('cloud'):
-      return '☁️';
-    case description.includes('rain') || description.includes('drizzle'):
-      return '🌧️';
-    case description.includes('thunderstorm'):
-      return '⛈️';
-    case description.includes('snow'):
-      return '❄️';
-    case description.includes('mist') || description.includes('fog'):
-      return '🌫️';
-    case description.includes('wind'):
-      return '💨';
+    case description.includes("clear") || description.includes("sunny"):
+      return "☀️";
+    case description.includes("cloud"):
+      return "☁️";
+    case description.includes("rain") || description.includes("drizzle"):
+      return "🌧️";
+    case description.includes("thunderstorm"):
+      return "⛈️";
+    case description.includes("snow"):
+      return "❄️";
+    case description.includes("mist") || description.includes("fog"):
+      return "🌫️";
+    case description.includes("wind"):
+      return "💨";
     default:
-      return '☁️'; // Default emoji for unknown weather conditions
+      return "☁️"; // Default emoji for unknown weather conditions
+  }
+}
+
+function updateMap(locationName) {
+  let iframe = document.getElementById("map");
+  if (iframe) {
+    let src = `
+    https://www.google.com/maps/embed/v1/search?q=
+    pickleball%20courts%20
+    ${locationName}
+    &key=${googleApiKey}
+    `;
+    iframe.src = src;
+  } else {
+    console.error("Map not found");
   }
 }
 
 window.addEventListener
-  ? window.addEventListener("load", initializeLocationInput, false)
-  : window.attachEvent && window.attachEvent("onload", initializeLocationInput);
+  ? window.addEventListener("load", initPage, false)
+  : window.attachEvent && window.attachEvent("onload", initPage);
