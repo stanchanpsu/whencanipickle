@@ -91,6 +91,10 @@ function searchLocation() {
   }
 }
 
+function sentenceCase(str) {
+  return str.toLowerCase().replace(/\.\s*([a-z])|^[a-z]/gm, s => s.toUpperCase());
+}
+
 function timeUntil(date) {
   const formatter = new Intl.RelativeTimeFormat(undefined, {
     numeric: "auto",
@@ -138,7 +142,7 @@ function checkPickleballWeather(latitude, longitude) {
         const weekday = date.toLocaleDateString("en-US", { weekday: "long" });
 
         let resultText = "🎾 Good news! You can play pickleball:\n";
-        resultText += `📅 ${timeUntil(date)} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
+        resultText += `📅 ${sentenceCase(timeUntil(date))} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
           [],
           {
             hour: "numeric",
