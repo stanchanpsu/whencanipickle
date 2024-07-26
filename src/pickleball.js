@@ -41,10 +41,12 @@ function initPage() {
   createCalendar();
 
   // Example usage: Add an event block
-  addEventBlock(0, 10, 12, "Sunny");
-  addEventBlock(1, 14, 16, "Sunny");
-  addEventBlock(2, 9, 11, "Sunny");
+  addEvent(0, 10, "Meeting");
+  addEvent(1, 14, "Presentation");
+  addEvent(2, 9, "Workshop");
 }
+
+// location
 
 function fetchLocationSuggestions(query) {
   const dropdown = document.getElementById("locationDropdown");
@@ -134,6 +136,8 @@ function timeUntil(date) {
     duration /= division.amount;
   }
 }
+
+// weather
 
 function checkPickleballWeather(latitude, longitude) {
   fetch(`https://api.weather.gov/points/${latitude},${longitude}`)
@@ -257,59 +261,54 @@ function updateMap(locationName) {
   }
 }
 
-window.addEventListener
-  ? window.addEventListener("load", initPage, false)
-  : window.attachEvent && window.attachEvent("onload", initPage);
+// Calendar
 
 function createCalendar() {
   const calendar = document.getElementById("calendar");
+  const tbody = calendar.querySelector("tbody");
   const today = new Date();
 
+  // Set day headers
   for (let i = 0; i < 3; i++) {
     const day = new Date(today);
     day.setDate(today.getDate() + i);
+    document.getElementById(`day${i}`).textContent = day.toLocaleDateString(
+      "en-US",
+      { weekday: "short", month: "short", day: "numeric" }
+    );
+  }
 
-    const dayColumn = document.createElement("div");
-    dayColumn.className = "day-column";
+  // Create time slots
+  for (let hour = 8; hour < 22; hour++) {
+    const row = document.createElement("tr");
+    const timeCell = document.createElement("td");
+    timeCell.className = "time-cell";
+    timeCell.textContent = `${hour}:00`;
+    row.appendChild(timeCell);
 
-    const dayHeader = document.createElement("div");
-    dayHeader.className = "day-header";
-    dayHeader.textContent = day.toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "short",
-      day: "numeric",
-    });
-    dayColumn.appendChild(dayHeader);
-
-    for (let hour = 7; hour < 24; hour++) {
-      const timeSlot = document.createElement("div");
-      timeSlot.className = "time-slot";
-      timeSlot.id = `day-${i}-hour-${hour}`;
-
-      const timeLabel = document.createElement("div");
-      timeLabel.className = "time-label";
-      timeLabel.textContent = `${hour}:00`;
-      timeSlot.appendChild(timeLabel);
-
-      dayColumn.appendChild(timeSlot);
+    for (let day = 0; day < 3; day++) {
+      const cell = document.createElement("td");
+      cell.id = `day-${day}-hour-${hour}`;
+      row.appendChild(cell);
     }
 
-    calendar.appendChild(dayColumn);
+    tbody.appendChild(row);
   }
 }
 
-function addEventBlock(day, startHour, endHour, eventText) {
-  const startSlot = document.getElementById(`day-${day}-hour-${startHour}`);
-  const eventBlock = document.createElement("div");
-  eventBlock.className = "event-block";
-  eventBlock.style.height = `${(endHour - startHour) * 40}px`;
-  eventBlock.textContent = eventText;
-  startSlot.appendChild(eventBlock);
+function addEvent(day, hour, eventText) {
+  const cell = document.getElementById(`day-${day}-hour-${hour}`);
+  cell.className = "event-cell";
+  cell.textContent = eventText;
 }
 
 function toggleCalendar() {
   const container = document.getElementById("calendarContainer");
   container.classList.toggle("expanded");
-  const icon = container.querySelector(".toggle-icon");
-  icon.textContent = container.classList.contains("expanded") ? "▲" : "▼";
 }
+
+// init
+
+window.addEventListener
+  ? window.addEventListener("load", initPage, false)
+  : window.attachEvent && window.attachEvent("onload", initPage);

@@ -187,6 +187,7 @@ main {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .calendar-header {
   background-color: #333;
   color: #fff;
@@ -196,46 +197,52 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+
+.calendar-header h2 {
+  margin: 0;
+}
+
 .toggle-icon {
-  font-size: 24px;
+  width: 24px;
+  height: 24px;
   transition: transform 0.3s ease;
 }
+
+.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
 #calendar {
-  display: flex;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  max-height: 0;
+  width: 100%;
+  border-collapse: collapse;
+  display: none;
 }
+
 .expanded #calendar {
-  max-height: 1500px; /* Adjust based on your needs */
+  display: table;
 }
-.day-column {
-  flex: 1;
-  border-right: 1px solid #333;
-}
-.day-column:last-child {
-  border-right: none;
-}
-.day-header {
-  background-color: #2c2c2c;
+
+#calendar th,
+#calendar td {
+  border: 1px solid #333;
   padding: 10px;
   text-align: center;
+}
+
+#calendar thead {
+  background-color: #2c2c2c;
+}
+
+#calendar tbody tr:nth-child(even) {
+  background-color: #252525;
+}
+
+.time-cell {
   font-weight: bold;
+  color: #999;
 }
-.time-slot {
-  height: 40px;
-  border-top: 1px solid #333;
-  padding: 5px;
-}
-.time-label {
-  font-size: 12px;
-  color: #cecdcd;
-}
-.event-block {
+
+.event-cell {
   background-color: #4caf50;
   color: white;
-  padding: 5px;
-  margin-top: 5px;
-  font-size: 14px;
-  border-radius: 4px;
 }
