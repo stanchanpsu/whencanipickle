@@ -36,6 +36,14 @@ function initPage() {
   searchLocation(selectedLocation);
 
   updateMap(selectedLocation.name);
+
+  // Create the calendar
+  createCalendar();
+
+  // Example usage: Add an event block
+  addEventBlock(0, 10, 12, "Meeting");
+  addEventBlock(1, 14, 16, "Presentation");
+  addEventBlock(2, 9, 11, "Workshop");
 }
 
 function fetchLocationSuggestions(query) {
@@ -252,3 +260,49 @@ function updateMap(locationName) {
 window.addEventListener
   ? window.addEventListener("load", initPage, false)
   : window.attachEvent && window.attachEvent("onload", initPage);
+
+function createCalendar() {
+  const calendar = document.getElementById("calendar");
+  const today = new Date();
+
+  for (let i = 0; i < 3; i++) {
+    const day = new Date(today);
+    day.setDate(today.getDate() + i);
+
+    const dayColumn = document.createElement("div");
+    dayColumn.className = "day-column";
+
+    const dayHeader = document.createElement("div");
+    dayHeader.className = "day-header";
+    dayHeader.textContent = day.toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "short",
+      day: "numeric",
+    });
+    dayColumn.appendChild(dayHeader);
+
+    for (let hour = 7; hour < 24; hour++) {
+      const timeSlot = document.createElement("div");
+      timeSlot.className = "time-slot";
+      timeSlot.id = `day-${i}-hour-${hour}`;
+
+      const timeLabel = document.createElement("div");
+      timeLabel.className = "time-label";
+      timeLabel.textContent = `${hour}:00`;
+      timeSlot.appendChild(timeLabel);
+
+      dayColumn.appendChild(timeSlot);
+    }
+
+    calendar.appendChild(dayColumn);
+  }
+}
+
+function addEventBlock(day, startHour, endHour, eventText) {
+  const startSlot = document.getElementById(`day-${day}-hour-${startHour}`);
+  const eventBlock = document.createElement("div");
+  eventBlock.className = "event-block";
+  eventBlock.style.height = `${(endHour - startHour) * 60 - 10}px`;
+  eventBlock.textContent = eventText;
+  startSlot.appendChild(eventBlock);
+}
