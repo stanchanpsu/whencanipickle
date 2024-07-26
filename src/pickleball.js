@@ -183,11 +183,24 @@ function findGoodPickleballTime(forecasts) {
   const humidityThreshold = 55;
   const windSpeedThreshold = 12;
 
+  //array of winter months
+  const months = [
+    'January', 'February','March','April','May','June', 'July', 'August', 'September', 'October', 'November', 'December'
+  ]
+
   for (let forecast of forecasts) {
     const temp = forecast.temperature;
     const startTime = new Date(forecast.startTime);
+    //set constant monthName with month from forecast statetime
+    const monthName = months[startTime.getMonth()];
     // Don't consider foracasts in the past.
     if (startTime < new Date()) {
+      continue;
+    }
+    //set another if statement with winter months and break 
+    else if (monthName == 'January' || 'February' || 'December') {
+      break;
+    } else {
       continue;
     }
     const hours = startTime.getHours();
