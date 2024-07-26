@@ -60,7 +60,13 @@
           <h2>the next time the weather is good for outdoor pickleball</h2>
           <p id="result" class="loading">Checking weather forecast...</p>
 
-          <div id="calendar"></div>
+          <div class="calendar-container" id="calendarContainer">
+            <div class="calendar-header" onclick="toggleCalendar()">
+              <h2>3-Day Calendar</h2>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <div id="calendar"></div>
+          </div>
 
           <iframe
             id="map"

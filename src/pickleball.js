@@ -41,9 +41,9 @@ function initPage() {
   createCalendar();
 
   // Example usage: Add an event block
-  addEventBlock(0, 10, 12, "Meeting");
-  addEventBlock(1, 14, 16, "Presentation");
-  addEventBlock(2, 9, 11, "Workshop");
+  addEventBlock(0, 10, 12, "Sunny");
+  addEventBlock(1, 14, 16, "Sunny");
+  addEventBlock(2, 9, 11, "Sunny");
 }
 
 function fetchLocationSuggestions(query) {
@@ -302,7 +302,14 @@ function addEventBlock(day, startHour, endHour, eventText) {
   const startSlot = document.getElementById(`day-${day}-hour-${startHour}`);
   const eventBlock = document.createElement("div");
   eventBlock.className = "event-block";
-  eventBlock.style.height = `${(endHour - startHour) * 60 - 10}px`;
+  eventBlock.style.height = `${(endHour - startHour) * 40}px`;
   eventBlock.textContent = eventText;
   startSlot.appendChild(eventBlock);
+}
+
+function toggleCalendar() {
+  const container = document.getElementById("calendarContainer");
+  container.classList.toggle("expanded");
+  const icon = container.querySelector(".toggle-icon");
+  icon.textContent = container.classList.contains("expanded") ? "▲" : "▼";
 }
