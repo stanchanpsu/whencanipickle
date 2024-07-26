@@ -199,7 +199,7 @@ main {
 }
 
 .calendar-header h2 {
-  margin: 0;
+  color: #b2b2b2;
 }
 
 .toggle-icon {
@@ -243,6 +243,6 @@ main {
 }
 
 .event-cell {
-  background-color: #4caf50;
-  color: white;
+  background-color: #6fe072;
+  color: rgb(15, 15, 15);
 }
