@@ -274,7 +274,7 @@ function createCalendar() {
   }
 
   // Create time slots
-  for (let hour = startHour; hour < endHour; hour++) {
+  for (let hour = startHour; hour <= endHour; hour++) {
     const row = document.createElement("tr");
     const timeCell = document.createElement("td");
     timeCell.className = "time-cell";
