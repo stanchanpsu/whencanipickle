@@ -335,15 +335,16 @@ function toggleCalendar() {
 }
 
 function getGoogleApiKey() {
-  fetch('/.netlify/functions/googleapikey')
+  const netlifyFunctionPath = "/.netlify/functions/googleapikey";
+  fetch()
     .then(response => response.json())
     .then(data => {
-      const message = data.body.message;
+      const message = data.message;
       console.log(message);
       alert(message);
     })
     .catch(error => {
-      console.error('Error fetching Google API key:', error);
+      console.error("Error fetching Google API key:", error);
     });
 }
 
