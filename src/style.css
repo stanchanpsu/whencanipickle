@@ -179,3 +179,69 @@ main {
 .social-icon:hover {
   color: #00a0dc;
 }
+
+/* calendar */
+.calendar-container {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header h2 {
+  color: #b2b2b2;
+}
+
+.toggle-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+  display: none;
+}
+
+.expanded #calendar {
+  display: table;
+}
+
+#calendar th,
+#calendar td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+#calendar thead {
+  background-color: #2c2c2c;
+}
+
+#calendar tbody tr:nth-child(even) {
+  background-color: #252525;
+}
+
+.time-cell {
+  color: #999;
+}
+
+.event-cell {
+  background-color: #6fe072;
+  color: rgb(15, 15, 15);
+}

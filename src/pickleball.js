@@ -1,6 +1,10 @@
+const googleApiKey = "";
+
+const startHour = 8;
+const endHour = 22;
+
 let debounceTimer;
 let selectedLocation = null;
-const googleApiKey = "";
 
 function initPage() {
   const input = document.getElementById("locationInput");
@@ -35,8 +39,11 @@ function initPage() {
   selectedLocation = { name: "New York, New York", lat: 40.7128, lon: -74.006 };
   searchLocation(selectedLocation);
 
-  updateMap(selectedLocation.name);
+  // Create the calendar
+  createCalendar();
 }
+
+// location
 
 function fetchLocationSuggestions(query) {
   const dropdown = document.getElementById("locationDropdown");
@@ -85,10 +92,14 @@ function fuzzySearch(query, data) {
 
 function searchLocation() {
   if (selectedLocation) {
-    checkPickleballWeather(
+    fetchWeather(
       parseFloat(selectedLocation.lat),
       parseFloat(selectedLocation.lon)
-    );
+    ).then((forecasts) => {
+      let goodForecasts = findGoodPickleballForecasts(forecasts);
+      showNextGoodTime(goodForecasts);
+      updateCalendar(goodForecasts);
+    });
     updateMap(selectedLocation.name);
   } else {
     console.error("No location selected");
@@ -127,61 +138,57 @@ function timeUntil(date) {
   }
 }
 
-function checkPickleballWeather(latitude, longitude) {
-  fetch(`https://api.weather.gov/points/${latitude},${longitude}`)
+// weather
+
+function fetchWeather(latitude, longitude) {
+  return fetch(`https://api.weather.gov/points/${latitude},${longitude}`)
     .then((response) => response.json())
     .then((data) => {
       return fetch(data.properties.forecastHourly);
     })
     .then((response) => response.json())
     .then((data) => {
-      const forecasts = data.properties.periods;
-      let goodTime = null;
-
-      goodTime = findGoodPickleballTime(forecasts);
-
-      const resultElement = document.getElementById("result");
-      resultElement.classList.remove("loading");
-
-      if (goodTime) {
-        const date = new Date(goodTime.startTime);
-        const weekday = date.toLocaleDateString("en-US", { weekday: "long" });
-        let resultText = "🎾 Good news! You can play pickleball:\n";
-        resultText += `📅 ${sentenceCase(
-          timeUntil(date)
-        )} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
-          [],
-          {
-            hour: "numeric",
-          }
-        )}\n\n`;
-        resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
-        resultText += `💧 Humidity: ${goodTime.relativeHumidity.value}%\n`;
-        resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}\n`;
-        resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${
-          goodTime.shortForecast
-        }\n`;
-        resultElement.innerText = resultText;
-      } else {
-        resultElement.innerText =
-          "😔 Darn! No good pickleball weather in the next week.  Check back later! 🥒";
-      }
-    })
-    .catch((error) => {
-      const resultElement = document.getElementById("result");
-      resultElement.classList.remove("loading");
-      resultElement.innerText = "";
-      console.error("Error:", error);
+      return data.properties.periods;
     });
 }
 
-function findGoodPickleballTime(forecasts) {
+function showNextGoodTime(goodTimes) {
+  const resultElement = document.getElementById("result");
+  resultElement.classList.remove("loading");
+
+  if (!goodTimes.length == 0) {
+    let goodTime = goodTimes[0];
+    const date = new Date(goodTime.startTime);
+    const weekday = date.toLocaleDateString("en-US", { weekday: "long" });
+    let resultText = "🎾 Good news! You can play pickleball:\n";
+    resultText += `📅 ${sentenceCase(
+      timeUntil(date)
+    )} - ${weekday}, ${date.toLocaleDateString()} at ${date.toLocaleTimeString(
+      [],
+      {
+        hour: "numeric",
+      }
+    )}\n\n`;
+    resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
+    resultText += `💧 Humidity: ${goodTime.relativeHumidity.value}%\n`;
+    resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}\n`;
+    resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${
+      goodTime.shortForecast
+    }\n`;
+    resultElement.innerText = resultText;
+  } else {
+    resultElement.innerText =
+      "😔 Darn! No good pickleball weather in the next week.  Check back later! 🥒";
+  }
+}
+
+function findGoodPickleballForecasts(forecasts) {
   const highTemp = 60;
   const lowTemp = 85;
-  const startHour = 8;
-  const endHour = 22;
   const humidityThreshold = 55;
   const windSpeedThreshold = 12;
+
+  let goodForecasts = [];
 
   for (let forecast of forecasts) {
     const temp = forecast.temperature;
@@ -206,10 +213,10 @@ function findGoodPickleballTime(forecasts) {
       windSpeed < windSpeedThreshold &&
       !isRainy
     ) {
-      return forecast;
+      goodForecasts.push(forecast);
     }
   }
-  return null;
+  return goodForecasts;
 }
 
 function getWeatherEmoji(description) {
@@ -249,6 +256,84 @@ function updateMap(locationName) {
   }
 }
 
+// Calendar
+
+function createCalendar() {
+  const calendar = document.getElementById("calendar");
+  const tbody = calendar.querySelector("tbody");
+  const today = new Date();
+
+  // Set day headers
+  for (let i = 0; i < 3; i++) {
+    const day = new Date(today);
+    day.setDate(today.getDate() + i);
+    document.getElementById(`day${i}`).textContent = day.toLocaleDateString(
+      "en-US",
+      { weekday: "short", month: "short", day: "numeric" }
+    );
+  }
+
+  // Create time slots
+  for (let hour = startHour; hour <= endHour; hour++) {
+    const row = document.createElement("tr");
+    const timeCell = document.createElement("td");
+    timeCell.className = "time-cell";
+    timeCell.textContent = `${hour}:00`;
+    row.appendChild(timeCell);
+
+    for (let i = 0; i < 3; i++) {
+      const day = new Date(today);
+      day.setDate(today.getDate() + i);
+      const cell = document.createElement("td");
+      cell.id = eventCellId(day, hour);
+      row.appendChild(cell);
+    }
+
+    tbody.appendChild(row);
+  }
+}
+
+function updateCalendar(goodForecasts) {
+  clearCalendar();
+  for (const time of goodForecasts) {
+    let day = new Date(time.startTime);
+    let text = `${getWeatherEmoji(time.shortForecast)} ${time.temperature}`;
+    addEvent(day, day.getHours(), text);
+  }
+}
+
+function clearCalendar() {
+  const eventCells = document.getElementsByClassName("event-cell");
+
+  // Convert the HTMLCollection to an array and iterate
+  Array.from(eventCells).forEach((cell) => {
+    cell.className = ""; // Remove the 'event-cell' class
+    cell.textContent = ""; // Clear the cell's text content
+  });
+}
+
+function eventCellId(day, hour) {
+  return `${day.toLocaleDateString("en-US", {
+    month: "numeric",
+    day: "numeric",
+  })}-${hour}`;
+}
+
+function addEvent(day, hour, eventText) {
+  const cell = document.getElementById(eventCellId(day, hour));
+  if (cell == null) {
+    return;
+  }
+  cell.className = "event-cell";
+  cell.textContent = eventText;
+}
+
+function toggleCalendar() {
+  const container = document.getElementById("calendarContainer");
+  container.classList.toggle("expanded");
+}
+
+// init
 window.addEventListener
   ? window.addEventListener("load", initPage, false)
   : window.attachEvent && window.attachEvent("onload", initPage);

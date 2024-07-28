@@ -60,6 +60,37 @@
           <h2>the next time the weather is good for outdoor pickleball</h2>
           <p id="result" class="loading">Checking weather forecast...</p>
 
+          <div class="calendar-container" id="calendarContainer">
+            <div class="calendar-header" onclick="toggleCalendar()">
+              <h2>3 day view</h2>
+              <svg
+                class="toggle-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 10L12 15L17 10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <table id="calendar">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th id="day0"></th>
+                  <th id="day1"></th>
+                  <th id="day2"></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
           <iframe
             id="map"
             style="border: 0"
