@@ -7,6 +7,8 @@ let debounceTimer;
 let selectedLocation = null;
 
 function initPage() {
+  getGoogleApiKey();
+
   const input = document.getElementById("locationInput");
   const dropdown = document.getElementById("locationDropdown");
 
@@ -172,9 +174,8 @@ function showNextGoodTime(goodTimes) {
     resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
     resultText += `💧 Humidity: ${goodTime.relativeHumidity.value}%\n`;
     resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}\n`;
-    resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${
-      goodTime.shortForecast
-    }\n`;
+    resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${goodTime.shortForecast
+      }\n`;
     resultElement.innerText = resultText;
   } else {
     resultElement.innerText =
@@ -331,6 +332,19 @@ function addEvent(day, hour, eventText) {
 function toggleCalendar() {
   const container = document.getElementById("calendarContainer");
   container.classList.toggle("expanded");
+}
+
+function getGoogleApiKey() {
+  fetch('/.netlify/functions/googleapikey')
+    .then(response => response.json())
+    .then(data => {
+      const message = data.body.message;
+      console.log(message);
+      alert(message);
+    })
+    .catch(error => {
+      console.error('Error fetching Google API key:', error);
+    });
 }
 
 // init
