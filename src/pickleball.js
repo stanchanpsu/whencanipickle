@@ -1,4 +1,4 @@
-const googleApiKey = "";
+let googleApiKey = "";
 
 const startHour = 8;
 const endHour = 22;
