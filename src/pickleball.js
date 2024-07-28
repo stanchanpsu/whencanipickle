@@ -336,7 +336,7 @@ function toggleCalendar() {
 
 function getGoogleApiKey() {
   const netlifyFunctionPath = "/.netlify/functions/googleapikey";
-  fetch()
+  fetch(netlifyFunctionPath)
     .then(response => response.json())
     .then(data => {
       const message = data.message;
