@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {
-    // const value = process.env.MY_IMPORTANT_VARIABLE;
+    const apiKey = process.env.GOOGLE_API_KEY;
 
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: `Hello, world.` }),
+        body: JSON.stringify({ message: apiKey }),
     };
 };

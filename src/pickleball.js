@@ -7,8 +7,6 @@ let debounceTimer;
 let selectedLocation = null;
 
 function initPage() {
-  getGoogleApiKey();
-
   const input = document.getElementById("locationInput");
   const dropdown = document.getElementById("locationDropdown");
 
@@ -36,13 +34,19 @@ function initPage() {
     }
   });
 
-  // Initialize with New York City
-  input.value = "New York";
-  selectedLocation = { name: "New York, New York", lat: 40.7128, lon: -74.006 };
-  searchLocation(selectedLocation);
+  getGoogleApiKey().then((apiKey) => {
+    // Initialize with New York City
+    input.value = "New York";
+    selectedLocation = {
+      name: "New York, New York",
+      lat: 40.7128,
+      lon: -74.006,
+    };
+    searchLocation(selectedLocation);
 
-  // Create the calendar
-  createCalendar();
+    // Create the calendar
+    createCalendar();
+  });
 }
 
 // location
@@ -174,8 +178,9 @@ function showNextGoodTime(goodTimes) {
     resultText += `🌡️ Temperature: ${goodTime.temperature}°F\n`;
     resultText += `💧 Humidity: ${goodTime.relativeHumidity.value}%\n`;
     resultText += `💨 Wind: ${goodTime.windSpeed} ${goodTime.windDirection}\n`;
-    resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${goodTime.shortForecast
-      }\n`;
+    resultText += `${getWeatherEmoji(goodTime.shortForecast)} Conditions: ${
+      goodTime.shortForecast
+    }\n`;
     resultElement.innerText = resultText;
   } else {
     resultElement.innerText =
@@ -336,14 +341,12 @@ function toggleCalendar() {
 
 function getGoogleApiKey() {
   const netlifyFunctionPath = "/.netlify/functions/googleapikey";
-  fetch(netlifyFunctionPath)
-    .then(response => response.json())
-    .then(data => {
-      const message = data.message;
-      console.log(message);
-      alert(message);
+  return fetch(netlifyFunctionPath)
+    .then((response) => response.json())
+    .then((data) => {
+      googleApiKey = data.message;
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Error fetching Google API key:", error);
     });
 }
