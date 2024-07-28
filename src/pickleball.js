@@ -1,4 +1,4 @@
-const googleApiKey = "";
+let googleApiKey = "";
 
 const startHour = 8;
 const endHour = 22;
@@ -34,13 +34,19 @@ function initPage() {
     }
   });
 
-  // Initialize with New York City
-  input.value = "New York";
-  selectedLocation = { name: "New York, New York", lat: 40.7128, lon: -74.006 };
-  searchLocation(selectedLocation);
+  getGoogleApiKey().then((apiKey) => {
+    // Initialize with New York City
+    input.value = "New York";
+    selectedLocation = {
+      name: "New York, New York",
+      lat: 40.7128,
+      lon: -74.006,
+    };
+    searchLocation(selectedLocation);
 
-  // Create the calendar
-  createCalendar();
+    // Create the calendar
+    createCalendar();
+  });
 }
 
 // location
@@ -331,6 +337,18 @@ function addEvent(day, hour, eventText) {
 function toggleCalendar() {
   const container = document.getElementById("calendarContainer");
   container.classList.toggle("expanded");
+}
+
+function getGoogleApiKey() {
+  const netlifyFunctionPath = "/.netlify/functions/googleapikey";
+  return fetch(netlifyFunctionPath)
+    .then((response) => response.json())
+    .then((data) => {
+      googleApiKey = data.message;
+    })
+    .catch((error) => {
+      console.error("Error fetching Google API key:", error);
+    });
 }
 
 // init

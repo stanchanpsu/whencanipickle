@@ -90,7 +90,7 @@ main {
 .pickleball {
   width: 10%;
   height: 10%;
-  background: url("ball.png") no-repeat center/contain;
+  background: url("images/ball.png") no-repeat center/contain;
   transform: translateZ(-1px);
 }
 
@@ -100,19 +100,19 @@ main {
 }
 
 .paddle.blue {
-  background: url("bluepad.png") no-repeat center/contain;
+  background: url("images/bluepad.png") no-repeat center/contain;
 }
 
 .paddle.green {
-  background: url("greenpad.png") no-repeat center/contain;
+  background: url("images/greenpad.png") no-repeat center/contain;
 }
 
 .paddle.peach {
-  background: url("peachpad.png") no-repeat center/contain;
+  background: url("images/peachpad.png") no-repeat center/contain;
 }
 
 .paddle.pink {
-  background: url("pinkpad.png") no-repeat center/contain;
+  background: url("images/pinkpad.png") no-repeat center/contain;
 }
 
 /* location input */
