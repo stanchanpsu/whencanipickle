@@ -1,114 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="cities.js"></script>
-    <script src="pickleball.js"></script>
 
-    <title>whencanipickle.nyc</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="cities.js"></script>
+  <script src="pickleball.js"></script>
 
-  <body>
-    <main>
-      <div class="scene">
-        <!-- Pickleballs -->
-        <div class="pickleball" style="top: 10%; left: 10%"></div>
-        <div class="pickleball" style="top: 75%; right: 15%"></div>
-        <div class="pickleball" style="top: 30%; right: 15%"></div>
-        <div class="pickleball" style="bottom: 15%; left: 10%"></div>
+  <title>whencanipickle.nyc</title>
+</head>
 
-        <!-- Paddles -->
-        <div
-          class="paddle blue"
-          style="top: 15%; left: 20%; transform: rotate(45deg)"
-        ></div>
-        <div
-          class="paddle green"
-          style="top: 70%; left: 20%; transform: rotate(20deg)"
-        ></div>
-        <div
-          class="paddle peach"
-          style="top: 45%; right: 15%; transform: rotate(15deg)"
-        ></div>
-        <div
-          class="paddle pink"
-          style="top: 5%; right: 30%; transform: rotate(-35deg)"
-        ></div>
-      </div>
+<body>
+  <main>
+    <div class="scene">
+      <!-- Pickleballs -->
+      <div class="pickleball" style="top: 10%; left: 10%"></div>
+      <div class="pickleball" style="top: 75%; right: 15%"></div>
+      <div class="pickleball" style="top: 30%; right: 15%"></div>
+      <div class="pickleball" style="bottom: 15%; left: 10%"></div>
 
-      <div class="content">
-        <div class="container">
-          <h1>
-            When can I play pickleball in
-            <div class="custom-select">
-              <input
-                type="text"
-                id="locationInput"
-                placeholder="Enter a city"
-                autocomplete="off"
-              />
-              <ul id="locationDropdown" class="dropdown-list"></ul>
-            </div>
-            ?
-          </h1>
-          <h2>the next time the weather is good for outdoor pickleball</h2>
-          <p id="result" class="loading">Checking weather forecast...</p>
+      <!-- Paddles -->
+      <div class="paddle blue" style="top: 15%; left: 20%; transform: rotate(45deg)"></div>
+      <div class="paddle green" style="top: 70%; left: 20%; transform: rotate(20deg)"></div>
+      <div class="paddle peach" style="top: 45%; right: 15%; transform: rotate(15deg)"></div>
+      <div class="paddle pink" style="top: 5%; right: 30%; transform: rotate(-35deg)"></div>
+    </div>
 
-          <div class="calendar-container" id="calendarContainer">
-            <div class="calendar-header" onclick="toggleCalendar()">
-              <h2>3 day view</h2>
-              <svg
-                class="toggle-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7 10L12 15L17 10"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <table id="calendar">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th id="day0"></th>
-                  <th id="day1"></th>
-                  <th id="day2"></th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+    <div class="content">
+      <div class="container">
+        <h1>
+          When can I play pickleball in
+          <div class="custom-select">
+            <input type="text" id="locationInput" placeholder="Enter a city" autocomplete="off" />
+            <ul id="locationDropdown" class="dropdown-list"></ul>
           </div>
+          ?
+        </h1>
+        <h2>the next time the weather is good for outdoor pickleball
+          <span class="info-icon" data-tooltip="• Sunny or partly cloudy
+            - Temperature between 60°F and 85°F
+            - Wind speed less than 10 mph
+            - No rain in the forecast">ⓘ</span>
+        </h2>
+        <p id="result" class="loading">Checking weather forecast...</p>
 
-          <iframe
-            id="map"
-            style="border: 0"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
+        <div class="calendar-container" id="calendarContainer">
+          <div class="calendar-header" onclick="toggleCalendar()">
+            <h2>3 day view</h2>
+            <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <table id="calendar">
+            <thead>
+              <tr>
+                <th></th>
+                <th id="day0"></th>
+                <th id="day1"></th>
+                <th id="day2"></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
 
-        <a
-          href="https://www.linkedin.com/in/chanstan"
-          target="_blank"
-          class="social-icon"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
+        <iframe id="map" style="border: 0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-    </main>
-  </body>
+
+      <a href="https://www.linkedin.com/in/chanstan" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </main>
+</body>
+
 </html>
