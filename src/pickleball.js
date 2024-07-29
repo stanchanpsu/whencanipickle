@@ -189,8 +189,8 @@ function showNextGoodTime(goodTimes) {
 }
 
 function findGoodPickleballForecasts(forecasts) {
-  const highTemp = 60;
-  const lowTemp = 85;
+  const lowTempThreshold = 60;
+  const highTempThreshold = 85;
   const humidityThreshold = 55;
   const windSpeedThreshold = 12;
 
@@ -211,8 +211,8 @@ function findGoodPickleballForecasts(forecasts) {
     const windSpeed = parseInt(forecast.windSpeed.replace(/ mph/, ""));
 
     if (
-      temp >= highTemp &&
-      temp <= lowTemp &&
+      temp >= lowTempThreshold &&
+      temp <= highTempThreshold &&
       hours >= startHour &&
       hours <= endHour &&
       humidity <= humidityThreshold &&
