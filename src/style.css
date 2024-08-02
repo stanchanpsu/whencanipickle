@@ -1,21 +1,27 @@
+:root {
+  color-scheme: light dark;
+  --accent-color: light-dark(#2169a7, #3498db);
+  --foreground-color: light-dark(#222222, #dddddd);
+  --background-color: light-dark(#cccccc, #333333);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2c2c2c;
-  color: #ddd;
+  background-color: color-mix(in srgb, var(--background-color), black 10%);
+  color: var(--foreground-color);
   line-height: 1.6;
   margin: 0;
 }
 
 .container {
-  --container-opacity: 0.9;
-  background-color: rgba(51, 51, 51, var(--container-opacity));
+  background-color: color-mix(in srgb, var(--background-color), transparent 10%);
   border-radius: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid #444;
+  border: 1px solid color-mix(in srgb, var(--background-color), white 10%);
   backdrop-filter: blur(4px);
   padding: 2rem;
   max-width: 600px;
@@ -28,13 +34,13 @@ body {
 }
 
 h1 {
-  color: #3498db;
+  color: var(--accent-color);
   margin: 0;
   text-align: center;
 }
 
 h2 {
-  color: #777;
+  color: color-mix(in srgb, var(--foreground-color), black 20%);
   margin: 0;
   font-size: 1rem;
   font-weight: normal;
@@ -43,7 +49,7 @@ h2 {
 
 .info-icon {
   font-size: 0.8em;
-  color: #3498db;
+  color: var(--accent-color);
   cursor: pointer;
   position: relative;
 }
@@ -54,8 +60,8 @@ h2 {
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #2c3e50;
-  color: #ffffff;
+  background-color: color-mix(in srgb, var(--accent-color), black 60%);
+  color: var(--foreground-color);
   padding: 10px;
   border-radius: 5px;
   font-size: 0.9em;
@@ -76,7 +82,7 @@ h2 {
 
 #result {
   white-space: pre-line;
-  background-color: #444;
+  background-color: color-mix(in srgb, var(--background-color), white 10%);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 0;
@@ -84,7 +90,6 @@ h2 {
 }
 
 .loading {
-  color: #777;
   font-style: italic;
 }
 
@@ -161,7 +166,7 @@ main {
   color: inherit;
   background: none;
   border: none;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid currentColor;
   outline: none;
   padding: 0 5px;
   width: 200px;
@@ -169,15 +174,15 @@ main {
 }
 
 #locationInput:focus {
-  background-color: rgba(52, 152, 219, 0.1);
+  background-color: color-mix(in srgb, currentcolor, transparent 90%);
 }
 
 .dropdown-list {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #444;
-  border: 1px solid #555;
+  background-color: color-mix(in srgb, var(--background-color), white 10%);
+  border: 1px solid color-mix(in srgb, var(--background-color), white 20%);
   border-top: none;
   max-height: 200px;
   overflow-y: auto;
@@ -196,7 +201,7 @@ main {
 }
 
 .dropdown-list li:hover {
-  background-color: #555;
+  background-color: color-mix(in srgb, var(--background-color), white 20%);
 }
 
 #map {
@@ -207,24 +212,25 @@ main {
 .social-icon {
   font-size: 2rem;
   color: #0077b5;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
+  opacity: .8;
 }
 
 .social-icon:hover {
-  color: #00a0dc;
+  opacity: 1;
 }
 
 /* calendar */
 .calendar-container {
-  background-color: #1e1e1e;
+  background-color: color-mix(in srgb, var(--background-color), black 10%);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -233,7 +239,7 @@ main {
 }
 
 .calendar-header h2 {
-  color: #b2b2b2;
+  color: currentColor;
 }
 
 .toggle-icon {
@@ -258,24 +264,23 @@ main {
 
 #calendar th,
 #calendar td {
-  border: 1px solid #333;
+  border: 1px solid color-mix(in srgb, var(--background-color), white 20%);
   padding: 10px;
   text-align: center;
 }
 
 #calendar thead {
-  background-color: #2c2c2c;
+  background-color: var(--background-color);
 }
 
 #calendar tbody tr:nth-child(even) {
-  background-color: #252525;
+  background-color: var(--background-color);
 }
 
 .time-cell {
-  color: #999;
+  color: color-mix(in srgb, var(--foreground-color), black 20%);
 }
 
 .event-cell {
-  background-color: #6fe072;
-  color: rgb(15, 15, 15);
+  color: var(--accent-color);
 }
