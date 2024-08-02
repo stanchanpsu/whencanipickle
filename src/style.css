@@ -1,8 +1,9 @@
 :root {
   color-scheme: light dark;
   --accent-color: light-dark(#2169a7, #3498db);
+  --onaccent-color: light-dark(#ffffff, #ffffff);
   --foreground-color: light-dark(#222222, #dddddd);
-  --background-color: light-dark(#cccccc, #333333);
+  --background-color: light-dark(#ffffff, #333333);
 }
 
 * {
@@ -11,7 +12,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: color-mix(in srgb, var(--background-color), black 10%);
+  background-color: color-mix(in srgb, var(--background-color), black 5%);
   color: var(--foreground-color);
   line-height: 1.6;
   margin: 0;
@@ -60,8 +61,8 @@ h2 {
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: color-mix(in srgb, var(--accent-color), black 60%);
-  color: var(--foreground-color);
+  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  color: var(--onaccent-color);
   padding: 10px;
   border-radius: 5px;
   font-size: 0.9em;
@@ -222,7 +223,7 @@ main {
 
 /* calendar */
 .calendar-container {
-  background-color: color-mix(in srgb, var(--background-color), black 10%);
+  background-color: color-mix(in srgb, var(--background-color), black 5%);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -264,7 +265,7 @@ main {
 
 #calendar th,
 #calendar td {
-  border: 1px solid color-mix(in srgb, var(--background-color), white 20%);
+  border: 1px solid color-mix(in srgb, var(--background-color), black 20%);
   padding: 10px;
   text-align: center;
 }
@@ -282,5 +283,6 @@ main {
 }
 
 .event-cell {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--onaccent-color);
 }
