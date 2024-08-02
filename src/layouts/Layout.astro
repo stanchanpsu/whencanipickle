@@ -1,0 +1,25 @@
+---
+import Head from '@components/Head.astro';
+import Body from '@components/Body.astro';
+---
+
+<html lang="en">
+    <Head { ...Astro.props }/>
+    <Body>
+        <slot/>
+    </Body>
+</html>
+
+<style is:global>
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+    :root {
+        color-scheme: light dark;
+        --accent-color: light-dark(#2169a7, #3498db);
+        --onaccent-color: light-dark(#ffffff, #ffffff);
+        --foreground-color: light-dark(#222222, #dddddd);
+        --background-color: light-dark(#ffffff, #333333);
+    }
+</style>

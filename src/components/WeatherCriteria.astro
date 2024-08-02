@@ -1,0 +1,64 @@
+<style>
+    h2 {
+        color: color-mix(in srgb, var(--foreground-color), black 20%);
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .anchor {
+        position: relative;
+        display: inline-block;
+    }
+
+    button {
+        color: inherit;
+        background: none;
+        border: none;
+        font-size: 0.8em;
+        color: var(--accent-color);
+        cursor: pointer;
+    }
+
+    ul {
+        display: none;
+        text-align: left;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: color-mix(in srgb, var(--accent-color), black 10%);
+        color: var(--onaccent-color);
+        margin: 0;
+        padding-block: 1rem;
+        padding-inline-end: 1rem;
+        border-radius: .25rem;
+        font-size: 0.9em;
+        transition: opacity 0.3s, visibility 0.3s;
+        width: max-content;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    button:focus + ul {
+        display: block;
+    }
+</style>
+
+<h2>
+    <span>
+        The next time the weather is good for outdoor pickleball
+    </span>
+    <div class="anchor">
+        <button>
+            <i class="fa fa-info-circle"/>
+        </button>
+        <ul>
+            <li>Between 8pm and 10pm</li>
+            <li>Not raining</li>
+            <li>Between 60°F and 85°F</li>
+            <li>Lower than 55% relative humidity</li>
+            <li>Less than 12mph windspeed</li>
+        </ul>
+    </div>
+</h2>

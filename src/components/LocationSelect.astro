@@ -1,0 +1,64 @@
+<style>
+    form {
+        display: inline-block;
+    }
+
+    label {
+        display: none;
+    }
+
+    input {
+        font: inherit;
+        color: inherit;
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-bottom: 2px solid currentColor;
+        outline: none;
+        display: inline-block;
+        width: 12ch;
+    }
+</style>
+
+<form onsubmit="return false">
+    <label for="cities">Cities</label>
+    <input
+        id="cities"
+        type="text"
+        list="citylist"
+        name="city"
+        autocomplete="off"
+        placeholder="Enter a city"/>
+    <datalist id="citylist"></datalist>
+</form>
+
+<script>
+    const $input = document.getElementById('cities');
+    const $cities = document.getElementById('citylist');
+    const WEATHER_GOV_BASE = 'https://api.weather.gov';
+
+    function formatLabel(entry) {
+        return `${entry.city}, ${entry.state}`;
+    }
+
+    fetch('/cities.json').then((res) => res.json()).then((cities) => {
+        $cities.innerHTML = cities.map((entry) => {
+            return `<option>${formatLabel(entry)}</option>`;
+        }).join('');
+
+        $input?.addEventListener('change', (ev) => {
+            const city = cities.find((entry) => formatLabel(entry) === ev.target.value);
+            if (!city) return;
+            const url = new URL(`/points/${city.latitude},${city.longitude}`, WEATHER_GOV_BASE);
+            fetch(url.toString())
+                .then((res) => res.json())
+                .then(({ properties }) => fetch(properties.forecastHourly))
+                .then((res) => res.json())
+                .then(({ properties }) => {
+                    const event = new CustomEvent('hourly-forecast', { detail: { ...properties } });
+                    window.dispatchEvent(event);
+                });
+        });
+    });
+</script>

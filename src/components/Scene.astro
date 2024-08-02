@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import ball from '@assets/ball.png';
+import bluepad from '@assets/bluepad.png';
+import greenpad from '@assets/greenpad.png';
+import peachpad from '@assets/peachpad.png';
+import pinkpad from '@assets/pinkpad.png';
+
+const sceneConfig = [{
+    src: ball,
+    style: { top: '10%', left: '10%' }
+}, {
+    src: ball,
+    style: { top: '75%', right: '15%' }
+}, {
+    src: ball,
+    style: { top: '30%', right: '15%' }
+}, {
+    src: ball,
+    style: { bottom: '15%', left: '10%' }
+}, {
+    src: bluepad,
+    style: { top: '15%', left: '20%', rotate: '45deg' }
+}, {
+    src: greenpad,
+    style: { top: '70%', left: '20%', rotate: '20deg' }
+}, {
+    src: peachpad,
+    style: { top: '45%', right: '15%', rotate: '15deg' }
+}, {
+    src: pinkpad,
+    style: { top: '5%', right: '30%', rotate: '-35deg' }
+}];
+---
+
+<style>
+    .scene {
+        height: 100vh;
+        width: 100vw;
+        transform: translateZ(-1px) scale(2);
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+    }
+
+    .scene :global(img) {
+        position: absolute;
+        width: 6rem;
+        height: auto;
+    }
+
+    .scene :global(img[src*="ball"]) {
+        width: 4rem;
+    }
+</style>
+
+<div class="scene">
+    { sceneConfig.map(({ src, style }) => (
+        <Image
+            src={ src }
+            style={ style }
+            alt=""
+            role="presentation" />
+    )) }
+</div>

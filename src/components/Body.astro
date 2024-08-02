@@ -1,0 +1,24 @@
+<style>
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: color-mix(in srgb, var(--background-color), black 5%);
+        color: var(--foreground-color);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    main {
+        perspective: 1px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: grid;
+        place-items: center;
+    }
+</style>
+
+<body>
+    <main>
+        <slot/>
+    </main>
+</body>
