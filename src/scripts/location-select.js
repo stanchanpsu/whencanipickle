@@ -1,9 +1,10 @@
+import { START_HOUR, END_HOUR } from "./hours.js";
+
 const $input = document.getElementById('cities');
 const $cities = document.getElementById('citylist');
 const WEATHER_GOV_BASE = 'https://api.weather.gov';
 
-const startHour = 8;
-const endHour = 22;
+
 const lowTempThreshold = 60;
 const highTempThreshold = 85;
 const humidityThreshold = 55;
@@ -41,8 +42,8 @@ function goodHours(startTime) {
     const startTimestamp = new Date(startTime);
     const hours = startTimestamp.getHours();
     return startTimestamp > new Date()
-        && hours >= startHour
-        && hours <= endHour;
+        && hours >= START_HOUR
+        && hours <= END_HOUR;
 }
 
 function goodTemperature(temp) {

@@ -17,7 +17,12 @@
         border-bottom: 2px solid currentColor;
         outline: none;
         display: inline-block;
-        width: 12ch;
+        width: 20ch;
+    }
+
+    /** Removing oddly positioned UA marker */
+    input::-webkit-calendar-picker-indicator {
+        display: none !important;
     }
 </style>
 
