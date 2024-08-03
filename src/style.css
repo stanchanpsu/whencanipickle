@@ -140,19 +140,19 @@ main {
 }
 
 .paddle.blue {
-  background: url("images/bluepad.png") no-repeat center/contain;
+  background: url("images/bluepad.svg") no-repeat center/contain;
 }
 
 .paddle.green {
-  background: url("images/greenpad.png") no-repeat center/contain;
+  background: url("images/greenpad.svg") no-repeat center/contain;
 }
 
 .paddle.peach {
-  background: url("images/peachpad.png") no-repeat center/contain;
+  background: url("images/peachpad.svg") no-repeat center/contain;
 }
 
 .paddle.pink {
-  background: url("images/pinkpad.png") no-repeat center/contain;
+  background: url("images/pinkpad.svg") no-repeat center/contain;
 }
 
 /* location input */
