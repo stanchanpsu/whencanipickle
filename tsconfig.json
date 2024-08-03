@@ -19,6 +19,9 @@
         ],
         "@pages/*": [
           "src/pages/*"
+        ],
+        "@scripts/*": [
+          "src/scripts/*"
         ]
       }
     }
