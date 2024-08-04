@@ -2,12 +2,24 @@ import getWeatherEmoji from "./emoji.js";
 
 const $results = document.getElementById("results");
 
+/**
+ * Formats a string to "Sentence case."
+ * 
+ * @param {String} str - The string to format.
+ * @returns {String} - The transformed string.
+ */
 function sentenceCase(str) {
     return str
         .toLowerCase()
         .replace(/\.\s*([a-z])|^[a-z]/gm, (s) => s.toUpperCase());
 }
 
+/**
+ * Determines the difference between now and the given time.
+ * 
+ * @param {Date} date - Native Date Object.
+ * @returns {String} - Human readable time difference.
+ */
 function timeUntil(date) {
     const formatter = new Intl.RelativeTimeFormat(undefined, {
         numeric: "auto",
@@ -34,6 +46,12 @@ function timeUntil(date) {
     }
 }
 
+/**
+ * Creates a human readable datetime description.
+ * 
+ * @param {String} startTime - ISO8601 Datetime format.
+ * @returns {String} - Human readable datetime description.
+ */
 function formatTime(startTime) {
     const date = new Date(startTime);
     const timeDiff = sentenceCase(timeUntil(date));
@@ -43,6 +61,12 @@ function formatTime(startTime) {
     return `${timeDiff} - ${weekday}, ${localeDate} at ${localeTime}`;
 }
 
+/**
+ * Decorates the forecast description with an emoji.
+ * 
+ * @param {String} shortForecast - Forecast description.
+ * @returns {String} - A forecast description prefixed with an appropriate emoji.
+ */
 function getConditions(shortForecast) {
     const emoji = getWeatherEmoji(shortForecast)
     return `${emoji} Conditions: ${shortForecast}`;
