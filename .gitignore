@@ -1,2 +1,7 @@
 *.zip
 keys
+dist/
+node_modules/
+.netlify
+.astro/
+.DS_Store

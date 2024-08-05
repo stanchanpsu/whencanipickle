@@ -1,0 +1,42 @@
+<style>
+    form {
+        display: inline-block;
+    }
+
+    label {
+        display: none;
+    }
+
+    input {
+        font: inherit;
+        color: inherit;
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-bottom: 2px solid currentColor;
+        outline: none;
+        display: inline-block;
+        width: 10ch;
+    }
+
+    /** Removing oddly positioned UA marker */
+    input::-webkit-calendar-picker-indicator {
+        display: none !important;
+    }
+</style>
+
+<form onsubmit="return false">
+    <label for="cities">Cities</label>
+    <input
+        id="cities"
+        type="text"
+        list="citylist"
+        name="city"
+        autocomplete="off"
+        placeholder="Enter a city"
+        value="New York, New York"/>
+    <datalist id="citylist"></datalist>
+</form>
+
+<script src="@scripts/location-select.js"></script>
