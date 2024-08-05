@@ -102,6 +102,10 @@ function goodForecasts(acc, forecast) {
     return acc.concat(forecast);
 }
 
+function isReplacementText({ inputType }) {
+    return typeof inputType === undefined || inputType === 'insertReplacementText';
+}
+
 // On load, fetch cities.json for input field, render as options.
 fetch('/cities.json').then((res) => res.json()).then((cities) => {
     $cities.innerHTML = cities.map((entry) => {
@@ -115,12 +119,14 @@ fetch('/cities.json').then((res) => res.json()).then((cities) => {
      * 
      * @param {String} value - Value within the input field. 
      */
-    function onChange(value) {
-        const city = cities.find((entry) => formatLabel(entry) === value);
-        if (!city) return;
+    function onChange() {
+        const location = cities.find((entry) => formatLabel(entry) === $input.value);
+        if (!location) return;
+        // Replace the input value with city alone
+        $input.value = location.city;
         // Event is read by <Map/> component.
-        window.dispatchEvent(new CustomEvent('city', { detail: formatLabel(city) }));
-        const url = new URL(`/points/${city.latitude},${city.longitude}`, WEATHER_GOV_BASE);
+        window.dispatchEvent(new CustomEvent('city', { detail: formatLabel(location) }));
+        const url = new URL(`/points/${location.latitude},${location.longitude}`, WEATHER_GOV_BASE);
         fetch(url.toString())
             .then((res) => res.json())
             .then(({ properties }) => fetch(properties.forecastHourly))
@@ -132,6 +138,6 @@ fetch('/cities.json').then((res) => res.json()).then((cities) => {
             });
     }
 
-    $input?.addEventListener('change', ({ target }) => onChange($input.value));
-    onChange($input.value);
+    $input?.addEventListener('change', onChange);
+    onChange();
 });
