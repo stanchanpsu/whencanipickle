@@ -1,67 +1,67 @@
 <style>
-    details {
-        background-color: color-mix(in srgb, var(--background-color), black 5%);
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+  details {
+    background-color: color-mix(in srgb, var(--background-color), black 5%);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    summary {
-        background-color: var(--background-color);
-        color: var(--foreground-color);
-        padding: 1rem;
-        cursor: pointer;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  summary {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    padding: 1rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    summary::-webkit-details-marker,
-    summary::marker {
-        display: none;
-    }
+  summary::-webkit-details-marker,
+  summary::marker {
+    display: none;
+  }
 
-    summary:after {
-        content: " ▼";
-    }
+  summary:after {
+    content: " ▼";
+  }
 
-    details[open] summary:after {
-        content: " ▲";
-    }
+  details[open] summary:after {
+    content: " ▲";
+  }
 
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-    table :global(th, td) {
-        border: 1px solid color-mix(in srgb, var(--background-color), black 20%);
-        padding: 0.5rem;
-        text-align: center;
-    }
+  table :global(th, td) {
+    border: 1px solid color-mix(in srgb, var(--background-color), black 20%);
+    padding: 0.5rem;
+    text-align: center;
+  }
 
-    table :global(tr:nth-child(even)) {
-        background-color: var(--background-color);
-    }
+  table :global(tr:nth-child(even)) {
+    background-color: var(--background-color);
+  }
 
-    /* Hour Cells */
-    table :global(tr td:first-child) {
-        color: color-mix(in srgb, var(--foreground-color), black 20%);
-    }
+  /* Hour Cells */
+  table :global(tr td:first-child) {
+    color: color-mix(in srgb, var(--foreground-color), black 20%);
+  }
 
-    /* Event Cells */
-    table :global(tr td:not(:first-child):not(:empty)) {
-        background-color: var(--accent-color);
-        color: var(--onaccent-color);
-    }
+  /* Event Cells */
+  table :global(tr td:not(:first-child):not(:empty)) {
+    background-color: var(--accent-color);
+    color: var(--onaccent-color);
+  }
 </style>
 
 <details>
-    <summary id="summary"></summary>
-    <table>
-        <thead id="thead"></thead>
-        <tbody id="tbody"></tbody>
-    </table>
+  <summary id="summary"></summary>
+  <table>
+    <thead id="thead"></thead>
+    <tbody id="tbody"></tbody>
+  </table>
 </details>
 
 <script src="@scripts/calendar.js"></script>

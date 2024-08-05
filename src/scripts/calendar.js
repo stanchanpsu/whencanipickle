@@ -26,7 +26,7 @@ function incrementedDates() {
  * @returns {String} - YYYY-MM-DDTHH.
  */
 function dateCellId(date) {
-    return date.toISOString().replace(/:.+/g,'');
+    return date.toISOString().replace(/:.+/g, '');
 }
 
 /**
@@ -56,7 +56,7 @@ function generateRow(dates, hour) {
     const events = dates.map((d) => {
         const date = new Date(d);
         date.setHours(hour);
-        return `<td id="${dateCellId(date)}"></td>`;
+        return `<td id="${dateCellId(date)}" class="event-cell"></td>`;
     }).join('');
     return `<tr><td>${hour}:00</td>${events}</tr>`;
 }
@@ -83,9 +83,20 @@ function renderCalendar() {
     $tbody.innerHTML = generateRows(dates);
 }
 
+/**
+ * Clears the calendar.
+ */
+function clearCalendar() {
+    const eventCells = document.getElementsByClassName('event-cell');
+    Array.from(eventCells).forEach(cell => {
+        cell.textContent = '';
+    });
+}
+
 renderCalendar();
 
 window.addEventListener("forecasts", ({ detail: forecasts }) => {
+    clearCalendar();
     forecasts.forEach((forecast) => {
         const { startTime, temperature, shortForecast } = forecast;
         const id = dateCellId(new Date(startTime));

@@ -102,10 +102,6 @@ function goodForecasts(acc, forecast) {
     return acc.concat(forecast);
 }
 
-function isReplacementText({ inputType }) {
-    return typeof inputType === undefined || inputType === 'insertReplacementText';
-}
-
 // On load, fetch cities.json for input field, render as options.
 fetch('/cities.json').then((res) => res.json()).then((cities) => {
     $cities.innerHTML = cities.map((entry) => {
