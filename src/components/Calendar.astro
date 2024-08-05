@@ -50,7 +50,7 @@
     }
 
     /* Event Cells */
-    table .event-cell {
+    table :global(tr td:not(:first-child):not(:empty)) {
         background-color: var(--accent-color);
         color: var(--onaccent-color);
     }

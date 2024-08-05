@@ -87,18 +87,16 @@ function renderCalendar() {
  * Clears the calendar.
  */
 function clearCalendar() {
-    const tableCells = document.querySelectorAll('td');
-    tableCells.forEach(cell => {
-        if (cell.textContent.trim() !== '') {
-            cell.textContent = '';
-        }
+    const eventCells = document.getElementsByClassName('event-cell');
+    Array.from(eventCells).forEach(cell => {
+        cell.textContent = '';
     });
 }
 
 renderCalendar();
 
 window.addEventListener("forecasts", ({ detail: forecasts }) => {
-    // clearCalendar();
+    clearCalendar();
     forecasts.forEach((forecast) => {
         const { startTime, temperature, shortForecast } = forecast;
         const id = dateCellId(new Date(startTime));
