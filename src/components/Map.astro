@@ -9,15 +9,15 @@ const key = process.env.GOOGLE_API_KEY;
     }
 </style>
 
-<iframe id="map"/>
+<iframe id="map"></iframe>
 
 <script define:vars={{ key }}>
-    const $map = document.getElementById('map');
-    const url = new URL('/maps/embed/v1/search', 'https://www.google.com');
-    url.searchParams.append('key', key);
-    window.addEventListener('city', ({ detail: city }) => {
-        const q = encodeURIComponent(`pickleball courts ${city}`);
-        url.searchParams.append('q', q);
+    const $map = document.getElementById("map");
+    window.addEventListener("city", ({ detail: city }) => {
+        const url = new URL("/maps/embed/v1/search", "https://www.google.com");
+        url.searchParams.append("key", key);
+        const q = `pickleball courts ${city}`;
+        url.searchParams.append("q", q);
         $map.src = url.toString();
     });
 </script>
