@@ -78,6 +78,7 @@ window.addEventListener("forecasts", ({ detail: forecasts }) => {
         const [forecast] = forecasts;
         $results.textContent = `🎾 Good news! You can play pickleball
         📅 ${formatTime(forecast.startTime)}
+
         🌡️ Temperature: ${forecast.temperature}°F
         💧 Humidity: ${forecast.relativeHumidity.value}%
         💨 Wind: ${forecast.windSpeed} ${forecast.windDirection}
