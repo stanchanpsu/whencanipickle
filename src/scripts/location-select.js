@@ -1,5 +1,3 @@
-import { START_HOUR, END_HOUR } from "./hours.js";
-
 const $input = document.getElementById('cities');
 const $cities = document.getElementById('citylist');
 const WEATHER_GOV_BASE = 'https://api.weather.gov';
@@ -17,20 +15,6 @@ const windSpeedThreshold = 12;
  */
 function formatLabel(entry) {
     return `${entry.city}, ${entry.state}`;
-}
-
-/**
- * Determines a good time to play.
- * 
- * @param {String} startTime - ISO8601 Datetime string.
- * @returns {Boolean}
- */
-function goodHours(startTime) {
-    const startTimestamp = new Date(startTime);
-    const hours = startTimestamp.getHours();
-    return startTimestamp > new Date()
-        && hours >= START_HOUR
-        && hours <= END_HOUR;
 }
 
 /**
@@ -86,14 +70,14 @@ function goodWindspeed(windspeed) {
 function goodForecasts(acc, forecast) {
     const {
         temperature,
-        startTime,
+        isDaytime,
         shortForecast,
         relativeHumidity,
         windSpeed
     } = forecast;
 
     if (
-        !goodHours(startTime)
+        !isDaytime
         || !goodTemperature(temperature)
         || !goodHumidity(relativeHumidity)
         || !goodPrecip(shortForecast)
