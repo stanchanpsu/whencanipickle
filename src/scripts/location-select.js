@@ -18,6 +18,17 @@ function formatLabel(entry) {
 }
 
 /**
+ * Determines a good time to play.
+ * 
+ * @param {String} startTime - ISO8601 Datetime string.
+ * @returns {Boolean}
+ */
+function isFuture(startTime) {
+    const startTimestamp = new Date(startTime);
+    return startTimestamp >= new Date()
+}
+
+/**
  * Determines a good temperature to play.
  * 
  * @param {Number} temp - Temperature.
@@ -70,6 +81,7 @@ function goodWindspeed(windspeed) {
 function goodForecasts(acc, forecast) {
     const {
         temperature,
+        startTime,
         isDaytime,
         shortForecast,
         relativeHumidity,
@@ -78,6 +90,7 @@ function goodForecasts(acc, forecast) {
 
     if (
         !isDaytime
+        || !isFuture(startTime)
         || !goodTemperature(temperature)
         || !goodHumidity(relativeHumidity)
         || !goodPrecip(shortForecast)
