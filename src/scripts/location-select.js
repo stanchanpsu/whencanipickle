@@ -221,12 +221,13 @@ fetch('/locations.json').then((res) => res.json()).then((locations) => {
         onLocationSelect(Number($btn.value));
     }
 
+    // Listen for keyboard events in the input field.
     $input.addEventListener('keydown', (ev) => {
         if (['Enter'].includes(ev.key)) return userChosen();
         keyboardTraverse(ev);
     });
 
-    // When an option in the dropdown is clicked, get city by index.
+    // When an option in the dropdown is clicked, target the element.
     $locations.addEventListener('click', (ev) =>  userChosen(ev.target));
 
     // Load the first option by default.
