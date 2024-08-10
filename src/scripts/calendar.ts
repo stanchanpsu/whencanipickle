@@ -10,7 +10,7 @@ const $tbody = document.getElementById('tbody');
  * Creates an array of dates, each incremented by one day.
  * Helps to setup the data that exists in any row.
  */
-function incrementedDates() {
+function incrementedDates(): Date[] {
     const today = new Date().getDate();
     return Array.from({ length: DAYS_SHOWN }, (_, i) => {
         const d = new Date();
@@ -25,7 +25,7 @@ function incrementedDates() {
  * @param {Date} date - Native Date Object.
  * @returns {String} - YYYY-MM-DDTHH.
  */
-function dateCellId(date) {
+function dateCellId(date: Date): string {
     return date.toISOString().replace(/:.+/g, '');
 }
 
@@ -35,7 +35,7 @@ function dateCellId(date) {
  * @param {Array<Date>} dates - Array of dates from incrementedDates.
  * @returns {String} - The table header row to be written as HTML.
  */
-function generateHeaders(dates) {
+function generateHeaders(dates: Date[]): string {
     return `<th></th>` + dates.map((d) => {
         const label = d.toLocaleDateString(
             "en-US",
@@ -52,7 +52,7 @@ function generateHeaders(dates) {
  * @param {Number} hour - The specific hour for this row.
  * @returns {String} - The table row to be written as HTML.
  */
-function generateRow(dates, hour) {
+function generateRow(dates: Date[], hour: number): string {
     const events = dates.map((d) => {
         const date = new Date(d);
         date.setHours(hour);
@@ -67,7 +67,7 @@ function generateRow(dates, hour) {
  * @param {Array<Date>} dates - Array of dates from incrementedDates.
  * @returns {String} - The table rows to be written as HTML.
  */
-function generateRows(dates) {
+function generateRows(dates: Date[]): string {
     return Array.from({ length: (END_HOUR - START_HOUR) + 1 }).map((_, i) => {
         return generateRow(dates, START_HOUR + i);
     }).join('');
@@ -76,7 +76,7 @@ function generateRows(dates) {
 /**
  * Renders the calendar.
  */
-function renderCalendar() {
+function renderCalendar(): void {
     $summary.textContent = `${DAYS_SHOWN} day view`;
     const dates = incrementedDates();
     $thead.innerHTML = generateHeaders(dates);
@@ -86,7 +86,7 @@ function renderCalendar() {
 /**
  * Clears the calendar.
  */
-function clearCalendar() {
+function clearCalendar(): void {
     const eventCells = document.getElementsByClassName('event-cell');
     Array.from(eventCells).forEach(cell => {
         cell.textContent = '';

@@ -3,7 +3,7 @@
  * that will return a Boolean identifying if the key (emoji) is
  * meant to represent the forecast description.
  */
-const emojiLookup = {
+const emojiLookup: { [key: string]: (s: string) => boolean } = {
     '☀️': (s) => /clear|sunny/i.test(s),
     '☁️': (s) => /cloud/i.test(s),
     '🌧️': (s) => /rain|drizzle/i.test(s),
@@ -19,6 +19,6 @@ const emojiLookup = {
  * @param {String} shortForecast - Forecast description from the weather API.
  * @returns {String} - The emoji that matches the description.
  */
-export default function getWeatherEmoji(shortForecast) {
-    return Object.entries(emojiLookup).reduce((acc, [em, fn]) => fn(shortForecast) ? em : acc, '☁️');
+export default function getWeatherEmoji(shortForecast: string): string {
+    return Object.entries(emojiLookup).reduce((acc: string, [em, fn]: [string, (s: string) => boolean]) => fn(shortForecast) ? em : acc, '☁️');
 }

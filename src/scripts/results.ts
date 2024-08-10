@@ -8,7 +8,7 @@ const $results = document.getElementById("results");
  * @param {String} str - The string to format.
  * @returns {String} - The transformed string.
  */
-function sentenceCase(str) {
+function sentenceCase(str: string): string {
     return str
         .toLowerCase()
         .replace(/\.\s*([a-z])|^[a-z]/gm, (s) => s.toUpperCase());
@@ -20,7 +20,7 @@ function sentenceCase(str) {
  * @param {Date} date - Native Date Object.
  * @returns {String} - Human readable time difference.
  */
-function timeUntil(date) {
+function timeUntil(date: Date): string {
     const formatter = new Intl.RelativeTimeFormat(undefined, {
         numeric: "auto",
     });
@@ -35,7 +35,7 @@ function timeUntil(date) {
         { amount: Number.POSITIVE_INFINITY, name: "years" },
     ];
 
-    let duration = (date - new Date()) / 1000;
+    let duration = (date.getTime() - new Date().getTime()) / 1000;
 
     for (let i = 0; i < DIVISIONS.length; i++) {
         const division = DIVISIONS[i];
@@ -52,7 +52,7 @@ function timeUntil(date) {
  * @param {String} startTime - ISO8601 Datetime format.
  * @returns {String} - Human readable datetime description.
  */
-function formatTime(startTime) {
+function formatTime(startTime: string): string {
     const date = new Date(startTime);
     const timeDiff = sentenceCase(timeUntil(date));
     const weekday = date.toLocaleDateString('en-US', { weekday: 'long' });
@@ -67,8 +67,8 @@ function formatTime(startTime) {
  * @param {String} shortForecast - Forecast description.
  * @returns {String} - A forecast description prefixed with an appropriate emoji.
  */
-function getConditions(shortForecast) {
-    const emoji = getWeatherEmoji(shortForecast)
+function getConditions(shortForecast: string): string {
+    const emoji = getWeatherEmoji(shortForecast);
     return `${emoji} Conditions: ${shortForecast}`;
 }
 

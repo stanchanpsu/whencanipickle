@@ -15,7 +15,7 @@ const windSpeedThreshold = 12;
  * @param {Object} location - A location entry. 
  * @returns {String} - A normalized location name.
  */
-function formatLabel(location) {
+function formatLabel(location: { city: string, state: string }): string {
     return `${location.city}, ${location.state}`;
 }
 
@@ -25,8 +25,8 @@ function formatLabel(location) {
  * @param {String} startTime - ISO8601 Datetime string.
  * @returns {Boolean}
  */
-function isFuture(startTime) {
-    return new Date(startTime) >= new Date()
+function isFuture(startTime: string): boolean {
+    return new Date(startTime) >= new Date();
 }
 
 /**
@@ -35,7 +35,7 @@ function isFuture(startTime) {
  * @param {Number} temp - Temperature.
  * @returns {Boolean}
  */
-function goodTemperature(temp) {
+function goodTemperature(temp: number): boolean {
     return temp >= lowTempThreshold
         && temp <= highTempThreshold;
 }
@@ -46,7 +46,7 @@ function goodTemperature(temp) {
  * @param {String} shortForecast - Forecast description. 
  * @returns {Boolean}
  */
-function goodPrecip(shortForecast) {
+function goodPrecip(shortForecast: string): boolean {
     const exclude = ['rain', 'shower'].map((word) => `(?!.*\\b${word}\\b)`).join('');
     const rgx = new RegExp(`^${exclude}.*$`, 'i');
     return rgx.test(shortForecast);
@@ -58,7 +58,7 @@ function goodPrecip(shortForecast) {
  * @param {Number} - The relativeHumidity value from the forecast. 
  * @returns {Boolean}
  */
-function goodHumidity(relativeHumidity) {
+function goodHumidity(relativeHumidity: { value: number }): boolean {
     return relativeHumidity.value <= humidityThreshold;
 }
 
@@ -68,7 +68,7 @@ function goodHumidity(relativeHumidity) {
  * @param {String} windspeed - The windspeed from the forecast. 
  * @returns {Boolean}
  */
-function goodWindspeed(windspeed) {
+function goodWindspeed(windspeed: string): boolean {
     return parseInt(windspeed.replace(/\D+/, ''), 10) < windSpeedThreshold;
 }
 
@@ -79,7 +79,7 @@ function goodWindspeed(windspeed) {
  * @param {Object} forecast - A forecast to check.
  * @returns {Array<Object>} - The final accumulation of good forecasts.
  */
-function goodForecasts(acc, forecast) {
+function goodForecasts(acc: any[], forecast: { temperature: number, startTime: string, isDaytime: boolean, shortForecast: string, relativeHumidity: { value: number }, windSpeed: string }): any[] {
     const {
         temperature,
         startTime,
@@ -106,7 +106,7 @@ function goodForecasts(acc, forecast) {
  * @param {KeyboardEvent} ev - Native DOM keyboard event 
  * @returns {Element|undefined} The next element to focus
  */
-function keyboardTraverse(ev) {
+function keyboardTraverse(ev: KeyboardEvent): HTMLElement | undefined {
     if (!ARROW_KEYS.includes(ev.key)) return;
     ev.stopPropagation();
     const visible = [...$locations.querySelectorAll('button:not([style*="none"])')];
@@ -123,7 +123,7 @@ function keyboardTraverse(ev) {
  * @param {Element} $current - The element meant to be newly tabbable
  * @returns {Element} - The element meant to be newly tabbable
  */
-function updateTabIndex($current) {
+function updateTabIndex($current: HTMLElement): HTMLElement {
     if (!$current) return;
     [...$locations.children].forEach(($btn) => {
         $btn.tabIndex = $btn === $current ? 0 : -1;
@@ -133,12 +133,12 @@ function updateTabIndex($current) {
 }
 
 // Show or hide the flyout depending on if the input has a value.
-$input.addEventListener('click', (ev) => 
+$input.addEventListener('click', (ev: Event) => 
     $input.setAttribute('aria-expanded', Boolean(ev.target.value))
 );
 
 // Filter the list of options during input.
-$input.addEventListener('input', (ev) => {
+$input.addEventListener('input', (ev: Event) => {
     // Update the size of the input to accommodate the value.
     $input.style.minWidth = `${ev.target.value.length}ch`;
     // Show the flyout of options.
@@ -155,17 +155,17 @@ $input.addEventListener('input', (ev) => {
 });
 
 // If tabbed into the list, continues to move up/down with arrow keys.
-$locations.addEventListener('keydown', (ev) => keyboardTraverse(ev)?.focus());
+$locations.addEventListener('keydown', (ev: KeyboardEvent) => keyboardTraverse(ev)?.focus());
 
 // If flyout is open and outside click, close flyout.
-document.body.addEventListener('click', (ev) => {
+document.body.addEventListener('click', (ev: Event) => {
     const isExpanded = $input.getAttribute('aria-expanded') === 'true';
     const outsideForm = ![...ev.composedPath()].includes($form);
     if (isExpanded && outsideForm) $input.setAttribute('aria-expanded', false);
 });
 
 // On load, fetch locations.json for input field, render as options.
-fetch('/locations.json').then((res) => res.json()).then((locations) => {
+fetch('/locations.json').then((res) => res.json()).then((locations: { city: string, state: string, latitude: string, longitude: string }[]) => {
     $locations.innerHTML = locations.map((entry, index) => {
         return `<button 
             tabIndex="-1"
@@ -181,7 +181,7 @@ fetch('/locations.json').then((res) => res.json()).then((locations) => {
      * @param {Number} index - The index of the target in the locations array
      * @returns {void}
      */
-    function onLocationSelect(index) {
+    function onLocationSelect(index: number): void {
         if (!locations?.[index]) return;
         const location = locations[index];
 
@@ -215,20 +215,20 @@ fetch('/locations.json').then((res) => res.json()).then((locations) => {
      * 
      * @param {Element} $btn - The element selected by the user
      */
-    function userChosen($btn = $locations.querySelector('button[tabIndex="0"]')) {
+    function userChosen($btn: HTMLElement = $locations.querySelector('button[tabIndex="0"]')): void {
         $input.setAttribute('aria-expanded', false);
         updateTabIndex($btn);
         onLocationSelect(Number($btn.value));
     }
 
     // Listen for keyboard events in the input field.
-    $input.addEventListener('keydown', (ev) => {
+    $input.addEventListener('keydown', (ev: KeyboardEvent) => {
         if (['Enter'].includes(ev.key)) return userChosen();
         keyboardTraverse(ev);
     });
 
     // When an option in the dropdown is clicked, target the element.
-    $locations.addEventListener('click', (ev) =>  userChosen(ev.target));
+    $locations.addEventListener('click', (ev: Event) =>  userChosen(ev.target as HTMLElement));
 
     // Load the first option by default.
     onLocationSelect(0);
