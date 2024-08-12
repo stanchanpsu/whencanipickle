@@ -1,0 +1,17 @@
+<style>
+    #grid {
+        display: grid;
+        grid-template-areas: 'results map' 'calendar map';
+        gap: 1rem;
+    }
+
+    @media (max-width: 700px) {
+        #grid {
+            grid-template-areas: 'results' 'calendar' 'map';
+        }
+    }
+</style>
+
+<div id="grid">
+    <slot/>
+</div>
