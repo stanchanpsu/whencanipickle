@@ -1,13 +1,16 @@
 <style>
     #grid {
         display: grid;
-        grid-template-areas: 'results map' 'calendar map';
+        grid-template-areas: 'results calendar' 'map calendar';
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        align-items: start;
     }
 
     @media (max-width: 700px) {
         #grid {
             grid-template-areas: 'results' 'calendar' 'map';
+            grid-template-columns: 1fr;
         }
     }
 </style>
