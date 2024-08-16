@@ -2,6 +2,7 @@ import getWeatherEmoji from "./emoji.js";
 import { START_HOUR, END_HOUR } from "./hours.js";
 
 const DAYS_SHOWN = 3;
+const $details = document.getElementById('details');
 const $summary = document.getElementById('summary');
 const $thead = document.getElementById('thead');
 const $tbody = document.getElementById('tbody');
@@ -93,6 +94,19 @@ function clearCalendar() {
     });
 }
 
+/**
+ * Toggles the details element.
+ * 
+ * @param {Event} ev - Native Event Object.
+ */
+function detailsToggle(ev) {
+    if (ev.matches) {
+        $details.removeAttribute('open');
+    } else {
+        $details.setAttribute('open', '');
+    }
+}
+
 renderCalendar();
 
 window.addEventListener("forecasts", ({ detail: forecasts }) => {
@@ -105,3 +119,7 @@ window.addEventListener("forecasts", ({ detail: forecasts }) => {
         cell.textContent = `${getWeatherEmoji(shortForecast)} ${temperature}`;
     });
 });
+
+const mq = window.matchMedia('(max-width: 700px)');
+mq.addEventListener('change', detailsToggle);
+detailsToggle(mq);
