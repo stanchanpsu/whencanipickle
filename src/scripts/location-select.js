@@ -47,9 +47,8 @@ function goodTemperature(temp) {
  * @returns {Boolean}
  */
 function goodPrecip(shortForecast) {
-    const exclude = ['rain', 'shower'].map((word) => `(?!.*\\b${word}\\b)`).join('');
-    const rgx = new RegExp(`^${exclude}.*$`, 'i');
-    return rgx.test(shortForecast);
+    const exclude = ['rain', 'shower', 'storm', 'snow', 'hail'];
+    return !exclude.some(word => shortForecast.toLowerCase().includes(word.toLowerCase()));
 }
 
 /**
