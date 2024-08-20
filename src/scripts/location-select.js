@@ -4,7 +4,7 @@ const $locations = document.getElementById('locations');
 const ARROW_KEYS = ['ArrowUp', 'ArrowDown'];
 const WEATHER_GOV_BASE = 'https://api.weather.gov';
 
-const lowTempThreshold = 60;
+const lowTempThreshold = 50;
 const highTempThreshold = 85;
 const humidityThreshold = 55;
 const windSpeedThreshold = 12;
