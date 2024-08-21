@@ -1,4 +1,4 @@
-import getWeatherEmoji from "./emoji.js";
+import getWeatherEmoji from "./emoji.ts";
 
 const $results = document.getElementById("results");
 

@@ -1,4 +1,4 @@
-import getWeatherEmoji from "./emoji.js";
+import getWeatherEmoji from "./emoji.ts";
 import { START_HOUR, END_HOUR } from "./hours.ts";
 
 const DAYS_SHOWN = 3;
