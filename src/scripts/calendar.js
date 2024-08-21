@@ -1,5 +1,5 @@
 import getWeatherEmoji from "./emoji.js";
-import { START_HOUR, END_HOUR } from "./hours.js";
+import { START_HOUR, END_HOUR } from "./hours.ts";
 
 const DAYS_SHOWN = 3;
 const $details = document.getElementById('details');
