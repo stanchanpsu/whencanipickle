@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "astro": "^4.13.1"
+    "astro": "^4.13.1",
+    "date-fns": "^3.6.0"
   }
 }
