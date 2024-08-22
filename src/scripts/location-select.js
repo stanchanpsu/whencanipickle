@@ -4,6 +4,7 @@ const $locations = document.getElementById('locations');
 const ARROW_KEYS = ['ArrowUp', 'ArrowDown'];
 const WEATHER_GOV_BASE = 'https://api.weather.gov';
 
+const LOCATION_LOCALSTORAGE_KEY = 'location';
 const lowTempThreshold = 60;
 const highTempThreshold = 85;
 const humidityThreshold = 55;
@@ -183,6 +184,7 @@ fetch('/locations.json').then((res) => res.json()).then((locations) => {
     function onLocationSelect(index) {
         if (!locations?.[index]) return;
         const location = locations[index];
+        localStorage.setItem(LOCATION_LOCALSTORAGE_KEY, index);
 
         // Replace the input value with city alone.
         $input.value = location.city;
@@ -229,6 +231,9 @@ fetch('/locations.json').then((res) => res.json()).then((locations) => {
     // When an option in the dropdown is clicked, target the element.
     $locations.addEventListener('click', (ev) =>  userChosen(ev.target));
 
-    // Load the first option by default.
-    onLocationSelect(0);
+    // Get loaded item from storage if it exists, otherwise default to first item.
+    const storage = localStorage.getItem(LOCATION_LOCALSTORAGE_KEY);
+    const idx = typeof storage === 'string' ? parseInt(storage, 10) : 0;
+    
+    onLocationSelect(idx);
 });
