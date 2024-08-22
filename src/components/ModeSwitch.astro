@@ -1,0 +1,33 @@
+<style>
+    button {
+        cursor: pointer;
+        display: grid;
+        width: 2em;
+        aspect-ratio: 1;
+        background-color: currentColor;
+        border-radius: 100%;
+        border: 0;
+        color: inherit;
+        transition: .218s ease;
+    }
+
+    button[data-mode="light"] {
+        mask-image: radial-gradient(circle at 75% 33%,transparent 29%,black 30%);
+    }
+
+    button[data-mode="dark"] {
+        transform: scale(.75);
+        box-shadow: 1.2rem 0 0 -.65rem currentColor,
+            -1.2rem 0 0 -.65rem currentColor,
+            0 -1.2rem 0 -.65rem currentColor,
+            0 1.2rem 0 -.65rem currentColor,
+            .85rem -.85rem 0 -.65rem currentColor,
+            .85rem .85rem 0 -.65rem currentColor,
+            -.85rem .85rem 0 -.65rem currentColor,
+            -.85rem -.85rem 0 -.65rem currentColor
+    }
+</style>
+
+<button id="mode-switch" aria-label="mode switch"></button>
+
+<script src="@scripts/mode-switch.js"></script>
