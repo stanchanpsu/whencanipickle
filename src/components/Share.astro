@@ -1,0 +1,23 @@
+<style>
+  button.share-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem; /* Increased border-radius for more rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text */
+    gap: 0.5rem;
+  }
+</style>
+
+<button id="shareResults" class="share-btn">
+  <span class="icon">📋</span>
+  <span class="text">Share Results</span>
+</button>
+
+<script src="@scripts/share.ts"></script>
