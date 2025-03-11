@@ -10,6 +10,17 @@
   }
 </style>
 
-<p id="results">Checking the weather...</p>
+<div id="results-container" style="position: relative;">
+  <button
+    id="shareResults"
+    class="copy-button"
+    style="position: absolute; top: 0; right: 0;"
+  >
+    <span><i class="fas fa-copy"></i></span>
+    <span class="text">Copy</span>
+  </button>
+
+  <p id="results">Checking the weather...</p>
+</div>
 
 <script src="@scripts/results.ts"></script>
