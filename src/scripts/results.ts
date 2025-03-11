@@ -74,7 +74,7 @@ window.addEventListener("forecasts", ({ detail: forecasts }: ForecastEvent) => {
   }
 });
 
-// Add copy button logic
+// Copy button
 const shareButton = document.getElementById("shareResults");
 if (shareButton) {
   shareButton.addEventListener("click", async () => {
