@@ -1,7 +1,7 @@
 import getWeatherEmoji from "./emoji.ts";
 import { START_HOUR, END_HOUR } from "./hours.ts";
 
-const DAYS_SHOWN: number = 3;
+const DAYS_SHOWN: number = 7;
 const $details = document.getElementById("details");
 const $summary = document.getElementById("summary");
 const $thead = document.getElementById("thead");
