@@ -4,6 +4,7 @@
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     grid-area: calendar;
+    min-width: 0;
   }
 
   summary {
@@ -30,9 +31,13 @@
     content: " ▲";
   }
 
+  #scrollbox {
+    overflow: auto;
+  }
+
   table {
     border-collapse: collapse;
-    width: 100%;
+    width: 800px;
   }
 
   table :global(th, td) {
@@ -59,10 +64,12 @@
 
 <details id="details">
   <summary id="summary"></summary>
-  <table>
-    <thead id="thead"></thead>
-    <tbody id="tbody"></tbody>
-  </table>
+  <div id="scrollbox">
+    <table>
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
 </details>
 
 <script src="@scripts/calendar.ts"></script>
