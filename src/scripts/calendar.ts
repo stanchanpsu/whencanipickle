@@ -1,4 +1,4 @@
-import getWeatherEmoji from "./emoji.ts";
+import getWeatherEmoji, { getFailureIndicator } from "./emoji.ts";
 import { START_HOUR, END_HOUR } from "./hours.ts";
 
 const DAYS_SHOWN: number = 7;
@@ -125,22 +125,40 @@ interface Forecast {
   startTime: string;
   temperature: number;
   shortForecast: string;
+  isGood: boolean;
+  failureReasons: string[];
 }
 
-interface ForecastEvent extends CustomEvent {
+interface AllForecastsEvent extends CustomEvent {
   detail: Forecast[];
 }
 
-window.addEventListener("forecasts", ({ detail: forecasts }: ForecastEvent) => {
-  clearCalendar();
-  forecasts.forEach((forecast: Forecast) => {
-    const { startTime, temperature, shortForecast } = forecast;
-    const id = dateCellId(new Date(startTime));
-    const cell = document.getElementById(id);
-    if (!cell) return;
-    cell.textContent = `${getWeatherEmoji(shortForecast)} ${temperature}`;
-  });
-});
+window.addEventListener(
+  "allForecasts",
+  ({ detail: forecasts }: AllForecastsEvent) => {
+    clearCalendar();
+    forecasts.forEach((forecast: Forecast) => {
+      const { startTime, temperature, shortForecast, isGood, failureReasons } =
+        forecast;
+      const id = dateCellId(new Date(startTime));
+      const cell = document.getElementById(id);
+      if (!cell) return;
+
+      if (isGood) {
+        // Ideal conditions: show emoji and temperature
+        cell.textContent = `${getWeatherEmoji(shortForecast)} ${temperature}`;
+        cell.classList.add("ideal");
+      } else {
+        // Bad conditions: show failure indicator
+        // Use the first failure reason as the primary one
+        const primaryReason = failureReasons[0];
+        const { emoji, label } = getFailureIndicator(primaryReason);
+        cell.textContent = `${emoji} ${label}`;
+        cell.classList.add("not-ideal");
+      }
+    });
+  },
+);
 
 const mq: MediaQueryList = window.matchMedia("(max-width: 700px)");
 mq.addEventListener("change", detailsToggle);

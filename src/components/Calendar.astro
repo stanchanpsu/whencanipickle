@@ -60,9 +60,21 @@
   }
 
   /* Event Cells */
-  table :global(tr td:not(:first-child):not(:empty)) {
+  table :global(tr td:not(:first-child):not(:empty):not(.ideal):not(.not-ideal)) {
     background-color: var(--accent-color);
     color: var(--onaccent-color);
+  }
+
+  /* Ideal Cells */
+  table :global(tr td.ideal) {
+    background-color: var(--accent-color);
+    color: var(--onaccent-color);
+  }
+
+  /* Non-ideal Cells */
+  table :global(tr td.not-ideal) {
+    background-color: color-mix(in srgb, var(--background-color), black 10%) !important;
+    color: color-mix(in srgb, var(--foreground-color), transparent 70%) !important;
   }
 
   table :global(tr > :first-child) {
