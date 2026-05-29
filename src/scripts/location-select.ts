@@ -256,7 +256,13 @@ fetch("/locations.json")
     function onLocationSelect(index) {
       if (!locations?.[index]) return;
       const location = locations[index];
-      localStorage.setItem(LOCATION_LOCALSTORAGE_KEY, index);
+      
+      // Safely store location in localStorage
+      try {
+        localStorage.setItem(LOCATION_LOCALSTORAGE_KEY, index);
+      } catch (e) {
+        console.warn('Failed to save location to localStorage:', e);
+      }
 
       // Replace the input value with city alone.
       $input.value = location.city;
@@ -273,11 +279,17 @@ fetch("/locations.json")
         WEATHER_GOV_BASE,
       );
 
-      // Execute the fetch request.
+      // Execute the fetch request with error handling.
       fetch(url.toString())
-        .then((res) => res.json())
+        .then((res) => {
+          if (!res.ok) throw new Error(`Weather API error: ${res.status}`);
+          return res.json();
+        })
         .then(({ properties }) => fetch(properties.forecastHourly))
-        .then((res) => res.json())
+        .then((res) => {
+          if (!res.ok) throw new Error(`Forecast API error: ${res.status}`);
+          return res.json();
+        })
         .then(({ properties }) => {
           const goodForecastsArray = properties.periods.reduce(
             (acc, forecast) =>
@@ -300,6 +312,20 @@ fetch("/locations.json")
           window.dispatchEvent(
             new CustomEvent("allForecasts", { 
               detail: { forecasts: allForecasts, timezone: location.timezone } 
+            }),
+          );
+        })
+        .catch((error) => {
+          console.error('Failed to fetch weather data:', error);
+          // Dispatch empty forecasts to prevent UI from hanging
+          window.dispatchEvent(
+            new CustomEvent("forecasts", { 
+              detail: { forecasts: [], timezone: location.timezone } 
+            }),
+          );
+          window.dispatchEvent(
+            new CustomEvent("allForecasts", { 
+              detail: { forecasts: [], timezone: location.timezone } 
             }),
           );
         });
@@ -330,9 +356,20 @@ fetch("/locations.json")
       userChosen(ev.target as Element),
     );
 
-    // Get loaded item from storage if it exists, otherwise default to first item.
-    const storage = localStorage.getItem(LOCATION_LOCALSTORAGE_KEY);
-    const idx = typeof storage === "string" ? parseInt(storage, 10) : 0;
+    // Safely get loaded item from storage if it exists, otherwise default to first item.
+    let idx = 0;
+    try {
+      const storage = localStorage.getItem(LOCATION_LOCALSTORAGE_KEY);
+      if (typeof storage === "string") {
+        idx = parseInt(storage, 10);
+      }
+    } catch (e) {
+      console.warn('Failed to read location from localStorage:', e);
+    }
 
     onLocationSelect(idx);
+  })
+  .catch((error) => {
+    console.error('Failed to load locations:', error);
+    $locations.innerHTML = '<p class="error">Failed to load locations. Please refresh the page.</p>';
   });
