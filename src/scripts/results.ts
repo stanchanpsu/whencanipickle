@@ -49,17 +49,19 @@ function getConditions(shortForecast: string): string {
 window.addEventListener("forecasts", ({ detail }: ForecastsEvent) => {
   if (!$results) return;
   const { forecasts, timezone } = detail;
-  $results.textContent = `😔 Darn! No good pickleball weather in the next week.  Check back later! 🥒`;
+  $results.innerHTML = `😔 Darn! No good pickleball weather in the next week.  Check back later! 🥒
+<div class="timezone-note">🕐 Times shown in city local time</div>`;
   if (forecasts.length) {
     const [forecast] = forecasts;
-    $results.textContent = `🎾 Good news! You can play pickleball
-        📅 ${formatTime(forecast.startTime, timezone)}
+    $results.innerHTML = `🎾 Good news! You can play pickleball
+    📅 ${formatTime(forecast.startTime, timezone)}
 
-        🌡️ Temperature: ${forecast.temperature}°F
-        💧 Humidity: ${forecast.relativeHumidity.value}%
-        💨 Wind: ${forecast.windSpeed} ${forecast.windDirection}
-        ${getConditions(forecast.shortForecast)}
-        `;
+    🌡️ Temperature: ${forecast.temperature}°F
+    💧 Humidity: ${forecast.relativeHumidity.value}%
+    💨 Wind: ${forecast.windSpeed} ${forecast.windDirection}
+    ${getConditions(forecast.shortForecast)}
+
+<div class="timezone-note">🕐 Times shown in city local time</div>`;
   }
 });
 
