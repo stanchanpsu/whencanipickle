@@ -82,6 +82,14 @@
     position: sticky;
     left: 0;
   }
+
+  .timezone-note {
+    font-size: 0.85em;
+    margin-block: 0.5rem;
+    padding-inline: 1rem;
+    color: color-mix(in srgb, var(--foreground-color), transparent 30%);
+    text-align: right;
+  }
 </style>
 
 <details id="details">
@@ -91,6 +99,7 @@
       <thead id="thead"></thead>
       <tbody id="tbody"></tbody>
     </table>
+    <div class="timezone-note" id="timezone-note"></div>
   </div>
 </details>
 

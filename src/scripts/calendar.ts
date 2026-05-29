@@ -8,6 +8,7 @@ const $details = document.getElementById("details");
 const $summary = document.getElementById("summary");
 const $thead = document.getElementById("thead");
 const $tbody = document.getElementById("tbody");
+const $timezoneNote = document.getElementById("timezone-note");
 
 let currentTimezone: string = "America/New_York";
 
@@ -41,12 +42,13 @@ function dateCellId(date: Date): string {
  * @returns {String} - The table header row to be written as HTML.
  */
 function generateHeaders(dates: Date[]): string {
+  const tooltip = "Times shown in city local time";
   return (
     `<th></th>` +
     dates
       .map((d) => {
         const label = formatDateLabelInTimezone(d, currentTimezone);
-        return `<th>${label}</th>`;
+        return `<th title="${tooltip}">${label}</th>`;
       })
       .join("")
   );
@@ -128,6 +130,9 @@ window.addEventListener(
     const { forecasts, timezone } = detail;
     currentTimezone = timezone;
     clearCalendar();
+    if ($timezoneNote) {
+      $timezoneNote.textContent = "🕐 Times shown in city local time";
+    }
     forecasts.forEach((forecast: Forecast) => {
       const { startTime, temperature, shortForecast, isGood, failureReasons, sunEvent } =
         forecast;
