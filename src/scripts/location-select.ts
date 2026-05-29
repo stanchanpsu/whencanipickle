@@ -49,7 +49,7 @@ function goodTemperature(temp) {
 function goodPrecip(shortForecast) {
   const exclude = ["rain", "shower", "storm", "snow", "hail"];
   return !exclude.some((word) =>
-    shortForecast.toLowerCase().includes(word.toLowerCase())
+    shortForecast.toLowerCase().includes(word.toLowerCase()),
   );
 }
 
@@ -71,6 +71,40 @@ function goodHumidity(relativeHumidity) {
  */
 function goodWindspeed(windspeed) {
   return parseInt(windspeed.replace(/\D+/, ""), 10) < windSpeedThreshold;
+}
+
+/**
+ * Evaluates a forecast and returns its quality and failure reasons.
+ *
+ * @param {Object} forecast - A forecast to check.
+ * @returns {Object} - { isGood: boolean, failureReasons: string[] }
+ */
+function evaluateForecast(forecast) {
+  const {
+    temperature,
+    startTime,
+    isDaytime,
+    shortForecast,
+    relativeHumidity,
+    windSpeed,
+  } = forecast;
+
+  const failureReasons = [];
+
+  if (!isDaytime) failureReasons.push("nighttime");
+  if (!goodTemperature(temperature)) {
+    failureReasons.push(
+      temperature < lowTempThreshold ? "temperature-low" : "temperature-high",
+    );
+  }
+  if (!goodHumidity(relativeHumidity)) failureReasons.push("humidity");
+  if (!goodPrecip(shortForecast)) failureReasons.push("precipitation");
+  if (!goodWindspeed(windSpeed)) failureReasons.push("wind");
+
+  return {
+    isGood: failureReasons.length === 0,
+    failureReasons,
+  };
 }
 
 /**
@@ -205,13 +239,13 @@ fetch("/locations.json")
 
       // Event is read by <Map/> component.
       window.dispatchEvent(
-        new CustomEvent("city", { detail: formatLabel(location) })
+        new CustomEvent("city", { detail: formatLabel(location) }),
       );
 
       // Construct the URL for the forecast request.
       const url = new URL(
         `/points/${location.latitude},${location.longitude}`,
-        WEATHER_GOV_BASE
+        WEATHER_GOV_BASE,
       );
 
       // Execute the fetch request.
@@ -220,10 +254,23 @@ fetch("/locations.json")
         .then(({ properties }) => fetch(properties.forecastHourly))
         .then((res) => res.json())
         .then(({ properties }) => {
-          const forecasts = properties.periods.reduce(goodForecasts, []);
-          // Event is read by <Results/> and <Calendar/> components.
+          const goodForecastsArray = properties.periods.reduce(
+            goodForecasts,
+            [],
+          );
+          const allForecasts = properties.periods
+            .filter((forecast) => isFuture(forecast.startTime))
+            .map((forecast) => ({
+              ...forecast,
+              ...evaluateForecast(forecast),
+            }));
+          // Event is read by <Results/> component.
           window.dispatchEvent(
-            new CustomEvent("forecasts", { detail: forecasts })
+            new CustomEvent("forecasts", { detail: goodForecastsArray }),
+          );
+          // Event is read by <Calendar/> component.
+          window.dispatchEvent(
+            new CustomEvent("allForecasts", { detail: allForecasts }),
           );
         });
     }
@@ -234,7 +281,7 @@ fetch("/locations.json")
      * @param {Element} $btn - The element selected by the user
      */
     function userChosen(
-      $btn = $locations.querySelector('button[tabIndex="0"]')
+      $btn = $locations.querySelector('button[tabIndex="0"]'),
     ) {
       if (!($btn instanceof HTMLButtonElement)) return;
       $input.setAttribute("aria-expanded", "false");
@@ -250,7 +297,7 @@ fetch("/locations.json")
 
     // When an option in the dropdown is clicked, target the element.
     $locations.addEventListener("click", (ev) =>
-      userChosen(ev.target as Element)
+      userChosen(ev.target as Element),
     );
 
     // Get loaded item from storage if it exists, otherwise default to first item.
