@@ -292,11 +292,15 @@ fetch("/locations.json")
             }));
           // Event is read by <Results/> component.
           window.dispatchEvent(
-            new CustomEvent("forecasts", { detail: goodForecastsArray }),
+            new CustomEvent("forecasts", { 
+              detail: { forecasts: goodForecastsArray, timezone: location.timezone } 
+            }),
           );
           // Event is read by <Calendar/> component.
           window.dispatchEvent(
-            new CustomEvent("allForecasts", { detail: allForecasts }),
+            new CustomEvent("allForecasts", { 
+              detail: { forecasts: allForecasts, timezone: location.timezone } 
+            }),
           );
         });
     }

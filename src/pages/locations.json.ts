@@ -5,6 +5,7 @@ const citiesData = [
       longitude: -74.0059413,
       rank: "1",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Los Angeles",
@@ -12,6 +13,7 @@ const citiesData = [
       longitude: -118.2436849,
       rank: "2",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Chicago",
@@ -19,6 +21,7 @@ const citiesData = [
       longitude: -87.6297982,
       rank: "3",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Houston",
@@ -26,6 +29,7 @@ const citiesData = [
       longitude: -95.3698028,
       rank: "4",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Philadelphia",
@@ -33,6 +37,7 @@ const citiesData = [
       longitude: -75.1652215,
       rank: "5",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Phoenix",
@@ -40,6 +45,7 @@ const citiesData = [
       longitude: -112.0740373,
       rank: "6",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "San Antonio",
@@ -47,6 +53,7 @@ const citiesData = [
       longitude: -98.49362819999999,
       rank: "7",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "San Diego",
@@ -54,6 +61,7 @@ const citiesData = [
       longitude: -117.1610838,
       rank: "8",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Dallas",
@@ -61,6 +69,7 @@ const citiesData = [
       longitude: -96.79698789999999,
       rank: "9",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "San Jose",
@@ -68,6 +77,7 @@ const citiesData = [
       longitude: -121.8863286,
       rank: "10",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Austin",
@@ -75,6 +85,7 @@ const citiesData = [
       longitude: -97.7430608,
       rank: "11",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Indianapolis",
@@ -82,6 +93,7 @@ const citiesData = [
       longitude: -86.158068,
       rank: "12",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Jacksonville",
@@ -89,6 +101,7 @@ const citiesData = [
       longitude: -81.65565099999999,
       rank: "13",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "San Francisco",
@@ -96,6 +109,7 @@ const citiesData = [
       longitude: -122.4194155,
       rank: "14",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Columbus",
@@ -103,6 +117,7 @@ const citiesData = [
       longitude: -82.99879419999999,
       rank: "15",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Charlotte",
@@ -110,6 +125,7 @@ const citiesData = [
       longitude: -80.8431267,
       rank: "16",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Fort Worth",
@@ -117,6 +133,7 @@ const citiesData = [
       longitude: -97.3307658,
       rank: "17",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Detroit",
@@ -124,6 +141,7 @@ const citiesData = [
       longitude: -83.0457538,
       rank: "18",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "El Paso",
@@ -131,6 +149,7 @@ const citiesData = [
       longitude: -106.4424559,
       rank: "19",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Memphis",
@@ -138,6 +157,7 @@ const citiesData = [
       longitude: -90.0489801,
       rank: "20",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Seattle",
@@ -145,6 +165,7 @@ const citiesData = [
       longitude: -122.3320708,
       rank: "21",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Denver",
@@ -152,6 +173,7 @@ const citiesData = [
       longitude: -104.990251,
       rank: "22",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Washington",
@@ -159,6 +181,7 @@ const citiesData = [
       longitude: -77.0368707,
       rank: "23",
       state: "District of Columbia",
+      timezone: "America/New_York",
     },
     {
       city: "Boston",
@@ -166,6 +189,7 @@ const citiesData = [
       longitude: -71.0588801,
       rank: "24",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Nashville-Davidson",
@@ -173,6 +197,7 @@ const citiesData = [
       longitude: -86.7816016,
       rank: "25",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Baltimore",
@@ -180,6 +205,7 @@ const citiesData = [
       longitude: -76.6121893,
       rank: "26",
       state: "Maryland",
+      timezone: "America/New_York",
     },
     {
       city: "Oklahoma City",
@@ -187,6 +213,7 @@ const citiesData = [
       longitude: -97.5164276,
       rank: "27",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Louisville/Jefferson County",
@@ -194,6 +221,7 @@ const citiesData = [
       longitude: -85.7584557,
       rank: "28",
       state: "Kentucky",
+      timezone: "America/New_York",
     },
     {
       city: "Portland",
@@ -201,6 +229,7 @@ const citiesData = [
       longitude: -122.6764816,
       rank: "29",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Las Vegas",
@@ -208,6 +237,7 @@ const citiesData = [
       longitude: -115.1398296,
       rank: "30",
       state: "Nevada",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Milwaukee",
@@ -215,6 +245,7 @@ const citiesData = [
       longitude: -87.9064736,
       rank: "31",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Albuquerque",
@@ -222,6 +253,7 @@ const citiesData = [
       longitude: -106.6055534,
       rank: "32",
       state: "New Mexico",
+      timezone: "America/Denver",
     },
     {
       city: "Tucson",
@@ -229,6 +261,7 @@ const citiesData = [
       longitude: -110.926479,
       rank: "33",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Fresno",
@@ -236,6 +269,7 @@ const citiesData = [
       longitude: -119.7725868,
       rank: "34",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Sacramento",
@@ -243,6 +277,7 @@ const citiesData = [
       longitude: -121.4943996,
       rank: "35",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Long Beach",
@@ -250,6 +285,7 @@ const citiesData = [
       longitude: -118.1937395,
       rank: "36",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Kansas City",
@@ -257,6 +293,7 @@ const citiesData = [
       longitude: -94.5785667,
       rank: "37",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Mesa",
@@ -264,6 +301,7 @@ const citiesData = [
       longitude: -111.8314724,
       rank: "38",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Virginia Beach",
@@ -271,6 +309,7 @@ const citiesData = [
       longitude: -75.97798499999999,
       rank: "39",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Atlanta",
@@ -278,6 +317,7 @@ const citiesData = [
       longitude: -84.3879824,
       rank: "40",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Colorado Springs",
@@ -285,6 +325,7 @@ const citiesData = [
       longitude: -104.8213634,
       rank: "41",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Omaha",
@@ -292,6 +333,7 @@ const citiesData = [
       longitude: -95.99798829999999,
       rank: "42",
       state: "Nebraska",
+      timezone: "America/Chicago",
     },
     {
       city: "Raleigh",
@@ -299,6 +341,7 @@ const citiesData = [
       longitude: -78.6381787,
       rank: "43",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Miami",
@@ -306,6 +349,7 @@ const citiesData = [
       longitude: -80.1917902,
       rank: "44",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Oakland",
@@ -313,6 +357,7 @@ const citiesData = [
       longitude: -122.2711137,
       rank: "45",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Minneapolis",
@@ -320,6 +365,7 @@ const citiesData = [
       longitude: -93.2650108,
       rank: "46",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Tulsa",
@@ -327,6 +373,7 @@ const citiesData = [
       longitude: -95.99277500000001,
       rank: "47",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Cleveland",
@@ -334,6 +381,7 @@ const citiesData = [
       longitude: -81.6943605,
       rank: "48",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Wichita",
@@ -341,6 +389,7 @@ const citiesData = [
       longitude: -97.336111,
       rank: "49",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Arlington",
@@ -348,6 +397,7 @@ const citiesData = [
       longitude: -97.10806559999999,
       rank: "50",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "New Orleans",
@@ -355,6 +405,7 @@ const citiesData = [
       longitude: -90.0715323,
       rank: "51",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Bakersfield",
@@ -362,6 +413,7 @@ const citiesData = [
       longitude: -119.0187125,
       rank: "52",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Tampa",
@@ -369,6 +421,7 @@ const citiesData = [
       longitude: -82.4571776,
       rank: "53",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Honolulu",
@@ -376,6 +429,7 @@ const citiesData = [
       longitude: -157.8583333,
       rank: "54",
       state: "Hawaii",
+      timezone: "Pacific/Honolulu",
     },
     {
       city: "Aurora",
@@ -383,6 +437,7 @@ const citiesData = [
       longitude: -104.8319195,
       rank: "55",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Anaheim",
@@ -390,6 +445,7 @@ const citiesData = [
       longitude: -117.9145036,
       rank: "56",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Santa Ana",
@@ -397,6 +453,7 @@ const citiesData = [
       longitude: -117.8678338,
       rank: "57",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "St. Louis",
@@ -404,6 +461,7 @@ const citiesData = [
       longitude: -90.19940419999999,
       rank: "58",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Riverside",
@@ -411,6 +469,7 @@ const citiesData = [
       longitude: -117.3961564,
       rank: "59",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Corpus Christi",
@@ -418,6 +477,7 @@ const citiesData = [
       longitude: -97.39638099999999,
       rank: "60",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Lexington-Fayette",
@@ -425,6 +485,7 @@ const citiesData = [
       longitude: -84.5037164,
       rank: "61",
       state: "Kentucky",
+      timezone: "America/New_York",
     },
     {
       city: "Pittsburgh",
@@ -432,6 +493,7 @@ const citiesData = [
       longitude: -79.9958864,
       rank: "62",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Anchorage",
@@ -439,6 +501,7 @@ const citiesData = [
       longitude: -149.9002778,
       rank: "63",
       state: "Alaska",
+      timezone: "America/Anchorage",
     },
     {
       city: "Stockton",
@@ -446,6 +509,7 @@ const citiesData = [
       longitude: -121.2907796,
       rank: "64",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cincinnati",
@@ -453,6 +517,7 @@ const citiesData = [
       longitude: -84.5120196,
       rank: "65",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "St. Paul",
@@ -460,6 +525,7 @@ const citiesData = [
       longitude: -93.0899578,
       rank: "66",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Toledo",
@@ -467,6 +533,7 @@ const citiesData = [
       longitude: -83.55521200000001,
       rank: "67",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Greensboro",
@@ -474,6 +541,7 @@ const citiesData = [
       longitude: -79.7919754,
       rank: "68",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Newark",
@@ -481,6 +549,7 @@ const citiesData = [
       longitude: -74.1723667,
       rank: "69",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Plano",
@@ -488,6 +557,7 @@ const citiesData = [
       longitude: -96.6988856,
       rank: "70",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Henderson",
@@ -495,6 +565,7 @@ const citiesData = [
       longitude: -114.9817213,
       rank: "71",
       state: "Nevada",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lincoln",
@@ -502,6 +573,7 @@ const citiesData = [
       longitude: -96.6851982,
       rank: "72",
       state: "Nebraska",
+      timezone: "America/Chicago",
     },
     {
       city: "Buffalo",
@@ -509,6 +581,7 @@ const citiesData = [
       longitude: -78.8783689,
       rank: "73",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Jersey City",
@@ -516,6 +589,7 @@ const citiesData = [
       longitude: -74.0776417,
       rank: "74",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Chula Vista",
@@ -523,6 +597,7 @@ const citiesData = [
       longitude: -117.0841955,
       rank: "75",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Fort Wayne",
@@ -530,6 +605,7 @@ const citiesData = [
       longitude: -85.1393513,
       rank: "76",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Orlando",
@@ -537,6 +613,7 @@ const citiesData = [
       longitude: -81.3792365,
       rank: "77",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "St. Petersburg",
@@ -544,6 +621,7 @@ const citiesData = [
       longitude: -82.64,
       rank: "78",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Chandler",
@@ -551,6 +629,7 @@ const citiesData = [
       longitude: -111.8412502,
       rank: "79",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Laredo",
@@ -558,6 +637,7 @@ const citiesData = [
       longitude: -99.48032409999999,
       rank: "80",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Norfolk",
@@ -565,6 +645,7 @@ const citiesData = [
       longitude: -76.28587259999999,
       rank: "81",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Durham",
@@ -572,6 +653,7 @@ const citiesData = [
       longitude: -78.898619,
       rank: "82",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Madison",
@@ -579,6 +661,7 @@ const citiesData = [
       longitude: -89.4012302,
       rank: "83",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Lubbock",
@@ -586,6 +669,7 @@ const citiesData = [
       longitude: -101.8551665,
       rank: "84",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Irvine",
@@ -593,6 +677,7 @@ const citiesData = [
       longitude: -117.7946942,
       rank: "85",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Winston-Salem",
@@ -600,6 +685,7 @@ const citiesData = [
       longitude: -80.244216,
       rank: "86",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Glendale",
@@ -607,6 +693,7 @@ const citiesData = [
       longitude: -112.1859866,
       rank: "87",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Garland",
@@ -614,6 +701,7 @@ const citiesData = [
       longitude: -96.63888329999999,
       rank: "88",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Hialeah",
@@ -621,6 +709,7 @@ const citiesData = [
       longitude: -80.2781057,
       rank: "89",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Reno",
@@ -628,6 +717,7 @@ const citiesData = [
       longitude: -119.8138027,
       rank: "90",
       state: "Nevada",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Chesapeake",
@@ -635,6 +725,7 @@ const citiesData = [
       longitude: -76.2874927,
       rank: "91",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Gilbert",
@@ -642,6 +733,7 @@ const citiesData = [
       longitude: -111.789027,
       rank: "92",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Baton Rouge",
@@ -649,6 +741,7 @@ const citiesData = [
       longitude: -91.1403196,
       rank: "93",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Irving",
@@ -656,6 +749,7 @@ const citiesData = [
       longitude: -96.9488945,
       rank: "94",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Scottsdale",
@@ -663,6 +757,7 @@ const citiesData = [
       longitude: -111.9260519,
       rank: "95",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "North Las Vegas",
@@ -670,6 +765,7 @@ const citiesData = [
       longitude: -115.1175013,
       rank: "96",
       state: "Nevada",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Fremont",
@@ -677,6 +773,7 @@ const citiesData = [
       longitude: -121.9885719,
       rank: "97",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Boise City",
@@ -684,6 +781,7 @@ const citiesData = [
       longitude: -116.2146068,
       rank: "98",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "Richmond",
@@ -691,6 +789,7 @@ const citiesData = [
       longitude: -77.4360481,
       rank: "99",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "San Bernardino",
@@ -698,6 +797,7 @@ const citiesData = [
       longitude: -117.2897652,
       rank: "100",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Birmingham",
@@ -705,6 +805,7 @@ const citiesData = [
       longitude: -86.80248999999999,
       rank: "101",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Spokane",
@@ -712,6 +813,7 @@ const citiesData = [
       longitude: -117.4260466,
       rank: "102",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Rochester",
@@ -719,6 +821,7 @@ const citiesData = [
       longitude: -77.6109219,
       rank: "103",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Des Moines",
@@ -726,6 +829,7 @@ const citiesData = [
       longitude: -93.6091064,
       rank: "104",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Modesto",
@@ -733,6 +837,7 @@ const citiesData = [
       longitude: -120.9968782,
       rank: "105",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Fayetteville",
@@ -740,6 +845,7 @@ const citiesData = [
       longitude: -78.87835849999999,
       rank: "106",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Tacoma",
@@ -747,6 +853,7 @@ const citiesData = [
       longitude: -122.4442906,
       rank: "107",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Oxnard",
@@ -754,6 +861,7 @@ const citiesData = [
       longitude: -119.1770516,
       rank: "108",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Fontana",
@@ -761,6 +869,7 @@ const citiesData = [
       longitude: -117.435048,
       rank: "109",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Columbus",
@@ -768,6 +877,7 @@ const citiesData = [
       longitude: -84.9877094,
       rank: "110",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Montgomery",
@@ -775,6 +885,7 @@ const citiesData = [
       longitude: -86.2999689,
       rank: "111",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Moreno Valley",
@@ -782,6 +893,7 @@ const citiesData = [
       longitude: -117.2296717,
       rank: "112",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Shreveport",
@@ -789,6 +901,7 @@ const citiesData = [
       longitude: -93.7501789,
       rank: "113",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Aurora",
@@ -796,6 +909,7 @@ const citiesData = [
       longitude: -88.32007150000001,
       rank: "114",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Yonkers",
@@ -803,6 +917,7 @@ const citiesData = [
       longitude: -73.89874689999999,
       rank: "115",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Akron",
@@ -810,6 +925,7 @@ const citiesData = [
       longitude: -81.51900529999999,
       rank: "116",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Huntington Beach",
@@ -817,6 +933,7 @@ const citiesData = [
       longitude: -117.9992265,
       rank: "117",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Little Rock",
@@ -824,6 +941,7 @@ const citiesData = [
       longitude: -92.28959479999999,
       rank: "118",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Augusta-Richmond County",
@@ -831,6 +949,7 @@ const citiesData = [
       longitude: -82.0105148,
       rank: "119",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Amarillo",
@@ -838,6 +957,7 @@ const citiesData = [
       longitude: -101.8312969,
       rank: "120",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Glendale",
@@ -845,6 +965,7 @@ const citiesData = [
       longitude: -118.255075,
       rank: "121",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Mobile",
@@ -852,6 +973,7 @@ const citiesData = [
       longitude: -88.0398912,
       rank: "122",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Grand Rapids",
@@ -859,6 +981,7 @@ const citiesData = [
       longitude: -85.6680863,
       rank: "123",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Salt Lake City",
@@ -866,6 +989,7 @@ const citiesData = [
       longitude: -111.8910474,
       rank: "124",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Tallahassee",
@@ -873,6 +997,7 @@ const citiesData = [
       longitude: -84.28073289999999,
       rank: "125",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Huntsville",
@@ -880,6 +1005,7 @@ const citiesData = [
       longitude: -86.5861037,
       rank: "126",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Grand Prairie",
@@ -887,6 +1013,7 @@ const citiesData = [
       longitude: -96.99778459999999,
       rank: "127",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Knoxville",
@@ -894,6 +1021,7 @@ const citiesData = [
       longitude: -83.9207392,
       rank: "128",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Worcester",
@@ -901,6 +1029,7 @@ const citiesData = [
       longitude: -71.8022934,
       rank: "129",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Newport News",
@@ -908,6 +1037,7 @@ const citiesData = [
       longitude: -76.4730122,
       rank: "130",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Brownsville",
@@ -915,6 +1045,7 @@ const citiesData = [
       longitude: -97.4974838,
       rank: "131",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Overland Park",
@@ -922,6 +1053,7 @@ const citiesData = [
       longitude: -94.6707917,
       rank: "132",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Santa Clarita",
@@ -929,6 +1061,7 @@ const citiesData = [
       longitude: -118.542586,
       rank: "133",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Providence",
@@ -936,6 +1069,7 @@ const citiesData = [
       longitude: -71.4128343,
       rank: "134",
       state: "Rhode Island",
+      timezone: "America/New_York",
     },
     {
       city: "Garden Grove",
@@ -943,6 +1077,7 @@ const citiesData = [
       longitude: -117.9414477,
       rank: "135",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Chattanooga",
@@ -950,6 +1085,7 @@ const citiesData = [
       longitude: -85.3096801,
       rank: "136",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Oceanside",
@@ -957,6 +1093,7 @@ const citiesData = [
       longitude: -117.3794834,
       rank: "137",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Jackson",
@@ -964,6 +1101,7 @@ const citiesData = [
       longitude: -90.1848103,
       rank: "138",
       state: "Mississippi",
+      timezone: "America/Chicago",
     },
     {
       city: "Fort Lauderdale",
@@ -971,6 +1109,7 @@ const citiesData = [
       longitude: -80.13731740000001,
       rank: "139",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Santa Rosa",
@@ -978,6 +1117,7 @@ const citiesData = [
       longitude: -122.7140548,
       rank: "140",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Rancho Cucamonga",
@@ -985,6 +1125,7 @@ const citiesData = [
       longitude: -117.5931084,
       rank: "141",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Port St. Lucie",
@@ -992,6 +1133,7 @@ const citiesData = [
       longitude: -80.3582261,
       rank: "142",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Tempe",
@@ -999,6 +1141,7 @@ const citiesData = [
       longitude: -111.9400054,
       rank: "143",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Ontario",
@@ -1006,6 +1149,7 @@ const citiesData = [
       longitude: -117.6508876,
       rank: "144",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Vancouver",
@@ -1013,6 +1157,7 @@ const citiesData = [
       longitude: -122.6614861,
       rank: "145",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cape Coral",
@@ -1020,6 +1165,7 @@ const citiesData = [
       longitude: -81.9495331,
       rank: "146",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Sioux Falls",
@@ -1027,6 +1173,7 @@ const citiesData = [
       longitude: -96.73110340000001,
       rank: "147",
       state: "South Dakota",
+      timezone: "America/Chicago",
     },
     {
       city: "Springfield",
@@ -1034,6 +1181,7 @@ const citiesData = [
       longitude: -93.29229889999999,
       rank: "148",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Peoria",
@@ -1041,6 +1189,7 @@ const citiesData = [
       longitude: -112.2373779,
       rank: "149",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Pembroke Pines",
@@ -1048,6 +1197,7 @@ const citiesData = [
       longitude: -80.2962555,
       rank: "150",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Elk Grove",
@@ -1055,6 +1205,7 @@ const citiesData = [
       longitude: -121.3716178,
       rank: "151",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Salem",
@@ -1062,6 +1213,7 @@ const citiesData = [
       longitude: -123.0350963,
       rank: "152",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lancaster",
@@ -1069,6 +1221,7 @@ const citiesData = [
       longitude: -118.1541632,
       rank: "153",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Corona",
@@ -1076,6 +1229,7 @@ const citiesData = [
       longitude: -117.5664384,
       rank: "154",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Eugene",
@@ -1083,6 +1237,7 @@ const citiesData = [
       longitude: -123.0867536,
       rank: "155",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Palmdale",
@@ -1090,6 +1245,7 @@ const citiesData = [
       longitude: -118.1164613,
       rank: "156",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Salinas",
@@ -1097,6 +1253,7 @@ const citiesData = [
       longitude: -121.6555013,
       rank: "157",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Springfield",
@@ -1104,6 +1261,7 @@ const citiesData = [
       longitude: -72.589811,
       rank: "158",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Pasadena",
@@ -1111,6 +1269,7 @@ const citiesData = [
       longitude: -95.2091006,
       rank: "159",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Fort Collins",
@@ -1118,6 +1277,7 @@ const citiesData = [
       longitude: -105.084423,
       rank: "160",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Hayward",
@@ -1125,6 +1285,7 @@ const citiesData = [
       longitude: -122.0807964,
       rank: "161",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pomona",
@@ -1132,6 +1293,7 @@ const citiesData = [
       longitude: -117.7499909,
       rank: "162",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cary",
@@ -1139,6 +1301,7 @@ const citiesData = [
       longitude: -78.7811169,
       rank: "163",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Rockford",
@@ -1146,6 +1309,7 @@ const citiesData = [
       longitude: -89.0939952,
       rank: "164",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Alexandria",
@@ -1153,6 +1317,7 @@ const citiesData = [
       longitude: -77.0469214,
       rank: "165",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Escondido",
@@ -1160,6 +1325,7 @@ const citiesData = [
       longitude: -117.086421,
       rank: "166",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "McKinney",
@@ -1167,6 +1333,7 @@ const citiesData = [
       longitude: -96.6397822,
       rank: "167",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Kansas City",
@@ -1174,6 +1341,7 @@ const citiesData = [
       longitude: -94.6274636,
       rank: "168",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Joliet",
@@ -1181,6 +1349,7 @@ const citiesData = [
       longitude: -88.0817251,
       rank: "169",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Sunnyvale",
@@ -1188,6 +1357,7 @@ const citiesData = [
       longitude: -122.0363496,
       rank: "170",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Torrance",
@@ -1195,6 +1365,7 @@ const citiesData = [
       longitude: -118.3406288,
       rank: "171",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Bridgeport",
@@ -1202,6 +1373,7 @@ const citiesData = [
       longitude: -73.19517669999999,
       rank: "172",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Lakewood",
@@ -1209,6 +1381,7 @@ const citiesData = [
       longitude: -105.0813734,
       rank: "173",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Hollywood",
@@ -1216,6 +1389,7 @@ const citiesData = [
       longitude: -80.1494901,
       rank: "174",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Paterson",
@@ -1223,6 +1397,7 @@ const citiesData = [
       longitude: -74.17181099999999,
       rank: "175",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Naperville",
@@ -1230,6 +1405,7 @@ const citiesData = [
       longitude: -88.1535352,
       rank: "176",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Syracuse",
@@ -1237,6 +1413,7 @@ const citiesData = [
       longitude: -76.14742439999999,
       rank: "177",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Mesquite",
@@ -1244,6 +1421,7 @@ const citiesData = [
       longitude: -96.5991593,
       rank: "178",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Dayton",
@@ -1251,6 +1429,7 @@ const citiesData = [
       longitude: -84.1916069,
       rank: "179",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Savannah",
@@ -1258,6 +1437,7 @@ const citiesData = [
       longitude: -81.09983419999999,
       rank: "180",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Clarksville",
@@ -1265,6 +1445,7 @@ const citiesData = [
       longitude: -87.3594528,
       rank: "181",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Orange",
@@ -1272,6 +1453,7 @@ const citiesData = [
       longitude: -117.8531119,
       rank: "182",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pasadena",
@@ -1279,6 +1461,7 @@ const citiesData = [
       longitude: -118.1445155,
       rank: "183",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Fullerton",
@@ -1286,6 +1469,7 @@ const citiesData = [
       longitude: -117.9242966,
       rank: "184",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Killeen",
@@ -1293,6 +1477,7 @@ const citiesData = [
       longitude: -97.72779589999999,
       rank: "185",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Frisco",
@@ -1300,6 +1485,7 @@ const citiesData = [
       longitude: -96.82361159999999,
       rank: "186",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Hampton",
@@ -1307,6 +1493,7 @@ const citiesData = [
       longitude: -76.34522179999999,
       rank: "187",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "McAllen",
@@ -1314,6 +1501,7 @@ const citiesData = [
       longitude: -98.23001239999999,
       rank: "188",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Warren",
@@ -1321,6 +1509,7 @@ const citiesData = [
       longitude: -83.01465259999999,
       rank: "189",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Bellevue",
@@ -1328,6 +1517,7 @@ const citiesData = [
       longitude: -122.2006786,
       rank: "190",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "West Valley City",
@@ -1335,6 +1525,7 @@ const citiesData = [
       longitude: -112.0010501,
       rank: "191",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Columbia",
@@ -1342,6 +1533,7 @@ const citiesData = [
       longitude: -81.0348144,
       rank: "192",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Olathe",
@@ -1349,6 +1541,7 @@ const citiesData = [
       longitude: -94.81912849999999,
       rank: "193",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Sterling Heights",
@@ -1356,6 +1549,7 @@ const citiesData = [
       longitude: -83.0302033,
       rank: "194",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "New Haven",
@@ -1363,6 +1557,7 @@ const citiesData = [
       longitude: -72.9278835,
       rank: "195",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Miramar",
@@ -1370,6 +1565,7 @@ const citiesData = [
       longitude: -80.30356019999999,
       rank: "196",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Waco",
@@ -1377,6 +1573,7 @@ const citiesData = [
       longitude: -97.1466695,
       rank: "197",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Thousand Oaks",
@@ -1384,6 +1581,7 @@ const citiesData = [
       longitude: -118.8375937,
       rank: "198",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cedar Rapids",
@@ -1391,6 +1589,7 @@ const citiesData = [
       longitude: -91.6656232,
       rank: "199",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Charleston",
@@ -1398,6 +1597,7 @@ const citiesData = [
       longitude: -79.93105120000001,
       rank: "200",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Visalia",
@@ -1405,6 +1605,7 @@ const citiesData = [
       longitude: -119.2920585,
       rank: "201",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Topeka",
@@ -1412,6 +1613,7 @@ const citiesData = [
       longitude: -95.68901849999999,
       rank: "202",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Elizabeth",
@@ -1419,6 +1621,7 @@ const citiesData = [
       longitude: -74.2107006,
       rank: "203",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Gainesville",
@@ -1426,6 +1629,7 @@ const citiesData = [
       longitude: -82.32482619999999,
       rank: "204",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Thornton",
@@ -1433,6 +1637,7 @@ const citiesData = [
       longitude: -104.9719243,
       rank: "205",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Roseville",
@@ -1440,6 +1645,7 @@ const citiesData = [
       longitude: -121.2880059,
       rank: "206",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Carrollton",
@@ -1447,6 +1653,7 @@ const citiesData = [
       longitude: -96.8899636,
       rank: "207",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Coral Springs",
@@ -1454,6 +1661,7 @@ const citiesData = [
       longitude: -80.2706044,
       rank: "208",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Stamford",
@@ -1461,6 +1669,7 @@ const citiesData = [
       longitude: -73.5387341,
       rank: "209",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Simi Valley",
@@ -1468,6 +1677,7 @@ const citiesData = [
       longitude: -118.781482,
       rank: "210",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Concord",
@@ -1475,6 +1685,7 @@ const citiesData = [
       longitude: -122.0310733,
       rank: "211",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Hartford",
@@ -1482,6 +1693,7 @@ const citiesData = [
       longitude: -72.6850932,
       rank: "212",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Kent",
@@ -1489,6 +1701,7 @@ const citiesData = [
       longitude: -122.2348431,
       rank: "213",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lafayette",
@@ -1496,6 +1709,7 @@ const citiesData = [
       longitude: -92.0198427,
       rank: "214",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Midland",
@@ -1503,6 +1717,7 @@ const citiesData = [
       longitude: -102.0779146,
       rank: "215",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Surprise",
@@ -1510,6 +1725,7 @@ const citiesData = [
       longitude: -112.3679279,
       rank: "216",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Denton",
@@ -1517,6 +1733,7 @@ const citiesData = [
       longitude: -97.13306829999999,
       rank: "217",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Victorville",
@@ -1524,6 +1741,7 @@ const citiesData = [
       longitude: -117.2927641,
       rank: "218",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Evansville",
@@ -1531,6 +1749,7 @@ const citiesData = [
       longitude: -87.5710898,
       rank: "219",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Santa Clara",
@@ -1538,6 +1757,7 @@ const citiesData = [
       longitude: -121.9552356,
       rank: "220",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Abilene",
@@ -1545,6 +1765,7 @@ const citiesData = [
       longitude: -99.73314390000002,
       rank: "221",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Athens-Clarke County",
@@ -1552,6 +1773,7 @@ const citiesData = [
       longitude: -83.357567,
       rank: "222",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Vallejo",
@@ -1559,6 +1781,7 @@ const citiesData = [
       longitude: -122.2566367,
       rank: "223",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Allentown",
@@ -1566,6 +1789,7 @@ const citiesData = [
       longitude: -75.4901833,
       rank: "224",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Norman",
@@ -1573,6 +1797,7 @@ const citiesData = [
       longitude: -97.4394777,
       rank: "225",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Beaumont",
@@ -1580,6 +1805,7 @@ const citiesData = [
       longitude: -94.1265562,
       rank: "226",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Independence",
@@ -1587,6 +1813,7 @@ const citiesData = [
       longitude: -94.41550679999999,
       rank: "227",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Murfreesboro",
@@ -1594,6 +1821,7 @@ const citiesData = [
       longitude: -86.39027,
       rank: "228",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Ann Arbor",
@@ -1601,6 +1829,7 @@ const citiesData = [
       longitude: -83.7430378,
       rank: "229",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Springfield",
@@ -1608,6 +1837,7 @@ const citiesData = [
       longitude: -89.6501481,
       rank: "230",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Berkeley",
@@ -1615,6 +1845,7 @@ const citiesData = [
       longitude: -122.272747,
       rank: "231",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Peoria",
@@ -1622,6 +1853,7 @@ const citiesData = [
       longitude: -89.5889864,
       rank: "232",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Provo",
@@ -1629,6 +1861,7 @@ const citiesData = [
       longitude: -111.6585337,
       rank: "233",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "El Monte",
@@ -1636,6 +1869,7 @@ const citiesData = [
       longitude: -118.0275667,
       rank: "234",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Columbia",
@@ -1643,6 +1877,7 @@ const citiesData = [
       longitude: -92.3340724,
       rank: "235",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Lansing",
@@ -1650,6 +1885,7 @@ const citiesData = [
       longitude: -84.5555347,
       rank: "236",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Fargo",
@@ -1657,6 +1893,7 @@ const citiesData = [
       longitude: -96.7898034,
       rank: "237",
       state: "North Dakota",
+      timezone: "America/Chicago",
     },
     {
       city: "Downey",
@@ -1664,6 +1901,7 @@ const citiesData = [
       longitude: -118.1331593,
       rank: "238",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Costa Mesa",
@@ -1671,6 +1909,7 @@ const citiesData = [
       longitude: -117.9186689,
       rank: "239",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Wilmington",
@@ -1678,6 +1917,7 @@ const citiesData = [
       longitude: -77.9447102,
       rank: "240",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Arvada",
@@ -1685,6 +1925,7 @@ const citiesData = [
       longitude: -105.0874842,
       rank: "241",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Inglewood",
@@ -1692,6 +1933,7 @@ const citiesData = [
       longitude: -118.3531311,
       rank: "242",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Miami Gardens",
@@ -1699,6 +1941,7 @@ const citiesData = [
       longitude: -80.2456045,
       rank: "243",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Carlsbad",
@@ -1706,6 +1949,7 @@ const citiesData = [
       longitude: -117.3505939,
       rank: "244",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Westminster",
@@ -1713,6 +1957,7 @@ const citiesData = [
       longitude: -105.0372046,
       rank: "245",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Rochester",
@@ -1720,6 +1965,7 @@ const citiesData = [
       longitude: -92.4801989,
       rank: "246",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Odessa",
@@ -1727,6 +1973,7 @@ const citiesData = [
       longitude: -102.3676431,
       rank: "247",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Manchester",
@@ -1734,6 +1981,7 @@ const citiesData = [
       longitude: -71.4547891,
       rank: "248",
       state: "New Hampshire",
+      timezone: "America/New_York",
     },
     {
       city: "Elgin",
@@ -1741,6 +1989,7 @@ const citiesData = [
       longitude: -88.2825668,
       rank: "249",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "West Jordan",
@@ -1748,6 +1997,7 @@ const citiesData = [
       longitude: -111.9391031,
       rank: "250",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Round Rock",
@@ -1755,6 +2005,7 @@ const citiesData = [
       longitude: -97.678896,
       rank: "251",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Clearwater",
@@ -1762,6 +2013,7 @@ const citiesData = [
       longitude: -82.8001026,
       rank: "252",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Waterbury",
@@ -1769,6 +2021,7 @@ const citiesData = [
       longitude: -73.0514965,
       rank: "253",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Gresham",
@@ -1776,6 +2029,7 @@ const citiesData = [
       longitude: -122.4302013,
       rank: "254",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Fairfield",
@@ -1783,6 +2037,7 @@ const citiesData = [
       longitude: -122.0399663,
       rank: "255",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Billings",
@@ -1790,6 +2045,7 @@ const citiesData = [
       longitude: -108.5006904,
       rank: "256",
       state: "Montana",
+      timezone: "America/Denver",
     },
     {
       city: "Lowell",
@@ -1797,6 +2053,7 @@ const citiesData = [
       longitude: -71.31617179999999,
       rank: "257",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "San Buenaventura (Ventura)",
@@ -1804,6 +2061,7 @@ const citiesData = [
       longitude: -119.2290316,
       rank: "258",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pueblo",
@@ -1811,6 +2069,7 @@ const citiesData = [
       longitude: -104.6091409,
       rank: "259",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "High Point",
@@ -1818,6 +2077,7 @@ const citiesData = [
       longitude: -80.0053176,
       rank: "260",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "West Covina",
@@ -1825,6 +2085,7 @@ const citiesData = [
       longitude: -117.9389526,
       rank: "261",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Richmond",
@@ -1832,6 +2093,7 @@ const citiesData = [
       longitude: -122.3477486,
       rank: "262",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Murrieta",
@@ -1839,6 +2101,7 @@ const citiesData = [
       longitude: -117.2139232,
       rank: "263",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cambridge",
@@ -1846,6 +2109,7 @@ const citiesData = [
       longitude: -71.10973349999999,
       rank: "264",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Antioch",
@@ -1853,6 +2117,7 @@ const citiesData = [
       longitude: -121.805789,
       rank: "265",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Temecula",
@@ -1860,6 +2125,7 @@ const citiesData = [
       longitude: -117.1483648,
       rank: "266",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Norwalk",
@@ -1867,6 +2133,7 @@ const citiesData = [
       longitude: -118.081733,
       rank: "267",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Centennial",
@@ -1874,6 +2141,7 @@ const citiesData = [
       longitude: -104.8771726,
       rank: "268",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Everett",
@@ -1881,6 +2149,7 @@ const citiesData = [
       longitude: -122.2020794,
       rank: "269",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Palm Bay",
@@ -1888,6 +2157,7 @@ const citiesData = [
       longitude: -80.5886646,
       rank: "270",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Wichita Falls",
@@ -1895,6 +2165,7 @@ const citiesData = [
       longitude: -98.4933873,
       rank: "271",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Green Bay",
@@ -1902,6 +2173,7 @@ const citiesData = [
       longitude: -88.019826,
       rank: "272",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Daly City",
@@ -1909,6 +2181,7 @@ const citiesData = [
       longitude: -122.4702079,
       rank: "273",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Burbank",
@@ -1916,6 +2189,7 @@ const citiesData = [
       longitude: -118.3089661,
       rank: "274",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Richardson",
@@ -1923,6 +2197,7 @@ const citiesData = [
       longitude: -96.7298519,
       rank: "275",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Pompano Beach",
@@ -1930,6 +2205,7 @@ const citiesData = [
       longitude: -80.1247667,
       rank: "276",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "North Charleston",
@@ -1937,6 +2213,7 @@ const citiesData = [
       longitude: -79.9748103,
       rank: "277",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Broken Arrow",
@@ -1944,6 +2221,7 @@ const citiesData = [
       longitude: -95.7974526,
       rank: "278",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Boulder",
@@ -1951,6 +2229,7 @@ const citiesData = [
       longitude: -105.2705456,
       rank: "279",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "West Palm Beach",
@@ -1958,6 +2237,7 @@ const citiesData = [
       longitude: -80.0533746,
       rank: "280",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Santa Maria",
@@ -1965,6 +2245,7 @@ const citiesData = [
       longitude: -120.4357191,
       rank: "281",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "El Cajon",
@@ -1972,6 +2253,7 @@ const citiesData = [
       longitude: -116.9625269,
       rank: "282",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Davenport",
@@ -1979,6 +2261,7 @@ const citiesData = [
       longitude: -90.5776367,
       rank: "283",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Rialto",
@@ -1986,6 +2269,7 @@ const citiesData = [
       longitude: -117.3703235,
       rank: "284",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Las Cruces",
@@ -1993,6 +2277,7 @@ const citiesData = [
       longitude: -106.7636538,
       rank: "285",
       state: "New Mexico",
+      timezone: "America/Denver",
     },
     {
       city: "San Mateo",
@@ -2000,6 +2285,7 @@ const citiesData = [
       longitude: -122.3255254,
       rank: "286",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lewisville",
@@ -2007,6 +2293,7 @@ const citiesData = [
       longitude: -96.994174,
       rank: "287",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "South Bend",
@@ -2014,6 +2301,7 @@ const citiesData = [
       longitude: -86.25198979999999,
       rank: "288",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Lakeland",
@@ -2021,6 +2309,7 @@ const citiesData = [
       longitude: -81.9498042,
       rank: "289",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Erie",
@@ -2028,6 +2317,7 @@ const citiesData = [
       longitude: -80.085059,
       rank: "290",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Tyler",
@@ -2035,6 +2325,7 @@ const citiesData = [
       longitude: -95.30106239999999,
       rank: "291",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Pearland",
@@ -2042,6 +2333,7 @@ const citiesData = [
       longitude: -95.2860474,
       rank: "292",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "College Station",
@@ -2049,6 +2341,7 @@ const citiesData = [
       longitude: -96.3344068,
       rank: "293",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Kenosha",
@@ -2056,6 +2349,7 @@ const citiesData = [
       longitude: -87.82118539999999,
       rank: "294",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Sandy Springs",
@@ -2063,6 +2357,7 @@ const citiesData = [
       longitude: -84.3733147,
       rank: "295",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Clovis",
@@ -2070,6 +2365,7 @@ const citiesData = [
       longitude: -119.7029194,
       rank: "296",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Flint",
@@ -2077,6 +2373,7 @@ const citiesData = [
       longitude: -83.6874562,
       rank: "297",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Roanoke",
@@ -2084,6 +2381,7 @@ const citiesData = [
       longitude: -79.9414266,
       rank: "298",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Albany",
@@ -2091,6 +2389,7 @@ const citiesData = [
       longitude: -73.7562317,
       rank: "299",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Jurupa Valley",
@@ -2098,6 +2397,7 @@ const citiesData = [
       longitude: -117.4854802,
       rank: "300",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Compton",
@@ -2105,6 +2405,7 @@ const citiesData = [
       longitude: -118.2200712,
       rank: "301",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "San Angelo",
@@ -2112,6 +2413,7 @@ const citiesData = [
       longitude: -100.4370375,
       rank: "302",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Hillsboro",
@@ -2119,6 +2421,7 @@ const citiesData = [
       longitude: -122.989827,
       rank: "303",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lawton",
@@ -2126,6 +2429,7 @@ const citiesData = [
       longitude: -98.39592909999999,
       rank: "304",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Renton",
@@ -2133,6 +2437,7 @@ const citiesData = [
       longitude: -122.2170661,
       rank: "305",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Vista",
@@ -2140,6 +2445,7 @@ const citiesData = [
       longitude: -117.2425355,
       rank: "306",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Davie",
@@ -2147,6 +2453,7 @@ const citiesData = [
       longitude: -80.25211569999999,
       rank: "307",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Greeley",
@@ -2154,6 +2461,7 @@ const citiesData = [
       longitude: -104.7091322,
       rank: "308",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Mission Viejo",
@@ -2161,6 +2469,7 @@ const citiesData = [
       longitude: -117.6719953,
       rank: "309",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Portsmouth",
@@ -2168,6 +2477,7 @@ const citiesData = [
       longitude: -76.2982742,
       rank: "310",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Dearborn",
@@ -2175,6 +2485,7 @@ const citiesData = [
       longitude: -83.17631449999999,
       rank: "311",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "South Gate",
@@ -2182,6 +2493,7 @@ const citiesData = [
       longitude: -118.2120161,
       rank: "312",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Tuscaloosa",
@@ -2189,6 +2501,7 @@ const citiesData = [
       longitude: -87.56917349999999,
       rank: "313",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Livonia",
@@ -2196,6 +2509,7 @@ const citiesData = [
       longitude: -83.35270969999999,
       rank: "314",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "New Bedford",
@@ -2203,6 +2517,7 @@ const citiesData = [
       longitude: -70.93420499999999,
       rank: "315",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Vacaville",
@@ -2210,6 +2525,7 @@ const citiesData = [
       longitude: -121.9877444,
       rank: "316",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Brockton",
@@ -2217,6 +2533,7 @@ const citiesData = [
       longitude: -71.0183787,
       rank: "317",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Roswell",
@@ -2224,6 +2541,7 @@ const citiesData = [
       longitude: -84.3615555,
       rank: "318",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Beaverton",
@@ -2231,6 +2549,7 @@ const citiesData = [
       longitude: -122.8037102,
       rank: "319",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Quincy",
@@ -2238,6 +2557,7 @@ const citiesData = [
       longitude: -71.0022705,
       rank: "320",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Sparks",
@@ -2245,6 +2565,7 @@ const citiesData = [
       longitude: -119.7526886,
       rank: "321",
       state: "Nevada",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Yakima",
@@ -2252,6 +2573,7 @@ const citiesData = [
       longitude: -120.5058987,
       rank: "322",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lee's Summit",
@@ -2259,6 +2581,7 @@ const citiesData = [
       longitude: -94.3821724,
       rank: "323",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Federal Way",
@@ -2266,6 +2589,7 @@ const citiesData = [
       longitude: -122.3126222,
       rank: "324",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Carson",
@@ -2273,6 +2597,7 @@ const citiesData = [
       longitude: -118.281693,
       rank: "325",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Santa Monica",
@@ -2280,6 +2605,7 @@ const citiesData = [
       longitude: -118.4911912,
       rank: "326",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Hesperia",
@@ -2287,6 +2613,7 @@ const citiesData = [
       longitude: -117.3008784,
       rank: "327",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Allen",
@@ -2294,6 +2621,7 @@ const citiesData = [
       longitude: -96.67055030000002,
       rank: "328",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Rio Rancho",
@@ -2301,6 +2629,7 @@ const citiesData = [
       longitude: -106.6630437,
       rank: "329",
       state: "New Mexico",
+      timezone: "America/Denver",
     },
     {
       city: "Yuma",
@@ -2308,6 +2637,7 @@ const citiesData = [
       longitude: -114.6276916,
       rank: "330",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Westminster",
@@ -2315,6 +2645,7 @@ const citiesData = [
       longitude: -117.9939921,
       rank: "331",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Orem",
@@ -2322,6 +2653,7 @@ const citiesData = [
       longitude: -111.6946475,
       rank: "332",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Lynn",
@@ -2329,6 +2661,7 @@ const citiesData = [
       longitude: -70.9494938,
       rank: "333",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Redding",
@@ -2336,6 +2669,7 @@ const citiesData = [
       longitude: -122.3916754,
       rank: "334",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Spokane Valley",
@@ -2343,6 +2677,7 @@ const citiesData = [
       longitude: -117.2393748,
       rank: "335",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Miami Beach",
@@ -2350,6 +2685,7 @@ const citiesData = [
       longitude: -80.1300455,
       rank: "336",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "League City",
@@ -2357,6 +2693,7 @@ const citiesData = [
       longitude: -95.0949303,
       rank: "337",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Lawrence",
@@ -2364,6 +2701,7 @@ const citiesData = [
       longitude: -95.2352501,
       rank: "338",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Santa Barbara",
@@ -2371,6 +2709,7 @@ const citiesData = [
       longitude: -119.6981901,
       rank: "339",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Plantation",
@@ -2378,6 +2717,7 @@ const citiesData = [
       longitude: -80.23310359999999,
       rank: "340",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Sandy",
@@ -2385,6 +2725,7 @@ const citiesData = [
       longitude: -111.8389726,
       rank: "341",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Sunrise",
@@ -2392,6 +2733,7 @@ const citiesData = [
       longitude: -80.25659499999999,
       rank: "342",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Macon",
@@ -2399,6 +2741,7 @@ const citiesData = [
       longitude: -83.6324022,
       rank: "343",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Longmont",
@@ -2406,6 +2749,7 @@ const citiesData = [
       longitude: -105.1019275,
       rank: "344",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Boca Raton",
@@ -2413,6 +2757,7 @@ const citiesData = [
       longitude: -80.1289321,
       rank: "345",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "San Marcos",
@@ -2420,6 +2765,7 @@ const citiesData = [
       longitude: -117.1661449,
       rank: "346",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Greenville",
@@ -2427,6 +2773,7 @@ const citiesData = [
       longitude: -77.3663538,
       rank: "347",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Waukegan",
@@ -2434,6 +2781,7 @@ const citiesData = [
       longitude: -87.84479379999999,
       rank: "348",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Fall River",
@@ -2441,6 +2789,7 @@ const citiesData = [
       longitude: -71.1550451,
       rank: "349",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Chico",
@@ -2448,6 +2797,7 @@ const citiesData = [
       longitude: -121.8374777,
       rank: "350",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Newton",
@@ -2455,6 +2805,7 @@ const citiesData = [
       longitude: -71.20922139999999,
       rank: "351",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "San Leandro",
@@ -2462,6 +2813,7 @@ const citiesData = [
       longitude: -122.1560768,
       rank: "352",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Reading",
@@ -2469,6 +2821,7 @@ const citiesData = [
       longitude: -75.9268747,
       rank: "353",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Norwalk",
@@ -2476,6 +2829,7 @@ const citiesData = [
       longitude: -73.4081575,
       rank: "354",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Fort Smith",
@@ -2483,6 +2837,7 @@ const citiesData = [
       longitude: -94.39854749999999,
       rank: "355",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Newport Beach",
@@ -2490,6 +2845,7 @@ const citiesData = [
       longitude: -117.9289469,
       rank: "356",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Asheville",
@@ -2497,6 +2853,7 @@ const citiesData = [
       longitude: -82.5514869,
       rank: "357",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Nashua",
@@ -2504,6 +2861,7 @@ const citiesData = [
       longitude: -71.46756599999999,
       rank: "358",
       state: "New Hampshire",
+      timezone: "America/New_York",
     },
     {
       city: "Edmond",
@@ -2511,6 +2869,7 @@ const citiesData = [
       longitude: -97.47809540000002,
       rank: "359",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Whittier",
@@ -2518,6 +2877,7 @@ const citiesData = [
       longitude: -118.032844,
       rank: "360",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Nampa",
@@ -2525,6 +2885,7 @@ const citiesData = [
       longitude: -116.5634624,
       rank: "361",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "Bloomington",
@@ -2532,6 +2893,7 @@ const citiesData = [
       longitude: -93.2982799,
       rank: "362",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Deltona",
@@ -2539,6 +2901,7 @@ const citiesData = [
       longitude: -81.26367379999999,
       rank: "363",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Hawthorne",
@@ -2546,6 +2909,7 @@ const citiesData = [
       longitude: -118.3525748,
       rank: "364",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Duluth",
@@ -2553,6 +2917,7 @@ const citiesData = [
       longitude: -92.1004852,
       rank: "365",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Carmel",
@@ -2560,6 +2925,7 @@ const citiesData = [
       longitude: -86.1180435,
       rank: "366",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Suffolk",
@@ -2567,6 +2933,7 @@ const citiesData = [
       longitude: -76.5835621,
       rank: "367",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Clifton",
@@ -2574,6 +2941,7 @@ const citiesData = [
       longitude: -74.16375529999999,
       rank: "368",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Citrus Heights",
@@ -2581,6 +2949,7 @@ const citiesData = [
       longitude: -121.2810611,
       rank: "369",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Livermore",
@@ -2588,6 +2957,7 @@ const citiesData = [
       longitude: -121.7680088,
       rank: "370",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Tracy",
@@ -2595,6 +2965,7 @@ const citiesData = [
       longitude: -121.4252227,
       rank: "371",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Alhambra",
@@ -2602,6 +2973,7 @@ const citiesData = [
       longitude: -118.1270146,
       rank: "372",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Kirkland",
@@ -2609,6 +2981,7 @@ const citiesData = [
       longitude: -122.2087353,
       rank: "373",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Trenton",
@@ -2616,6 +2989,7 @@ const citiesData = [
       longitude: -74.7429384,
       rank: "374",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Ogden",
@@ -2623,6 +2997,7 @@ const citiesData = [
       longitude: -111.9738304,
       rank: "375",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Hoover",
@@ -2630,6 +3005,7 @@ const citiesData = [
       longitude: -86.8113781,
       rank: "376",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Cicero",
@@ -2637,6 +3013,7 @@ const citiesData = [
       longitude: -87.7539448,
       rank: "377",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Fishers",
@@ -2644,6 +3021,7 @@ const citiesData = [
       longitude: -86.01335,
       rank: "378",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Sugar Land",
@@ -2651,6 +3029,7 @@ const citiesData = [
       longitude: -95.6349463,
       rank: "379",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Danbury",
@@ -2658,6 +3037,7 @@ const citiesData = [
       longitude: -73.4540111,
       rank: "380",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Meridian",
@@ -2665,6 +3045,7 @@ const citiesData = [
       longitude: -116.3915131,
       rank: "381",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "Indio",
@@ -2672,6 +3053,7 @@ const citiesData = [
       longitude: -116.2155619,
       rank: "382",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Concord",
@@ -2679,6 +3061,7 @@ const citiesData = [
       longitude: -80.579511,
       rank: "383",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Menifee",
@@ -2686,6 +3069,7 @@ const citiesData = [
       longitude: -117.185294,
       rank: "384",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Champaign",
@@ -2693,6 +3077,7 @@ const citiesData = [
       longitude: -88.2433829,
       rank: "385",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Buena Park",
@@ -2700,6 +3085,7 @@ const citiesData = [
       longitude: -117.9981181,
       rank: "386",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Troy",
@@ -2707,6 +3093,7 @@ const citiesData = [
       longitude: -83.1497751,
       rank: "387",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "O'Fallon",
@@ -2714,6 +3101,7 @@ const citiesData = [
       longitude: -90.69984769999999,
       rank: "388",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Johns Creek",
@@ -2721,6 +3109,7 @@ const citiesData = [
       longitude: -84.198579,
       rank: "389",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Bellingham",
@@ -2728,6 +3117,7 @@ const citiesData = [
       longitude: -122.4781473,
       rank: "390",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Westland",
@@ -2735,6 +3125,7 @@ const citiesData = [
       longitude: -83.400211,
       rank: "391",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Bloomington",
@@ -2742,6 +3133,7 @@ const citiesData = [
       longitude: -86.52638569999999,
       rank: "392",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Sioux City",
@@ -2749,6 +3141,7 @@ const citiesData = [
       longitude: -96.40030689999999,
       rank: "393",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Warwick",
@@ -2756,6 +3149,7 @@ const citiesData = [
       longitude: -71.4161671,
       rank: "394",
       state: "Rhode Island",
+      timezone: "America/New_York",
     },
     {
       city: "Hemet",
@@ -2763,6 +3157,7 @@ const citiesData = [
       longitude: -116.9719684,
       rank: "395",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Longview",
@@ -2770,6 +3165,7 @@ const citiesData = [
       longitude: -94.74048909999999,
       rank: "396",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Farmington Hills",
@@ -2777,6 +3173,7 @@ const citiesData = [
       longitude: -83.3677168,
       rank: "397",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Bend",
@@ -2784,6 +3181,7 @@ const citiesData = [
       longitude: -121.3153096,
       rank: "398",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lakewood",
@@ -2791,6 +3189,7 @@ const citiesData = [
       longitude: -118.1339563,
       rank: "399",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Merced",
@@ -2798,6 +3197,7 @@ const citiesData = [
       longitude: -120.4829677,
       rank: "400",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Mission",
@@ -2805,6 +3205,7 @@ const citiesData = [
       longitude: -98.32529319999999,
       rank: "401",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Chino",
@@ -2812,6 +3213,7 @@ const citiesData = [
       longitude: -117.688944,
       rank: "402",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Redwood City",
@@ -2819,6 +3221,7 @@ const citiesData = [
       longitude: -122.2363548,
       rank: "403",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Edinburg",
@@ -2826,6 +3229,7 @@ const citiesData = [
       longitude: -98.1633432,
       rank: "404",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Cranston",
@@ -2833,6 +3237,7 @@ const citiesData = [
       longitude: -71.4372796,
       rank: "405",
       state: "Rhode Island",
+      timezone: "America/New_York",
     },
     {
       city: "Parma",
@@ -2840,6 +3245,7 @@ const citiesData = [
       longitude: -81.7229086,
       rank: "406",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "New Rochelle",
@@ -2847,6 +3253,7 @@ const citiesData = [
       longitude: -73.7823549,
       rank: "407",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Lake Forest",
@@ -2854,6 +3261,7 @@ const citiesData = [
       longitude: -117.689218,
       rank: "408",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Napa",
@@ -2861,6 +3269,7 @@ const citiesData = [
       longitude: -122.286865,
       rank: "409",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Hammond",
@@ -2868,6 +3277,7 @@ const citiesData = [
       longitude: -87.5000412,
       rank: "410",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Fayetteville",
@@ -2875,6 +3285,7 @@ const citiesData = [
       longitude: -94.1574263,
       rank: "411",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Bloomington",
@@ -2882,6 +3293,7 @@ const citiesData = [
       longitude: -88.99368729999999,
       rank: "412",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Avondale",
@@ -2889,6 +3301,7 @@ const citiesData = [
       longitude: -112.3496021,
       rank: "413",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Somerville",
@@ -2896,6 +3309,7 @@ const citiesData = [
       longitude: -71.0994968,
       rank: "414",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Palm Coast",
@@ -2903,6 +3317,7 @@ const citiesData = [
       longitude: -81.20786989999999,
       rank: "415",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Bryan",
@@ -2910,6 +3325,7 @@ const citiesData = [
       longitude: -96.3699632,
       rank: "416",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Gary",
@@ -2917,6 +3333,7 @@ const citiesData = [
       longitude: -87.3464271,
       rank: "417",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Largo",
@@ -2924,6 +3341,7 @@ const citiesData = [
       longitude: -82.7873244,
       rank: "418",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Brooklyn Park",
@@ -2931,6 +3349,7 @@ const citiesData = [
       longitude: -93.3563405,
       rank: "419",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Tustin",
@@ -2938,6 +3357,7 @@ const citiesData = [
       longitude: -117.826166,
       rank: "420",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Racine",
@@ -2945,6 +3365,7 @@ const citiesData = [
       longitude: -87.78285230000002,
       rank: "421",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Deerfield Beach",
@@ -2952,6 +3373,7 @@ const citiesData = [
       longitude: -80.09976569999999,
       rank: "422",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Lynchburg",
@@ -2959,6 +3381,7 @@ const citiesData = [
       longitude: -79.14224639999999,
       rank: "423",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Mountain View",
@@ -2966,6 +3389,7 @@ const citiesData = [
       longitude: -122.0838511,
       rank: "424",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Medford",
@@ -2973,6 +3397,7 @@ const citiesData = [
       longitude: -122.8755949,
       rank: "425",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lawrence",
@@ -2980,6 +3405,7 @@ const citiesData = [
       longitude: -71.1631137,
       rank: "426",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Bellflower",
@@ -2987,6 +3413,7 @@ const citiesData = [
       longitude: -118.1170117,
       rank: "427",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Melbourne",
@@ -2994,6 +3421,7 @@ const citiesData = [
       longitude: -80.60810889999999,
       rank: "428",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "St. Joseph",
@@ -3001,6 +3429,7 @@ const citiesData = [
       longitude: -94.84668099999999,
       rank: "429",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Camden",
@@ -3008,6 +3437,7 @@ const citiesData = [
       longitude: -75.1196199,
       rank: "430",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "St. George",
@@ -3015,6 +3445,7 @@ const citiesData = [
       longitude: -113.5684164,
       rank: "431",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Kennewick",
@@ -3022,6 +3453,7 @@ const citiesData = [
       longitude: -119.1372338,
       rank: "432",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Baldwin Park",
@@ -3029,6 +3461,7 @@ const citiesData = [
       longitude: -117.9608978,
       rank: "433",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Chino Hills",
@@ -3036,6 +3469,7 @@ const citiesData = [
       longitude: -117.7325848,
       rank: "434",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Alameda",
@@ -3043,6 +3477,7 @@ const citiesData = [
       longitude: -122.2416355,
       rank: "435",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Albany",
@@ -3050,6 +3485,7 @@ const citiesData = [
       longitude: -84.15574099999999,
       rank: "436",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Arlington Heights",
@@ -3057,6 +3493,7 @@ const citiesData = [
       longitude: -87.98062650000001,
       rank: "437",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Scranton",
@@ -3064,6 +3501,7 @@ const citiesData = [
       longitude: -75.66241219999999,
       rank: "438",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Evanston",
@@ -3071,6 +3509,7 @@ const citiesData = [
       longitude: -87.68769689999999,
       rank: "439",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Kalamazoo",
@@ -3078,6 +3517,7 @@ const citiesData = [
       longitude: -85.5872286,
       rank: "440",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Baytown",
@@ -3085,6 +3525,7 @@ const citiesData = [
       longitude: -94.97742740000001,
       rank: "441",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Upland",
@@ -3092,6 +3533,7 @@ const citiesData = [
       longitude: -117.6483876,
       rank: "442",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Springdale",
@@ -3099,6 +3541,7 @@ const citiesData = [
       longitude: -94.1288141,
       rank: "443",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Bethlehem",
@@ -3106,6 +3549,7 @@ const citiesData = [
       longitude: -75.37045789999999,
       rank: "444",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Schaumburg",
@@ -3113,6 +3557,7 @@ const citiesData = [
       longitude: -88.0834059,
       rank: "445",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Mount Pleasant",
@@ -3120,6 +3565,7 @@ const citiesData = [
       longitude: -79.82842579999999,
       rank: "446",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Auburn",
@@ -3127,6 +3573,7 @@ const citiesData = [
       longitude: -122.2284532,
       rank: "447",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Decatur",
@@ -3134,6 +3581,7 @@ const citiesData = [
       longitude: -88.9548001,
       rank: "448",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "San Ramon",
@@ -3141,6 +3589,7 @@ const citiesData = [
       longitude: -121.9780153,
       rank: "449",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pleasanton",
@@ -3148,6 +3597,7 @@ const citiesData = [
       longitude: -121.8746789,
       rank: "450",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Wyoming",
@@ -3155,6 +3605,7 @@ const citiesData = [
       longitude: -85.7053085,
       rank: "451",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Lake Charles",
@@ -3162,6 +3613,7 @@ const citiesData = [
       longitude: -93.2173758,
       rank: "452",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Plymouth",
@@ -3169,6 +3621,7 @@ const citiesData = [
       longitude: -93.4555093,
       rank: "453",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Bolingbrook",
@@ -3176,6 +3629,7 @@ const citiesData = [
       longitude: -88.0683955,
       rank: "454",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Pharr",
@@ -3183,6 +3637,7 @@ const citiesData = [
       longitude: -98.1836216,
       rank: "455",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Appleton",
@@ -3190,6 +3645,7 @@ const citiesData = [
       longitude: -88.41538469999999,
       rank: "456",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Gastonia",
@@ -3197,6 +3653,7 @@ const citiesData = [
       longitude: -81.18730049999999,
       rank: "457",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Folsom",
@@ -3204,6 +3661,7 @@ const citiesData = [
       longitude: -121.1760583,
       rank: "458",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Southfield",
@@ -3211,6 +3669,7 @@ const citiesData = [
       longitude: -83.2218731,
       rank: "459",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Rochester Hills",
@@ -3218,6 +3677,7 @@ const citiesData = [
       longitude: -83.1499322,
       rank: "460",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "New Britain",
@@ -3225,6 +3685,7 @@ const citiesData = [
       longitude: -72.7795419,
       rank: "461",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Goodyear",
@@ -3232,6 +3693,7 @@ const citiesData = [
       longitude: -112.3576567,
       rank: "462",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Canton",
@@ -3239,6 +3701,7 @@ const citiesData = [
       longitude: -81.378447,
       rank: "463",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Warner Robins",
@@ -3246,6 +3709,7 @@ const citiesData = [
       longitude: -83.624201,
       rank: "464",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Union City",
@@ -3253,6 +3717,7 @@ const citiesData = [
       longitude: -122.0438298,
       rank: "465",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Perris",
@@ -3260,6 +3725,7 @@ const citiesData = [
       longitude: -117.2286478,
       rank: "466",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Manteca",
@@ -3267,6 +3733,7 @@ const citiesData = [
       longitude: -121.2160526,
       rank: "467",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Iowa City",
@@ -3274,6 +3741,7 @@ const citiesData = [
       longitude: -91.5301683,
       rank: "468",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Jonesboro",
@@ -3281,6 +3749,7 @@ const citiesData = [
       longitude: -90.704279,
       rank: "469",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Wilmington",
@@ -3288,6 +3757,7 @@ const citiesData = [
       longitude: -75.5397878,
       rank: "470",
       state: "Delaware",
+      timezone: "America/New_York",
     },
     {
       city: "Lynwood",
@@ -3295,6 +3765,7 @@ const citiesData = [
       longitude: -118.2114603,
       rank: "471",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Loveland",
@@ -3302,6 +3773,7 @@ const citiesData = [
       longitude: -105.0749801,
       rank: "472",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Pawtucket",
@@ -3309,6 +3781,7 @@ const citiesData = [
       longitude: -71.38255579999999,
       rank: "473",
       state: "Rhode Island",
+      timezone: "America/New_York",
     },
     {
       city: "Boynton Beach",
@@ -3316,6 +3789,7 @@ const citiesData = [
       longitude: -80.0905465,
       rank: "474",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Waukesha",
@@ -3323,6 +3797,7 @@ const citiesData = [
       longitude: -88.2314813,
       rank: "475",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Gulfport",
@@ -3330,6 +3805,7 @@ const citiesData = [
       longitude: -89.0928155,
       rank: "476",
       state: "Mississippi",
+      timezone: "America/Chicago",
     },
     {
       city: "Apple Valley",
@@ -3337,6 +3813,7 @@ const citiesData = [
       longitude: -117.1858759,
       rank: "477",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Passaic",
@@ -3344,6 +3821,7 @@ const citiesData = [
       longitude: -74.1284764,
       rank: "478",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Rapid City",
@@ -3351,6 +3829,7 @@ const citiesData = [
       longitude: -103.2310149,
       rank: "479",
       state: "South Dakota",
+      timezone: "America/Chicago",
     },
     {
       city: "Layton",
@@ -3358,6 +3837,7 @@ const citiesData = [
       longitude: -111.9710529,
       rank: "480",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Lafayette",
@@ -3365,6 +3845,7 @@ const citiesData = [
       longitude: -86.87528689999999,
       rank: "481",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Turlock",
@@ -3372,6 +3853,7 @@ const citiesData = [
       longitude: -120.8465941,
       rank: "482",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Muncie",
@@ -3379,6 +3861,7 @@ const citiesData = [
       longitude: -85.3863599,
       rank: "483",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Temple",
@@ -3386,6 +3869,7 @@ const citiesData = [
       longitude: -97.342782,
       rank: "484",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Missouri City",
@@ -3393,6 +3877,7 @@ const citiesData = [
       longitude: -95.5377215,
       rank: "485",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Redlands",
@@ -3400,6 +3885,7 @@ const citiesData = [
       longitude: -117.1825381,
       rank: "486",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Santa Fe",
@@ -3407,6 +3893,7 @@ const citiesData = [
       longitude: -105.937799,
       rank: "487",
       state: "New Mexico",
+      timezone: "America/Denver",
     },
     {
       city: "Lauderhill",
@@ -3414,6 +3901,7 @@ const citiesData = [
       longitude: -80.2133808,
       rank: "488",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Milpitas",
@@ -3421,6 +3909,7 @@ const citiesData = [
       longitude: -121.8995741,
       rank: "489",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Palatine",
@@ -3428,6 +3917,7 @@ const citiesData = [
       longitude: -88.03424000000001,
       rank: "490",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Missoula",
@@ -3435,6 +3925,7 @@ const citiesData = [
       longitude: -113.996586,
       rank: "491",
       state: "Montana",
+      timezone: "America/Denver",
     },
     {
       city: "Rock Hill",
@@ -3442,6 +3933,7 @@ const citiesData = [
       longitude: -81.02507840000001,
       rank: "492",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Jacksonville",
@@ -3449,6 +3941,7 @@ const citiesData = [
       longitude: -77.4302414,
       rank: "493",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Franklin",
@@ -3456,6 +3949,7 @@ const citiesData = [
       longitude: -86.8688899,
       rank: "494",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Flagstaff",
@@ -3463,6 +3957,7 @@ const citiesData = [
       longitude: -111.651302,
       rank: "495",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Flower Mound",
@@ -3470,6 +3965,7 @@ const citiesData = [
       longitude: -97.0969552,
       rank: "496",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Weston",
@@ -3477,6 +3973,7 @@ const citiesData = [
       longitude: -80.3997748,
       rank: "497",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Waterloo",
@@ -3484,6 +3981,7 @@ const citiesData = [
       longitude: -92.34257749999999,
       rank: "498",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Union City",
@@ -3491,6 +3989,7 @@ const citiesData = [
       longitude: -74.26316349999999,
       rank: "499",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Mount Vernon",
@@ -3498,6 +3997,7 @@ const citiesData = [
       longitude: -73.8370786,
       rank: "500",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Fort Myers",
@@ -3505,6 +4005,7 @@ const citiesData = [
       longitude: -81.8723084,
       rank: "501",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Dothan",
@@ -3512,6 +4013,7 @@ const citiesData = [
       longitude: -85.3904888,
       rank: "502",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Rancho Cordova",
@@ -3519,6 +4021,7 @@ const citiesData = [
       longitude: -121.302728,
       rank: "503",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Redondo Beach",
@@ -3526,6 +4029,7 @@ const citiesData = [
       longitude: -118.3884078,
       rank: "504",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Jackson",
@@ -3533,6 +4037,7 @@ const citiesData = [
       longitude: -88.81394689999999,
       rank: "505",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Pasco",
@@ -3540,6 +4045,7 @@ const citiesData = [
       longitude: -119.1005657,
       rank: "506",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "St. Charles",
@@ -3547,6 +4053,7 @@ const citiesData = [
       longitude: -90.4974359,
       rank: "507",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Eau Claire",
@@ -3554,6 +4061,7 @@ const citiesData = [
       longitude: -91.4984941,
       rank: "508",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "North Richland Hills",
@@ -3561,6 +4069,7 @@ const citiesData = [
       longitude: -97.2289029,
       rank: "509",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Bismarck",
@@ -3568,6 +4077,7 @@ const citiesData = [
       longitude: -100.7837392,
       rank: "510",
       state: "North Dakota",
+      timezone: "America/Chicago",
     },
     {
       city: "Yorba Linda",
@@ -3575,6 +4085,7 @@ const citiesData = [
       longitude: -117.8131125,
       rank: "511",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Kenner",
@@ -3582,6 +4093,7 @@ const citiesData = [
       longitude: -90.2417434,
       rank: "512",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Walnut Creek",
@@ -3589,6 +4101,7 @@ const citiesData = [
       longitude: -122.0651819,
       rank: "513",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Frederick",
@@ -3596,6 +4109,7 @@ const citiesData = [
       longitude: -77.4105409,
       rank: "514",
       state: "Maryland",
+      timezone: "America/New_York",
     },
     {
       city: "Oshkosh",
@@ -3603,6 +4117,7 @@ const citiesData = [
       longitude: -88.5426136,
       rank: "515",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Pittsburg",
@@ -3610,6 +4125,7 @@ const citiesData = [
       longitude: -121.8846806,
       rank: "516",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Palo Alto",
@@ -3617,6 +4133,7 @@ const citiesData = [
       longitude: -122.1430195,
       rank: "517",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Bossier City",
@@ -3624,6 +4141,7 @@ const citiesData = [
       longitude: -93.7321228,
       rank: "518",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Portland",
@@ -3631,6 +4149,7 @@ const citiesData = [
       longitude: -70.2553259,
       rank: "519",
       state: "Maine",
+      timezone: "America/New_York",
     },
     {
       city: "St. Cloud",
@@ -3638,6 +4157,7 @@ const citiesData = [
       longitude: -94.16324039999999,
       rank: "520",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Davis",
@@ -3645,6 +4165,7 @@ const citiesData = [
       longitude: -121.7405167,
       rank: "521",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "South San Francisco",
@@ -3652,6 +4173,7 @@ const citiesData = [
       longitude: -122.4077498,
       rank: "522",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Camarillo",
@@ -3659,6 +4181,7 @@ const citiesData = [
       longitude: -119.0376023,
       rank: "523",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "North Little Rock",
@@ -3666,6 +4189,7 @@ const citiesData = [
       longitude: -92.2670941,
       rank: "524",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Schenectady",
@@ -3673,6 +4197,7 @@ const citiesData = [
       longitude: -73.9395687,
       rank: "525",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Gaithersburg",
@@ -3680,6 +4205,7 @@ const citiesData = [
       longitude: -77.2013705,
       rank: "526",
       state: "Maryland",
+      timezone: "America/New_York",
     },
     {
       city: "Harlingen",
@@ -3687,6 +4213,7 @@ const citiesData = [
       longitude: -97.69610259999999,
       rank: "527",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Woodbury",
@@ -3694,6 +4221,7 @@ const citiesData = [
       longitude: -92.9593797,
       rank: "528",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Eagan",
@@ -3701,6 +4229,7 @@ const citiesData = [
       longitude: -93.1668858,
       rank: "529",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Yuba City",
@@ -3708,6 +4237,7 @@ const citiesData = [
       longitude: -121.6169108,
       rank: "530",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Maple Grove",
@@ -3715,6 +4245,7 @@ const citiesData = [
       longitude: -93.4557877,
       rank: "531",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Youngstown",
@@ -3722,6 +4253,7 @@ const citiesData = [
       longitude: -80.6495194,
       rank: "532",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Skokie",
@@ -3729,6 +4261,7 @@ const citiesData = [
       longitude: -87.7416246,
       rank: "533",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Kissimmee",
@@ -3736,6 +4269,7 @@ const citiesData = [
       longitude: -81.40757099999999,
       rank: "534",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Johnson City",
@@ -3743,6 +4277,7 @@ const citiesData = [
       longitude: -82.3534727,
       rank: "535",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Victoria",
@@ -3750,6 +4285,7 @@ const citiesData = [
       longitude: -97.0035982,
       rank: "536",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "San Clemente",
@@ -3757,6 +4293,7 @@ const citiesData = [
       longitude: -117.6119925,
       rank: "537",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Bayonne",
@@ -3764,6 +4301,7 @@ const citiesData = [
       longitude: -74.1143091,
       rank: "538",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Laguna Niguel",
@@ -3771,6 +4309,7 @@ const citiesData = [
       longitude: -117.7075526,
       rank: "539",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "East Orange",
@@ -3778,6 +4317,7 @@ const citiesData = [
       longitude: -74.2048677,
       rank: "540",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Shawnee",
@@ -3785,6 +4325,7 @@ const citiesData = [
       longitude: -94.7151865,
       rank: "541",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Homestead",
@@ -3792,6 +4333,7 @@ const citiesData = [
       longitude: -80.4775569,
       rank: "542",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Rockville",
@@ -3799,6 +4341,7 @@ const citiesData = [
       longitude: -77.1527578,
       rank: "544",
       state: "Maryland",
+      timezone: "America/New_York",
     },
     {
       city: "Delray Beach",
@@ -3806,6 +4349,7 @@ const citiesData = [
       longitude: -80.0728201,
       rank: "543",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Janesville",
@@ -3813,6 +4357,7 @@ const citiesData = [
       longitude: -89.0187222,
       rank: "545",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Conway",
@@ -3820,6 +4365,7 @@ const citiesData = [
       longitude: -92.4421011,
       rank: "546",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Pico Rivera",
@@ -3827,6 +4373,7 @@ const citiesData = [
       longitude: -118.096735,
       rank: "547",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lorain",
@@ -3834,6 +4381,7 @@ const citiesData = [
       longitude: -82.1823746,
       rank: "548",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Montebello",
@@ -3841,6 +4389,7 @@ const citiesData = [
       longitude: -118.1137535,
       rank: "549",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lodi",
@@ -3848,6 +4397,7 @@ const citiesData = [
       longitude: -121.2722194,
       rank: "550",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "New Braunfels",
@@ -3855,6 +4405,7 @@ const citiesData = [
       longitude: -98.1244531,
       rank: "551",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Marysville",
@@ -3862,6 +4413,7 @@ const citiesData = [
       longitude: -122.1770818,
       rank: "552",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Tamarac",
@@ -3869,6 +4421,7 @@ const citiesData = [
       longitude: -80.2497707,
       rank: "553",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Madera",
@@ -3876,6 +4429,7 @@ const citiesData = [
       longitude: -120.0607176,
       rank: "554",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Conroe",
@@ -3883,6 +4437,7 @@ const citiesData = [
       longitude: -95.45605119999999,
       rank: "555",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Santa Cruz",
@@ -3890,6 +4445,7 @@ const citiesData = [
       longitude: -122.0307963,
       rank: "556",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Eden Prairie",
@@ -3897,6 +4453,7 @@ const citiesData = [
       longitude: -93.47078599999999,
       rank: "557",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Cheyenne",
@@ -3904,6 +4461,7 @@ const citiesData = [
       longitude: -104.8202462,
       rank: "558",
       state: "Wyoming",
+      timezone: "America/Denver",
     },
     {
       city: "Daytona Beach",
@@ -3911,6 +4469,7 @@ const citiesData = [
       longitude: -81.0228331,
       rank: "559",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Alpharetta",
@@ -3918,6 +4477,7 @@ const citiesData = [
       longitude: -84.2940899,
       rank: "560",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Hamilton",
@@ -3925,6 +4485,7 @@ const citiesData = [
       longitude: -84.5613355,
       rank: "561",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Waltham",
@@ -3932,6 +4493,7 @@ const citiesData = [
       longitude: -71.2356113,
       rank: "562",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Coon Rapids",
@@ -3939,6 +4501,7 @@ const citiesData = [
       longitude: -93.30300629999999,
       rank: "563",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Haverhill",
@@ -3946,6 +4509,7 @@ const citiesData = [
       longitude: -71.0772796,
       rank: "564",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Council Bluffs",
@@ -3953,6 +4517,7 @@ const citiesData = [
       longitude: -95.8608333,
       rank: "565",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Taylor",
@@ -3960,6 +4525,7 @@ const citiesData = [
       longitude: -83.2696509,
       rank: "566",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Utica",
@@ -3967,6 +4533,7 @@ const citiesData = [
       longitude: -75.232664,
       rank: "567",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Ames",
@@ -3974,6 +4541,7 @@ const citiesData = [
       longitude: -93.61999999999999,
       rank: "568",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "La Habra",
@@ -3981,6 +4549,7 @@ const citiesData = [
       longitude: -117.9461734,
       rank: "569",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Encinitas",
@@ -3988,6 +4557,7 @@ const citiesData = [
       longitude: -117.2919818,
       rank: "570",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Bowling Green",
@@ -3995,6 +4565,7 @@ const citiesData = [
       longitude: -86.4808043,
       rank: "571",
       state: "Kentucky",
+      timezone: "America/New_York",
     },
     {
       city: "Burnsville",
@@ -4002,6 +4573,7 @@ const citiesData = [
       longitude: -93.27772259999999,
       rank: "572",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Greenville",
@@ -4009,6 +4581,7 @@ const citiesData = [
       longitude: -82.3940104,
       rank: "573",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "West Des Moines",
@@ -4016,6 +4589,7 @@ const citiesData = [
       longitude: -93.711332,
       rank: "574",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Cedar Park",
@@ -4023,6 +4597,7 @@ const citiesData = [
       longitude: -97.8202888,
       rank: "575",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Tulare",
@@ -4030,6 +4605,7 @@ const citiesData = [
       longitude: -119.3473379,
       rank: "576",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Monterey Park",
@@ -4037,6 +4613,7 @@ const citiesData = [
       longitude: -118.1228476,
       rank: "577",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Vineland",
@@ -4044,6 +4621,7 @@ const citiesData = [
       longitude: -75.02596369999999,
       rank: "578",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Terre Haute",
@@ -4051,6 +4629,7 @@ const citiesData = [
       longitude: -87.41390919999999,
       rank: "579",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "North Miami",
@@ -4058,6 +4637,7 @@ const citiesData = [
       longitude: -80.1867138,
       rank: "580",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Mansfield",
@@ -4065,6 +4645,7 @@ const citiesData = [
       longitude: -97.1416768,
       rank: "581",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "West Allis",
@@ -4072,6 +4653,7 @@ const citiesData = [
       longitude: -88.0070315,
       rank: "582",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Bristol",
@@ -4079,6 +4661,7 @@ const citiesData = [
       longitude: -72.9492703,
       rank: "583",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Taylorsville",
@@ -4086,6 +4669,7 @@ const citiesData = [
       longitude: -111.9388258,
       rank: "584",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Malden",
@@ -4093,6 +4677,7 @@ const citiesData = [
       longitude: -71.066163,
       rank: "585",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Meriden",
@@ -4100,6 +4685,7 @@ const citiesData = [
       longitude: -72.80704349999999,
       rank: "586",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Blaine",
@@ -4107,6 +4693,7 @@ const citiesData = [
       longitude: -93.23494889999999,
       rank: "587",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Wellington",
@@ -4114,6 +4701,7 @@ const citiesData = [
       longitude: -80.2683571,
       rank: "588",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Cupertino",
@@ -4121,6 +4709,7 @@ const citiesData = [
       longitude: -122.0321823,
       rank: "589",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Springfield",
@@ -4128,6 +4717,7 @@ const citiesData = [
       longitude: -123.0220289,
       rank: "590",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Rogers",
@@ -4135,6 +4725,7 @@ const citiesData = [
       longitude: -94.1185366,
       rank: "591",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "St. Clair Shores",
@@ -4142,6 +4733,7 @@ const citiesData = [
       longitude: -82.89636039999999,
       rank: "592",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Gardena",
@@ -4149,6 +4741,7 @@ const citiesData = [
       longitude: -118.3089624,
       rank: "593",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pontiac",
@@ -4156,6 +4749,7 @@ const citiesData = [
       longitude: -83.29104679999999,
       rank: "594",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "National City",
@@ -4163,6 +4757,7 @@ const citiesData = [
       longitude: -117.0991967,
       rank: "595",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Grand Junction",
@@ -4170,6 +4765,7 @@ const citiesData = [
       longitude: -108.5506486,
       rank: "596",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Rocklin",
@@ -4177,6 +4773,7 @@ const citiesData = [
       longitude: -121.2357828,
       rank: "597",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Chapel Hill",
@@ -4184,6 +4781,7 @@ const citiesData = [
       longitude: -79.0558445,
       rank: "598",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Casper",
@@ -4191,6 +4789,7 @@ const citiesData = [
       longitude: -106.313081,
       rank: "599",
       state: "Wyoming",
+      timezone: "America/Denver",
     },
     {
       city: "Broomfield",
@@ -4198,6 +4797,7 @@ const citiesData = [
       longitude: -105.0866504,
       rank: "600",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Petaluma",
@@ -4205,6 +4805,7 @@ const citiesData = [
       longitude: -122.6366524,
       rank: "601",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "South Jordan",
@@ -4212,6 +4813,7 @@ const citiesData = [
       longitude: -111.929658,
       rank: "602",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Springfield",
@@ -4219,6 +4821,7 @@ const citiesData = [
       longitude: -83.8088171,
       rank: "603",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Great Falls",
@@ -4226,6 +4829,7 @@ const citiesData = [
       longitude: -111.2833449,
       rank: "604",
       state: "Montana",
+      timezone: "America/Denver",
     },
     {
       city: "Lancaster",
@@ -4233,6 +4837,7 @@ const citiesData = [
       longitude: -76.3055144,
       rank: "605",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "North Port",
@@ -4240,6 +4845,7 @@ const citiesData = [
       longitude: -82.2359254,
       rank: "606",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Lakewood",
@@ -4247,6 +4853,7 @@ const citiesData = [
       longitude: -122.518458,
       rank: "607",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Marietta",
@@ -4254,6 +4861,7 @@ const citiesData = [
       longitude: -84.5499327,
       rank: "608",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "San Rafael",
@@ -4261,6 +4869,7 @@ const citiesData = [
       longitude: -122.5310874,
       rank: "609",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Royal Oak",
@@ -4268,6 +4877,7 @@ const citiesData = [
       longitude: -83.1446485,
       rank: "610",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Des Plaines",
@@ -4275,6 +4885,7 @@ const citiesData = [
       longitude: -87.88339909999999,
       rank: "611",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Huntington Park",
@@ -4282,6 +4893,7 @@ const citiesData = [
       longitude: -118.2250725,
       rank: "612",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "La Mesa",
@@ -4289,6 +4901,7 @@ const citiesData = [
       longitude: -117.0230839,
       rank: "613",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Orland Park",
@@ -4296,6 +4909,7 @@ const citiesData = [
       longitude: -87.85394250000002,
       rank: "614",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Auburn",
@@ -4303,6 +4917,7 @@ const citiesData = [
       longitude: -85.48078249999999,
       rank: "615",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Lakeville",
@@ -4310,6 +4925,7 @@ const citiesData = [
       longitude: -93.24271999999999,
       rank: "616",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Owensboro",
@@ -4317,6 +4933,7 @@ const citiesData = [
       longitude: -87.1111676,
       rank: "617",
       state: "Kentucky",
+      timezone: "America/New_York",
     },
     {
       city: "Moore",
@@ -4324,6 +4941,7 @@ const citiesData = [
       longitude: -97.48670279999999,
       rank: "618",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Jupiter",
@@ -4331,6 +4949,7 @@ const citiesData = [
       longitude: -80.0942087,
       rank: "619",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Idaho Falls",
@@ -4338,6 +4957,7 @@ const citiesData = [
       longitude: -112.0339645,
       rank: "620",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "Dubuque",
@@ -4345,6 +4965,7 @@ const citiesData = [
       longitude: -90.66457179999999,
       rank: "621",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Bartlett",
@@ -4352,6 +4973,7 @@ const citiesData = [
       longitude: -89.8739753,
       rank: "622",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Rowlett",
@@ -4359,6 +4981,7 @@ const citiesData = [
       longitude: -96.56388,
       rank: "623",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Novi",
@@ -4366,6 +4989,7 @@ const citiesData = [
       longitude: -83.4754913,
       rank: "624",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "White Plains",
@@ -4373,6 +4997,7 @@ const citiesData = [
       longitude: -73.7629097,
       rank: "625",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Arcadia",
@@ -4380,6 +5005,7 @@ const citiesData = [
       longitude: -118.0353449,
       rank: "626",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Redmond",
@@ -4387,6 +5013,7 @@ const citiesData = [
       longitude: -122.121512,
       rank: "627",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lake Elsinore",
@@ -4394,6 +5021,7 @@ const citiesData = [
       longitude: -117.3272615,
       rank: "628",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Ocala",
@@ -4401,6 +5029,7 @@ const citiesData = [
       longitude: -82.14009229999999,
       rank: "629",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Tinley Park",
@@ -4408,6 +5037,7 @@ const citiesData = [
       longitude: -87.7932939,
       rank: "630",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Port Orange",
@@ -4415,6 +5045,7 @@ const citiesData = [
       longitude: -80.9956105,
       rank: "631",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Medford",
@@ -4422,6 +5053,7 @@ const citiesData = [
       longitude: -71.1061639,
       rank: "632",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Oak Lawn",
@@ -4429,6 +5061,7 @@ const citiesData = [
       longitude: -87.7479528,
       rank: "633",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Rocky Mount",
@@ -4436,6 +5069,7 @@ const citiesData = [
       longitude: -77.7905339,
       rank: "634",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Kokomo",
@@ -4443,6 +5077,7 @@ const citiesData = [
       longitude: -86.13360329999999,
       rank: "635",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Coconut Creek",
@@ -4450,6 +5085,7 @@ const citiesData = [
       longitude: -80.17893509999999,
       rank: "636",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Bowie",
@@ -4457,6 +5093,7 @@ const citiesData = [
       longitude: -76.77913649999999,
       rank: "637",
       state: "Maryland",
+      timezone: "America/New_York",
     },
     {
       city: "Berwyn",
@@ -4464,6 +5101,7 @@ const citiesData = [
       longitude: -87.7936685,
       rank: "638",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Midwest City",
@@ -4471,6 +5109,7 @@ const citiesData = [
       longitude: -97.3967019,
       rank: "639",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Fountain Valley",
@@ -4478,6 +5117,7 @@ const citiesData = [
       longitude: -117.9536697,
       rank: "640",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Buckeye",
@@ -4485,6 +5125,7 @@ const citiesData = [
       longitude: -112.5837766,
       rank: "641",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Dearborn Heights",
@@ -4492,6 +5133,7 @@ const citiesData = [
       longitude: -83.27326269999999,
       rank: "642",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Woodland",
@@ -4499,6 +5141,7 @@ const citiesData = [
       longitude: -121.7732971,
       rank: "643",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Noblesville",
@@ -4506,6 +5149,7 @@ const citiesData = [
       longitude: -86.0085955,
       rank: "644",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Valdosta",
@@ -4513,6 +5157,7 @@ const citiesData = [
       longitude: -83.2784851,
       rank: "645",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Diamond Bar",
@@ -4520,6 +5165,7 @@ const citiesData = [
       longitude: -117.8103367,
       rank: "646",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Manhattan",
@@ -4527,6 +5173,7 @@ const citiesData = [
       longitude: -96.57166939999999,
       rank: "647",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Santee",
@@ -4534,6 +5181,7 @@ const citiesData = [
       longitude: -116.9739167,
       rank: "648",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Taunton",
@@ -4541,6 +5189,7 @@ const citiesData = [
       longitude: -71.0897674,
       rank: "649",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Sanford",
@@ -4548,6 +5197,7 @@ const citiesData = [
       longitude: -81.269453,
       rank: "650",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Kettering",
@@ -4555,6 +5205,7 @@ const citiesData = [
       longitude: -84.1688274,
       rank: "651",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "New Brunswick",
@@ -4562,6 +5213,7 @@ const citiesData = [
       longitude: -74.4518188,
       rank: "652",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Decatur",
@@ -4569,6 +5221,7 @@ const citiesData = [
       longitude: -86.9833417,
       rank: "653",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Chicopee",
@@ -4576,6 +5229,7 @@ const citiesData = [
       longitude: -72.6078672,
       rank: "654",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Anderson",
@@ -4583,6 +5237,7 @@ const citiesData = [
       longitude: -85.6802541,
       rank: "655",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Margate",
@@ -4590,6 +5245,7 @@ const citiesData = [
       longitude: -80.206436,
       rank: "656",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Weymouth Town",
@@ -4597,6 +5253,7 @@ const citiesData = [
       longitude: -70.94103559999999,
       rank: "657",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Hempstead",
@@ -4604,6 +5261,7 @@ const citiesData = [
       longitude: -73.6187397,
       rank: "658",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Corvallis",
@@ -4611,6 +5269,7 @@ const citiesData = [
       longitude: -123.2620435,
       rank: "659",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Eastvale",
@@ -4618,6 +5277,7 @@ const citiesData = [
       longitude: -117.5848025,
       rank: "660",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Porterville",
@@ -4625,6 +5285,7 @@ const citiesData = [
       longitude: -119.0167679,
       rank: "661",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "West Haven",
@@ -4632,6 +5293,7 @@ const citiesData = [
       longitude: -72.9469711,
       rank: "662",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Brentwood",
@@ -4639,6 +5301,7 @@ const citiesData = [
       longitude: -121.6957863,
       rank: "663",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Paramount",
@@ -4646,6 +5309,7 @@ const citiesData = [
       longitude: -118.1597911,
       rank: "664",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Grand Forks",
@@ -4653,6 +5317,7 @@ const citiesData = [
       longitude: -97.0328547,
       rank: "665",
       state: "North Dakota",
+      timezone: "America/Chicago",
     },
     {
       city: "Georgetown",
@@ -4660,6 +5325,7 @@ const citiesData = [
       longitude: -97.6779842,
       rank: "666",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "St. Peters",
@@ -4667,6 +5333,7 @@ const citiesData = [
       longitude: -90.6298922,
       rank: "667",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Shoreline",
@@ -4674,6 +5341,7 @@ const citiesData = [
       longitude: -122.3415178,
       rank: "668",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Mount Prospect",
@@ -4681,6 +5349,7 @@ const citiesData = [
       longitude: -87.9372908,
       rank: "669",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Hanford",
@@ -4688,6 +5357,7 @@ const citiesData = [
       longitude: -119.6456844,
       rank: "670",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Normal",
@@ -4695,6 +5365,7 @@ const citiesData = [
       longitude: -88.9906312,
       rank: "671",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Rosemead",
@@ -4702,6 +5373,7 @@ const citiesData = [
       longitude: -118.072846,
       rank: "672",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lehi",
@@ -4709,6 +5381,7 @@ const citiesData = [
       longitude: -111.8507662,
       rank: "673",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Pocatello",
@@ -4716,6 +5389,7 @@ const citiesData = [
       longitude: -112.4455344,
       rank: "674",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "Highland",
@@ -4723,6 +5397,7 @@ const citiesData = [
       longitude: -117.2086513,
       rank: "675",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Novato",
@@ -4730,6 +5405,7 @@ const citiesData = [
       longitude: -122.5697032,
       rank: "676",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Port Arthur",
@@ -4737,6 +5413,7 @@ const citiesData = [
       longitude: -93.93994699999999,
       rank: "677",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Carson City",
@@ -4744,6 +5421,7 @@ const citiesData = [
       longitude: -119.7674034,
       rank: "678",
       state: "Nevada",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "San Marcos",
@@ -4751,6 +5429,7 @@ const citiesData = [
       longitude: -97.9413941,
       rank: "679",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Hendersonville",
@@ -4758,6 +5437,7 @@ const citiesData = [
       longitude: -86.6199957,
       rank: "680",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Elyria",
@@ -4765,6 +5445,7 @@ const citiesData = [
       longitude: -82.10764859999999,
       rank: "681",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Revere",
@@ -4772,6 +5453,7 @@ const citiesData = [
       longitude: -71.0119948,
       rank: "682",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Pflugerville",
@@ -4779,6 +5461,7 @@ const citiesData = [
       longitude: -97.62000429999999,
       rank: "683",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Greenwood",
@@ -4786,6 +5469,7 @@ const citiesData = [
       longitude: -86.10665259999999,
       rank: "684",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Bellevue",
@@ -4793,6 +5477,7 @@ const citiesData = [
       longitude: -95.9145568,
       rank: "685",
       state: "Nebraska",
+      timezone: "America/Chicago",
     },
     {
       city: "Wheaton",
@@ -4800,6 +5485,7 @@ const citiesData = [
       longitude: -88.1070127,
       rank: "686",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Smyrna",
@@ -4807,6 +5493,7 @@ const citiesData = [
       longitude: -84.51437609999999,
       rank: "687",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Sarasota",
@@ -4814,6 +5501,7 @@ const citiesData = [
       longitude: -82.53065269999999,
       rank: "688",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Blue Springs",
@@ -4821,6 +5509,7 @@ const citiesData = [
       longitude: -94.2816148,
       rank: "689",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Colton",
@@ -4828,6 +5517,7 @@ const citiesData = [
       longitude: -117.3136547,
       rank: "690",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Euless",
@@ -4835,6 +5525,7 @@ const citiesData = [
       longitude: -97.08195409999999,
       rank: "691",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Castle Rock",
@@ -4842,6 +5533,7 @@ const citiesData = [
       longitude: -104.8560902,
       rank: "692",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Cathedral City",
@@ -4849,6 +5541,7 @@ const citiesData = [
       longitude: -116.4668036,
       rank: "693",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Kingsport",
@@ -4856,6 +5549,7 @@ const citiesData = [
       longitude: -82.5618186,
       rank: "694",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Lake Havasu City",
@@ -4863,6 +5557,7 @@ const citiesData = [
       longitude: -114.3224548,
       rank: "695",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Pensacola",
@@ -4870,6 +5565,7 @@ const citiesData = [
       longitude: -87.2169149,
       rank: "696",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Hoboken",
@@ -4877,6 +5573,7 @@ const citiesData = [
       longitude: -74.0323626,
       rank: "697",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Yucaipa",
@@ -4884,6 +5581,7 @@ const citiesData = [
       longitude: -117.0430865,
       rank: "698",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Watsonville",
@@ -4891,6 +5589,7 @@ const citiesData = [
       longitude: -121.7568946,
       rank: "699",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Richland",
@@ -4898,6 +5597,7 @@ const citiesData = [
       longitude: -119.2844621,
       rank: "700",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Delano",
@@ -4905,6 +5605,7 @@ const citiesData = [
       longitude: -119.2470536,
       rank: "701",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Hoffman Estates",
@@ -4912,6 +5613,7 @@ const citiesData = [
       longitude: -88.12271989999999,
       rank: "702",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Florissant",
@@ -4919,6 +5621,7 @@ const citiesData = [
       longitude: -90.322614,
       rank: "703",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Placentia",
@@ -4926,6 +5629,7 @@ const citiesData = [
       longitude: -117.8703363,
       rank: "704",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "West New York",
@@ -4933,6 +5637,7 @@ const citiesData = [
       longitude: -74.0143064,
       rank: "705",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Dublin",
@@ -4940,6 +5645,7 @@ const citiesData = [
       longitude: -121.9357918,
       rank: "706",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Oak Park",
@@ -4947,6 +5653,7 @@ const citiesData = [
       longitude: -87.7845025,
       rank: "707",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Peabody",
@@ -4954,6 +5661,7 @@ const citiesData = [
       longitude: -70.9286609,
       rank: "708",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Perth Amboy",
@@ -4961,6 +5669,7 @@ const citiesData = [
       longitude: -74.2654234,
       rank: "709",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Battle Creek",
@@ -4968,6 +5677,7 @@ const citiesData = [
       longitude: -85.17971419999999,
       rank: "710",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Bradenton",
@@ -4975,6 +5685,7 @@ const citiesData = [
       longitude: -82.5748194,
       rank: "711",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Gilroy",
@@ -4982,6 +5693,7 @@ const citiesData = [
       longitude: -121.5682751,
       rank: "712",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Milford",
@@ -4989,6 +5701,7 @@ const citiesData = [
       longitude: -73.064036,
       rank: "713",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Albany",
@@ -4996,6 +5709,7 @@ const citiesData = [
       longitude: -123.1059282,
       rank: "714",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Ankeny",
@@ -5003,6 +5717,7 @@ const citiesData = [
       longitude: -93.6001278,
       rank: "715",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "La Crosse",
@@ -5010,6 +5725,7 @@ const citiesData = [
       longitude: -91.23958069999999,
       rank: "716",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Burlington",
@@ -5017,6 +5733,7 @@ const citiesData = [
       longitude: -79.43779909999999,
       rank: "717",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "DeSoto",
@@ -5024,6 +5741,7 @@ const citiesData = [
       longitude: -96.8570738,
       rank: "718",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Harrisonburg",
@@ -5031,6 +5749,7 @@ const citiesData = [
       longitude: -78.8689155,
       rank: "719",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Minnetonka",
@@ -5038,6 +5757,7 @@ const citiesData = [
       longitude: -93.4687489,
       rank: "720",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Elkhart",
@@ -5045,6 +5765,7 @@ const citiesData = [
       longitude: -85.9766671,
       rank: "721",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Lakewood",
@@ -5052,6 +5773,7 @@ const citiesData = [
       longitude: -81.7981908,
       rank: "722",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Glendora",
@@ -5059,6 +5781,7 @@ const citiesData = [
       longitude: -117.865339,
       rank: "723",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Southaven",
@@ -5066,6 +5789,7 @@ const citiesData = [
       longitude: -90.0125913,
       rank: "724",
       state: "Mississippi",
+      timezone: "America/Chicago",
     },
     {
       city: "Charleston",
@@ -5073,6 +5797,7 @@ const citiesData = [
       longitude: -81.6326234,
       rank: "725",
       state: "West Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Joplin",
@@ -5080,6 +5805,7 @@ const citiesData = [
       longitude: -94.51328099999999,
       rank: "726",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Enid",
@@ -5087,6 +5813,7 @@ const citiesData = [
       longitude: -97.8783911,
       rank: "727",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Palm Beach Gardens",
@@ -5094,6 +5821,7 @@ const citiesData = [
       longitude: -80.13865469999999,
       rank: "728",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Brookhaven",
@@ -5101,6 +5829,7 @@ const citiesData = [
       longitude: -84.3365917,
       rank: "729",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Plainfield",
@@ -5108,6 +5837,7 @@ const citiesData = [
       longitude: -74.4073736,
       rank: "730",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Grand Island",
@@ -5115,6 +5845,7 @@ const citiesData = [
       longitude: -98.3420118,
       rank: "731",
       state: "Nebraska",
+      timezone: "America/Chicago",
     },
     {
       city: "Palm Desert",
@@ -5122,6 +5853,7 @@ const citiesData = [
       longitude: -116.3744556,
       rank: "732",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Huntersville",
@@ -5129,6 +5861,7 @@ const citiesData = [
       longitude: -80.84285040000002,
       rank: "733",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Tigard",
@@ -5136,6 +5869,7 @@ const citiesData = [
       longitude: -122.7714861,
       rank: "734",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lenexa",
@@ -5143,6 +5877,7 @@ const citiesData = [
       longitude: -94.73357089999999,
       rank: "735",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Saginaw",
@@ -5150,6 +5885,7 @@ const citiesData = [
       longitude: -83.9508068,
       rank: "736",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Kentwood",
@@ -5157,6 +5893,7 @@ const citiesData = [
       longitude: -85.64474919999999,
       rank: "737",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Doral",
@@ -5164,6 +5901,7 @@ const citiesData = [
       longitude: -80.3553302,
       rank: "738",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Apple Valley",
@@ -5171,6 +5909,7 @@ const citiesData = [
       longitude: -93.21772000000001,
       rank: "739",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Grapevine",
@@ -5178,6 +5917,7 @@ const citiesData = [
       longitude: -97.0780654,
       rank: "740",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Aliso Viejo",
@@ -5185,6 +5925,7 @@ const citiesData = [
       longitude: -117.7256083,
       rank: "741",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Sammamish",
@@ -5192,6 +5933,7 @@ const citiesData = [
       longitude: -122.0355736,
       rank: "742",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Casa Grande",
@@ -5199,6 +5941,7 @@ const citiesData = [
       longitude: -111.7573521,
       rank: "743",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Pinellas Park",
@@ -5206,6 +5949,7 @@ const citiesData = [
       longitude: -82.6995443,
       rank: "744",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Troy",
@@ -5213,6 +5957,7 @@ const citiesData = [
       longitude: -73.69178509999999,
       rank: "745",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "West Sacramento",
@@ -5220,6 +5965,7 @@ const citiesData = [
       longitude: -121.530234,
       rank: "746",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Burien",
@@ -5227,6 +5973,7 @@ const citiesData = [
       longitude: -122.3467918,
       rank: "747",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Commerce City",
@@ -5234,6 +5981,7 @@ const citiesData = [
       longitude: -104.9338675,
       rank: "748",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Monroe",
@@ -5241,6 +5989,7 @@ const citiesData = [
       longitude: -92.1193012,
       rank: "749",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Cerritos",
@@ -5248,6 +5997,7 @@ const citiesData = [
       longitude: -118.0647871,
       rank: "750",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Downers Grove",
@@ -5255,6 +6005,7 @@ const citiesData = [
       longitude: -88.01117459999999,
       rank: "751",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Coral Gables",
@@ -5262,6 +6013,7 @@ const citiesData = [
       longitude: -80.2683838,
       rank: "752",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Wilson",
@@ -5269,6 +6021,7 @@ const citiesData = [
       longitude: -77.9155395,
       rank: "753",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Niagara Falls",
@@ -5276,6 +6029,7 @@ const citiesData = [
       longitude: -79.0377388,
       rank: "754",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Poway",
@@ -5283,6 +6037,7 @@ const citiesData = [
       longitude: -117.0358646,
       rank: "755",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Edina",
@@ -5290,6 +6045,7 @@ const citiesData = [
       longitude: -93.3499489,
       rank: "756",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Cuyahoga Falls",
@@ -5297,6 +6053,7 @@ const citiesData = [
       longitude: -81.48455849999999,
       rank: "757",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Rancho Santa Margarita",
@@ -5304,6 +6061,7 @@ const citiesData = [
       longitude: -117.603104,
       rank: "758",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Harrisburg",
@@ -5311,6 +6069,7 @@ const citiesData = [
       longitude: -76.8867008,
       rank: "759",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Huntington",
@@ -5318,6 +6077,7 @@ const citiesData = [
       longitude: -82.44515400000002,
       rank: "760",
       state: "West Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "La Mirada",
@@ -5325,6 +6085,7 @@ const citiesData = [
       longitude: -118.0120086,
       rank: "761",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cypress",
@@ -5332,6 +6093,7 @@ const citiesData = [
       longitude: -118.0372852,
       rank: "762",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Caldwell",
@@ -5339,6 +6101,7 @@ const citiesData = [
       longitude: -116.6873596,
       rank: "763",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "Logan",
@@ -5346,6 +6109,7 @@ const citiesData = [
       longitude: -111.8338359,
       rank: "764",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Galveston",
@@ -5353,6 +6117,7 @@ const citiesData = [
       longitude: -94.7976958,
       rank: "765",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Sheboygan",
@@ -5360,6 +6125,7 @@ const citiesData = [
       longitude: -87.71453,
       rank: "766",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Middletown",
@@ -5367,6 +6133,7 @@ const citiesData = [
       longitude: -84.39827629999999,
       rank: "767",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Murray",
@@ -5374,6 +6141,7 @@ const citiesData = [
       longitude: -111.8879909,
       rank: "768",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Roswell",
@@ -5381,6 +6149,7 @@ const citiesData = [
       longitude: -104.5230242,
       rank: "769",
       state: "New Mexico",
+      timezone: "America/Denver",
     },
     {
       city: "Parker",
@@ -5388,6 +6157,7 @@ const citiesData = [
       longitude: -104.7613633,
       rank: "770",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Bedford",
@@ -5395,6 +6165,7 @@ const citiesData = [
       longitude: -97.1430671,
       rank: "771",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "East Lansing",
@@ -5402,6 +6173,7 @@ const citiesData = [
       longitude: -84.48386540000001,
       rank: "772",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Methuen",
@@ -5409,6 +6181,7 @@ const citiesData = [
       longitude: -71.1908924,
       rank: "773",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Covina",
@@ -5416,6 +6189,7 @@ const citiesData = [
       longitude: -117.8903397,
       rank: "774",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Alexandria",
@@ -5423,6 +6197,7 @@ const citiesData = [
       longitude: -92.4451371,
       rank: "775",
       state: "Louisiana",
+      timezone: "America/Chicago",
     },
     {
       city: "Olympia",
@@ -5430,6 +6205,7 @@ const citiesData = [
       longitude: -122.9006951,
       rank: "776",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Euclid",
@@ -5437,6 +6213,7 @@ const citiesData = [
       longitude: -81.5267873,
       rank: "777",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Mishawaka",
@@ -5444,6 +6221,7 @@ const citiesData = [
       longitude: -86.15861559999999,
       rank: "778",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Salina",
@@ -5451,6 +6229,7 @@ const citiesData = [
       longitude: -97.61142369999999,
       rank: "779",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Azusa",
@@ -5458,6 +6237,7 @@ const citiesData = [
       longitude: -117.9075627,
       rank: "780",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Newark",
@@ -5465,6 +6245,7 @@ const citiesData = [
       longitude: -82.4012642,
       rank: "781",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Chesterfield",
@@ -5472,6 +6253,7 @@ const citiesData = [
       longitude: -90.5770675,
       rank: "782",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Leesburg",
@@ -5479,6 +6261,7 @@ const citiesData = [
       longitude: -77.56360149999999,
       rank: "783",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Dunwoody",
@@ -5486,6 +6269,7 @@ const citiesData = [
       longitude: -84.3346473,
       rank: "784",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Hattiesburg",
@@ -5493,6 +6277,7 @@ const citiesData = [
       longitude: -89.29033919999999,
       rank: "785",
       state: "Mississippi",
+      timezone: "America/Chicago",
     },
     {
       city: "Roseville",
@@ -5500,6 +6285,7 @@ const citiesData = [
       longitude: -82.9371409,
       rank: "786",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Bonita Springs",
@@ -5507,6 +6293,7 @@ const citiesData = [
       longitude: -81.7786972,
       rank: "787",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Portage",
@@ -5514,6 +6301,7 @@ const citiesData = [
       longitude: -85.5800022,
       rank: "788",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "St. Louis Park",
@@ -5521,6 +6309,7 @@ const citiesData = [
       longitude: -93.3702186,
       rank: "789",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Collierville",
@@ -5528,6 +6317,7 @@ const citiesData = [
       longitude: -89.6645266,
       rank: "790",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Middletown",
@@ -5535,6 +6325,7 @@ const citiesData = [
       longitude: -72.6506488,
       rank: "791",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Stillwater",
@@ -5542,6 +6333,7 @@ const citiesData = [
       longitude: -97.0583681,
       rank: "792",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "East Providence",
@@ -5549,6 +6341,7 @@ const citiesData = [
       longitude: -71.3700545,
       rank: "793",
       state: "Rhode Island",
+      timezone: "America/New_York",
     },
     {
       city: "Lawrence",
@@ -5556,6 +6349,7 @@ const citiesData = [
       longitude: -86.0252612,
       rank: "794",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Wauwatosa",
@@ -5563,6 +6357,7 @@ const citiesData = [
       longitude: -88.0075875,
       rank: "795",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Mentor",
@@ -5570,6 +6365,7 @@ const citiesData = [
       longitude: -81.339552,
       rank: "796",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Ceres",
@@ -5577,6 +6373,7 @@ const citiesData = [
       longitude: -120.9577098,
       rank: "797",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cedar Hill",
@@ -5584,6 +6381,7 @@ const citiesData = [
       longitude: -96.9561152,
       rank: "798",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Mansfield",
@@ -5591,6 +6389,7 @@ const citiesData = [
       longitude: -82.5154471,
       rank: "799",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Binghamton",
@@ -5598,6 +6397,7 @@ const citiesData = [
       longitude: -75.91797380000001,
       rank: "800",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Coeur d'Alene",
@@ -5605,6 +6405,7 @@ const citiesData = [
       longitude: -116.7804664,
       rank: "801",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "San Luis Obispo",
@@ -5612,6 +6413,7 @@ const citiesData = [
       longitude: -120.6596156,
       rank: "802",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Minot",
@@ -5619,6 +6421,7 @@ const citiesData = [
       longitude: -101.2922906,
       rank: "803",
       state: "North Dakota",
+      timezone: "America/Chicago",
     },
     {
       city: "Palm Springs",
@@ -5626,6 +6429,7 @@ const citiesData = [
       longitude: -116.5452921,
       rank: "804",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pine Bluff",
@@ -5633,6 +6437,7 @@ const citiesData = [
       longitude: -92.00319549999999,
       rank: "805",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Texas City",
@@ -5640,6 +6445,7 @@ const citiesData = [
       longitude: -94.9027002,
       rank: "806",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Summerville",
@@ -5647,6 +6453,7 @@ const citiesData = [
       longitude: -80.17564809999999,
       rank: "807",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Twin Falls",
@@ -5654,6 +6461,7 @@ const citiesData = [
       longitude: -114.4608711,
       rank: "808",
       state: "Idaho",
+      timezone: "America/Denver",
     },
     {
       city: "Jeffersonville",
@@ -5661,6 +6469,7 @@ const citiesData = [
       longitude: -85.7371847,
       rank: "809",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "San Jacinto",
@@ -5668,6 +6477,7 @@ const citiesData = [
       longitude: -116.958635,
       rank: "810",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Madison",
@@ -5675,6 +6485,7 @@ const citiesData = [
       longitude: -86.74833180000002,
       rank: "811",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Altoona",
@@ -5682,6 +6493,7 @@ const citiesData = [
       longitude: -78.3947359,
       rank: "812",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Columbus",
@@ -5689,6 +6501,7 @@ const citiesData = [
       longitude: -85.9213796,
       rank: "813",
       state: "Indiana",
+      timezone: "America/New_York",
     },
     {
       city: "Beavercreek",
@@ -5696,6 +6509,7 @@ const citiesData = [
       longitude: -84.06326849999999,
       rank: "814",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Apopka",
@@ -5703,6 +6517,7 @@ const citiesData = [
       longitude: -81.5322149,
       rank: "815",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Elmhurst",
@@ -5710,6 +6525,7 @@ const citiesData = [
       longitude: -87.9403418,
       rank: "816",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Maricopa",
@@ -5717,6 +6533,7 @@ const citiesData = [
       longitude: -112.0476423,
       rank: "817",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Farmington",
@@ -5724,6 +6541,7 @@ const citiesData = [
       longitude: -108.2186856,
       rank: "818",
       state: "New Mexico",
+      timezone: "America/Denver",
     },
     {
       city: "Glenview",
@@ -5731,6 +6549,7 @@ const citiesData = [
       longitude: -87.7878408,
       rank: "819",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Cleveland Heights",
@@ -5738,6 +6557,7 @@ const citiesData = [
       longitude: -81.556235,
       rank: "820",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Draper",
@@ -5745,6 +6565,7 @@ const citiesData = [
       longitude: -111.8638226,
       rank: "821",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Lincoln",
@@ -5752,6 +6573,7 @@ const citiesData = [
       longitude: -121.2930079,
       rank: "822",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Sierra Vista",
@@ -5759,6 +6581,7 @@ const citiesData = [
       longitude: -110.2772856,
       rank: "823",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Lacey",
@@ -5766,6 +6589,7 @@ const citiesData = [
       longitude: -122.8231915,
       rank: "824",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Biloxi",
@@ -5773,6 +6597,7 @@ const citiesData = [
       longitude: -88.88530779999999,
       rank: "825",
       state: "Mississippi",
+      timezone: "America/Chicago",
     },
     {
       city: "Strongsville",
@@ -5780,6 +6605,7 @@ const citiesData = [
       longitude: -81.83569,
       rank: "826",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Barnstable Town",
@@ -5787,6 +6613,7 @@ const citiesData = [
       longitude: -70.3002024,
       rank: "827",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Wylie",
@@ -5794,6 +6621,7 @@ const citiesData = [
       longitude: -96.5388789,
       rank: "828",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Sayreville",
@@ -5801,6 +6629,7 @@ const citiesData = [
       longitude: -74.360846,
       rank: "829",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Kannapolis",
@@ -5808,6 +6637,7 @@ const citiesData = [
       longitude: -80.6217341,
       rank: "830",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Charlottesville",
@@ -5815,6 +6645,7 @@ const citiesData = [
       longitude: -78.47667810000002,
       rank: "831",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Littleton",
@@ -5822,6 +6653,7 @@ const citiesData = [
       longitude: -105.0166498,
       rank: "832",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Titusville",
@@ -5829,6 +6661,7 @@ const citiesData = [
       longitude: -80.8075537,
       rank: "833",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Hackensack",
@@ -5836,6 +6669,7 @@ const citiesData = [
       longitude: -74.0434736,
       rank: "834",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Newark",
@@ -5843,6 +6677,7 @@ const citiesData = [
       longitude: -122.0402399,
       rank: "835",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pittsfield",
@@ -5850,6 +6685,7 @@ const citiesData = [
       longitude: -73.2453824,
       rank: "836",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "York",
@@ -5857,6 +6693,7 @@ const citiesData = [
       longitude: -76.727745,
       rank: "837",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Lombard",
@@ -5864,6 +6701,7 @@ const citiesData = [
       longitude: -88.00784349999999,
       rank: "838",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Attleboro",
@@ -5871,6 +6709,7 @@ const citiesData = [
       longitude: -71.2856082,
       rank: "839",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "DeKalb",
@@ -5878,6 +6717,7 @@ const citiesData = [
       longitude: -88.75036469999999,
       rank: "840",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Blacksburg",
@@ -5885,6 +6725,7 @@ const citiesData = [
       longitude: -80.4139393,
       rank: "841",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Dublin",
@@ -5892,6 +6733,7 @@ const citiesData = [
       longitude: -83.1140771,
       rank: "842",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Haltom City",
@@ -5899,6 +6741,7 @@ const citiesData = [
       longitude: -97.26918169999999,
       rank: "843",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Lompoc",
@@ -5906,6 +6749,7 @@ const citiesData = [
       longitude: -120.4579409,
       rank: "844",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "El Centro",
@@ -5913,6 +6757,7 @@ const citiesData = [
       longitude: -115.5630514,
       rank: "845",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Danville",
@@ -5920,6 +6765,7 @@ const citiesData = [
       longitude: -121.9999606,
       rank: "846",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Jefferson City",
@@ -5927,6 +6773,7 @@ const citiesData = [
       longitude: -92.1735164,
       rank: "847",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Cutler Bay",
@@ -5934,6 +6781,7 @@ const citiesData = [
       longitude: -80.34685929999999,
       rank: "848",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Oakland Park",
@@ -5941,6 +6789,7 @@ const citiesData = [
       longitude: -80.1319893,
       rank: "849",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "North Miami Beach",
@@ -5948,6 +6797,7 @@ const citiesData = [
       longitude: -80.1625463,
       rank: "850",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Freeport",
@@ -5955,6 +6805,7 @@ const citiesData = [
       longitude: -73.58318349999999,
       rank: "851",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Moline",
@@ -5962,6 +6813,7 @@ const citiesData = [
       longitude: -90.51513419999999,
       rank: "852",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Coachella",
@@ -5969,6 +6821,7 @@ const citiesData = [
       longitude: -116.173894,
       rank: "853",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Fort Pierce",
@@ -5976,6 +6829,7 @@ const citiesData = [
       longitude: -80.3256056,
       rank: "854",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Smyrna",
@@ -5983,6 +6837,7 @@ const citiesData = [
       longitude: -86.5186045,
       rank: "855",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Bountiful",
@@ -5990,6 +6845,7 @@ const citiesData = [
       longitude: -111.880771,
       rank: "856",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Fond du Lac",
@@ -5997,6 +6853,7 @@ const citiesData = [
       longitude: -88.4470508,
       rank: "857",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Everett",
@@ -6004,6 +6861,7 @@ const citiesData = [
       longitude: -71.0536625,
       rank: "858",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Danville",
@@ -6011,6 +6869,7 @@ const citiesData = [
       longitude: -79.39502279999999,
       rank: "859",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Keller",
@@ -6018,6 +6877,7 @@ const citiesData = [
       longitude: -97.229298,
       rank: "860",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Belleville",
@@ -6025,6 +6885,7 @@ const citiesData = [
       longitude: -89.9839935,
       rank: "861",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Bell Gardens",
@@ -6032,6 +6893,7 @@ const citiesData = [
       longitude: -118.1514588,
       rank: "862",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cleveland",
@@ -6039,6 +6901,7 @@ const citiesData = [
       longitude: -84.8766115,
       rank: "863",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "North Lauderdale",
@@ -6046,6 +6909,7 @@ const citiesData = [
       longitude: -80.2258811,
       rank: "864",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Fairfield",
@@ -6053,6 +6917,7 @@ const citiesData = [
       longitude: -84.5603187,
       rank: "865",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Salem",
@@ -6060,6 +6925,7 @@ const citiesData = [
       longitude: -70.8967155,
       rank: "866",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Rancho Palos Verdes",
@@ -6067,6 +6933,7 @@ const citiesData = [
       longitude: -118.3870173,
       rank: "867",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "San Bruno",
@@ -6074,6 +6941,7 @@ const citiesData = [
       longitude: -122.4110835,
       rank: "868",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Concord",
@@ -6081,6 +6949,7 @@ const citiesData = [
       longitude: -71.5375718,
       rank: "869",
       state: "New Hampshire",
+      timezone: "America/New_York",
     },
     {
       city: "Burlington",
@@ -6088,6 +6957,7 @@ const citiesData = [
       longitude: -73.21207199999999,
       rank: "870",
       state: "Vermont",
+      timezone: "America/New_York",
     },
     {
       city: "Apex",
@@ -6095,6 +6965,7 @@ const citiesData = [
       longitude: -78.85028559999999,
       rank: "871",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Midland",
@@ -6102,6 +6973,7 @@ const citiesData = [
       longitude: -84.2472116,
       rank: "872",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Altamonte Springs",
@@ -6109,6 +6981,7 @@ const citiesData = [
       longitude: -81.3656242,
       rank: "873",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Hutchinson",
@@ -6116,6 +6989,7 @@ const citiesData = [
       longitude: -97.92977429999999,
       rank: "874",
       state: "Kansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Buffalo Grove",
@@ -6123,6 +6997,7 @@ const citiesData = [
       longitude: -87.9631308,
       rank: "875",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Urbandale",
@@ -6130,6 +7005,7 @@ const citiesData = [
       longitude: -93.71216559999999,
       rank: "876",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "State College",
@@ -6137,6 +7013,7 @@ const citiesData = [
       longitude: -77.8600012,
       rank: "877",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Urbana",
@@ -6144,6 +7021,7 @@ const citiesData = [
       longitude: -88.2072697,
       rank: "878",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Plainfield",
@@ -6151,6 +7029,7 @@ const citiesData = [
       longitude: -88.2120315,
       rank: "879",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Manassas",
@@ -6158,6 +7037,7 @@ const citiesData = [
       longitude: -77.47526669999999,
       rank: "880",
       state: "Virginia",
+      timezone: "America/New_York",
     },
     {
       city: "Bartlett",
@@ -6165,6 +7045,7 @@ const citiesData = [
       longitude: -88.1856301,
       rank: "881",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Kearny",
@@ -6172,6 +7053,7 @@ const citiesData = [
       longitude: -74.1454214,
       rank: "882",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Oro Valley",
@@ -6179,6 +7061,7 @@ const citiesData = [
       longitude: -110.966488,
       rank: "883",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Findlay",
@@ -6186,6 +7069,7 @@ const citiesData = [
       longitude: -83.6499321,
       rank: "884",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Rohnert Park",
@@ -6193,6 +7077,7 @@ const citiesData = [
       longitude: -122.7010984,
       rank: "885",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Westfield",
@@ -6200,6 +7085,7 @@ const citiesData = [
       longitude: -72.749538,
       rank: "887",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Linden",
@@ -6207,6 +7093,7 @@ const citiesData = [
       longitude: -74.24459019999999,
       rank: "886",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Sumter",
@@ -6214,6 +7101,7 @@ const citiesData = [
       longitude: -80.3414693,
       rank: "888",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Wilkes-Barre",
@@ -6221,6 +7109,7 @@ const citiesData = [
       longitude: -75.88130749999999,
       rank: "889",
       state: "Pennsylvania",
+      timezone: "America/New_York",
     },
     {
       city: "Woonsocket",
@@ -6228,6 +7117,7 @@ const citiesData = [
       longitude: -71.51478390000001,
       rank: "890",
       state: "Rhode Island",
+      timezone: "America/New_York",
     },
     {
       city: "Leominster",
@@ -6235,6 +7125,7 @@ const citiesData = [
       longitude: -71.759794,
       rank: "891",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Shelton",
@@ -6242,6 +7133,7 @@ const citiesData = [
       longitude: -73.0931641,
       rank: "892",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Brea",
@@ -6249,6 +7141,7 @@ const citiesData = [
       longitude: -117.9000604,
       rank: "893",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Covington",
@@ -6256,6 +7149,7 @@ const citiesData = [
       longitude: -84.5085536,
       rank: "894",
       state: "Kentucky",
+      timezone: "America/New_York",
     },
     {
       city: "Rockwall",
@@ -6263,6 +7157,7 @@ const citiesData = [
       longitude: -96.4597089,
       rank: "895",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Meridian",
@@ -6270,6 +7165,7 @@ const citiesData = [
       longitude: -88.703656,
       rank: "896",
       state: "Mississippi",
+      timezone: "America/Chicago",
     },
     {
       city: "Riverton",
@@ -6277,6 +7173,7 @@ const citiesData = [
       longitude: -111.9391023,
       rank: "897",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "St. Cloud",
@@ -6284,6 +7181,7 @@ const citiesData = [
       longitude: -81.2811801,
       rank: "898",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Quincy",
@@ -6291,6 +7189,7 @@ const citiesData = [
       longitude: -91.4098726,
       rank: "899",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Morgan Hill",
@@ -6298,6 +7197,7 @@ const citiesData = [
       longitude: -121.6543901,
       rank: "900",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Warren",
@@ -6305,6 +7205,7 @@ const citiesData = [
       longitude: -80.81841659999999,
       rank: "901",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Edmonds",
@@ -6312,6 +7213,7 @@ const citiesData = [
       longitude: -122.3773552,
       rank: "902",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Burleson",
@@ -6319,6 +7221,7 @@ const citiesData = [
       longitude: -97.3208492,
       rank: "903",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Beverly",
@@ -6326,6 +7229,7 @@ const citiesData = [
       longitude: -70.880049,
       rank: "904",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Mankato",
@@ -6333,6 +7237,7 @@ const citiesData = [
       longitude: -93.99939959999999,
       rank: "905",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Hagerstown",
@@ -6340,6 +7245,7 @@ const citiesData = [
       longitude: -77.71999319999999,
       rank: "906",
       state: "Maryland",
+      timezone: "America/New_York",
     },
     {
       city: "Prescott",
@@ -6347,6 +7253,7 @@ const citiesData = [
       longitude: -112.4685025,
       rank: "907",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Campbell",
@@ -6354,6 +7261,7 @@ const citiesData = [
       longitude: -121.9499568,
       rank: "908",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Cedar Falls",
@@ -6361,6 +7269,7 @@ const citiesData = [
       longitude: -92.4453161,
       rank: "909",
       state: "Iowa",
+      timezone: "America/Chicago",
     },
     {
       city: "Beaumont",
@@ -6368,6 +7277,7 @@ const citiesData = [
       longitude: -116.977248,
       rank: "910",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "La Puente",
@@ -6375,6 +7285,7 @@ const citiesData = [
       longitude: -117.9495083,
       rank: "911",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Crystal Lake",
@@ -6382,6 +7293,7 @@ const citiesData = [
       longitude: -88.31619649999999,
       rank: "912",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Fitchburg",
@@ -6389,6 +7301,7 @@ const citiesData = [
       longitude: -71.8022955,
       rank: "913",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Carol Stream",
@@ -6396,6 +7309,7 @@ const citiesData = [
       longitude: -88.13479269999999,
       rank: "914",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Hickory",
@@ -6403,6 +7317,7 @@ const citiesData = [
       longitude: -81.3444573,
       rank: "915",
       state: "North Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Streamwood",
@@ -6410,6 +7325,7 @@ const citiesData = [
       longitude: -88.17840849999999,
       rank: "916",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Norwich",
@@ -6417,6 +7333,7 @@ const citiesData = [
       longitude: -72.07591049999999,
       rank: "917",
       state: "Connecticut",
+      timezone: "America/New_York",
     },
     {
       city: "Coppell",
@@ -6424,6 +7341,7 @@ const citiesData = [
       longitude: -97.01500779999999,
       rank: "918",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "San Gabriel",
@@ -6431,6 +7349,7 @@ const citiesData = [
       longitude: -118.1058333,
       rank: "919",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Holyoke",
@@ -6438,6 +7357,7 @@ const citiesData = [
       longitude: -72.6162009,
       rank: "920",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Bentonville",
@@ -6445,6 +7365,7 @@ const citiesData = [
       longitude: -94.2088172,
       rank: "921",
       state: "Arkansas",
+      timezone: "America/Chicago",
     },
     {
       city: "Florence",
@@ -6452,6 +7373,7 @@ const citiesData = [
       longitude: -87.677251,
       rank: "922",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Peachtree Corners",
@@ -6459,6 +7381,7 @@ const citiesData = [
       longitude: -84.2214551,
       rank: "923",
       state: "Georgia",
+      timezone: "America/New_York",
     },
     {
       city: "Brentwood",
@@ -6466,6 +7389,7 @@ const citiesData = [
       longitude: -86.78277720000001,
       rank: "924",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "Bozeman",
@@ -6473,6 +7397,7 @@ const citiesData = [
       longitude: -111.0429339,
       rank: "925",
       state: "Montana",
+      timezone: "America/Denver",
     },
     {
       city: "New Berlin",
@@ -6480,6 +7405,7 @@ const citiesData = [
       longitude: -88.1084224,
       rank: "926",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Goose Creek",
@@ -6487,6 +7413,7 @@ const citiesData = [
       longitude: -80.03258670000001,
       rank: "927",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Huntsville",
@@ -6494,6 +7421,7 @@ const citiesData = [
       longitude: -95.55077709999999,
       rank: "928",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Prescott Valley",
@@ -6501,6 +7429,7 @@ const citiesData = [
       longitude: -112.315721,
       rank: "929",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Maplewood",
@@ -6508,6 +7437,7 @@ const citiesData = [
       longitude: -92.9952153,
       rank: "930",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Romeoville",
@@ -6515,6 +7445,7 @@ const citiesData = [
       longitude: -88.0895061,
       rank: "931",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Duncanville",
@@ -6522,6 +7453,7 @@ const citiesData = [
       longitude: -96.9083366,
       rank: "932",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Atlantic City",
@@ -6529,6 +7461,7 @@ const citiesData = [
       longitude: -74.4229266,
       rank: "933",
       state: "New Jersey",
+      timezone: "America/New_York",
     },
     {
       city: "Clovis",
@@ -6536,6 +7469,7 @@ const citiesData = [
       longitude: -103.2052272,
       rank: "934",
       state: "New Mexico",
+      timezone: "America/Denver",
     },
     {
       city: "The Colony",
@@ -6543,6 +7477,7 @@ const citiesData = [
       longitude: -96.89283089999999,
       rank: "935",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Culver City",
@@ -6550,6 +7485,7 @@ const citiesData = [
       longitude: -118.3964665,
       rank: "936",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Marlborough",
@@ -6557,6 +7493,7 @@ const citiesData = [
       longitude: -71.5522874,
       rank: "937",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Hilton Head Island",
@@ -6564,6 +7501,7 @@ const citiesData = [
       longitude: -80.752608,
       rank: "938",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Moorhead",
@@ -6571,6 +7509,7 @@ const citiesData = [
       longitude: -96.76780389999999,
       rank: "939",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Calexico",
@@ -6578,6 +7517,7 @@ const citiesData = [
       longitude: -115.4988834,
       rank: "940",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Bullhead City",
@@ -6585,6 +7525,7 @@ const citiesData = [
       longitude: -114.5285981,
       rank: "941",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Germantown",
@@ -6592,6 +7533,7 @@ const citiesData = [
       longitude: -89.8100858,
       rank: "942",
       state: "Tennessee",
+      timezone: "America/New_York",
     },
     {
       city: "La Quinta",
@@ -6599,6 +7541,7 @@ const citiesData = [
       longitude: -116.3100095,
       rank: "943",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Lancaster",
@@ -6606,6 +7549,7 @@ const citiesData = [
       longitude: -82.5993294,
       rank: "944",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Wausau",
@@ -6613,6 +7557,7 @@ const citiesData = [
       longitude: -89.6301221,
       rank: "945",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Sherman",
@@ -6620,6 +7565,7 @@ const citiesData = [
       longitude: -96.6088805,
       rank: "946",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Ocoee",
@@ -6627,6 +7573,7 @@ const citiesData = [
       longitude: -81.5439619,
       rank: "947",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Shakopee",
@@ -6634,6 +7581,7 @@ const citiesData = [
       longitude: -93.5272861,
       rank: "948",
       state: "Minnesota",
+      timezone: "America/Chicago",
     },
     {
       city: "Woburn",
@@ -6641,6 +7589,7 @@ const citiesData = [
       longitude: -71.1522765,
       rank: "949",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Bremerton",
@@ -6648,6 +7597,7 @@ const citiesData = [
       longitude: -122.6329356,
       rank: "950",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Rock Island",
@@ -6655,6 +7605,7 @@ const citiesData = [
       longitude: -90.5787476,
       rank: "951",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Muskogee",
@@ -6662,6 +7613,7 @@ const citiesData = [
       longitude: -95.3696909,
       rank: "952",
       state: "Oklahoma",
+      timezone: "America/Chicago",
     },
     {
       city: "Cape Girardeau",
@@ -6669,6 +7621,7 @@ const citiesData = [
       longitude: -89.51814759999999,
       rank: "953",
       state: "Missouri",
+      timezone: "America/Chicago",
     },
     {
       city: "Annapolis",
@@ -6676,6 +7629,7 @@ const citiesData = [
       longitude: -76.4921829,
       rank: "954",
       state: "Maryland",
+      timezone: "America/New_York",
     },
     {
       city: "Greenacres",
@@ -6683,6 +7637,7 @@ const citiesData = [
       longitude: -80.1353896,
       rank: "955",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Ormond Beach",
@@ -6690,6 +7645,7 @@ const citiesData = [
       longitude: -81.0558894,
       rank: "956",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Hallandale Beach",
@@ -6697,6 +7653,7 @@ const citiesData = [
       longitude: -80.14837899999999,
       rank: "957",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Stanton",
@@ -6704,6 +7661,7 @@ const citiesData = [
       longitude: -117.9931165,
       rank: "958",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Puyallup",
@@ -6711,6 +7669,7 @@ const citiesData = [
       longitude: -122.2928974,
       rank: "959",
       state: "Washington",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Pacifica",
@@ -6718,6 +7677,7 @@ const citiesData = [
       longitude: -122.4869194,
       rank: "960",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Hanover Park",
@@ -6725,6 +7685,7 @@ const citiesData = [
       longitude: -88.1450735,
       rank: "961",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Hurst",
@@ -6732,6 +7693,7 @@ const citiesData = [
       longitude: -97.1705678,
       rank: "962",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Lima",
@@ -6739,6 +7701,7 @@ const citiesData = [
       longitude: -84.1052256,
       rank: "963",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Marana",
@@ -6746,6 +7709,7 @@ const citiesData = [
       longitude: -111.2224422,
       rank: "964",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Carpentersville",
@@ -6753,6 +7717,7 @@ const citiesData = [
       longitude: -88.2578582,
       rank: "965",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Oakley",
@@ -6760,6 +7725,7 @@ const citiesData = [
       longitude: -121.7124536,
       rank: "966",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Huber Heights",
@@ -6767,6 +7733,7 @@ const citiesData = [
       longitude: -84.12466080000002,
       rank: "967",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Lancaster",
@@ -6774,6 +7741,7 @@ const citiesData = [
       longitude: -96.7561082,
       rank: "968",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Montclair",
@@ -6781,6 +7749,7 @@ const citiesData = [
       longitude: -117.6897776,
       rank: "969",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Wheeling",
@@ -6788,6 +7757,7 @@ const citiesData = [
       longitude: -87.9289591,
       rank: "970",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Brookfield",
@@ -6795,6 +7765,7 @@ const citiesData = [
       longitude: -88.1064787,
       rank: "971",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Park Ridge",
@@ -6802,6 +7773,7 @@ const citiesData = [
       longitude: -87.84061919999999,
       rank: "972",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Florence",
@@ -6809,6 +7781,7 @@ const citiesData = [
       longitude: -79.7625625,
       rank: "973",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Roy",
@@ -6816,6 +7789,7 @@ const citiesData = [
       longitude: -112.0263313,
       rank: "974",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Winter Garden",
@@ -6823,6 +7797,7 @@ const citiesData = [
       longitude: -81.58618469999999,
       rank: "975",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Chelsea",
@@ -6830,6 +7805,7 @@ const citiesData = [
       longitude: -71.0328284,
       rank: "976",
       state: "Massachusetts",
+      timezone: "America/New_York",
     },
     {
       city: "Valley Stream",
@@ -6837,6 +7813,7 @@ const citiesData = [
       longitude: -73.70846449999999,
       rank: "977",
       state: "New York",
+      timezone: "America/New_York",
     },
     {
       city: "Spartanburg",
@@ -6844,6 +7821,7 @@ const citiesData = [
       longitude: -81.9320482,
       rank: "978",
       state: "South Carolina",
+      timezone: "America/New_York",
     },
     {
       city: "Lake Oswego",
@@ -6851,6 +7829,7 @@ const citiesData = [
       longitude: -122.6706498,
       rank: "979",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Friendswood",
@@ -6858,6 +7837,7 @@ const citiesData = [
       longitude: -95.2010447,
       rank: "980",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Westerville",
@@ -6865,6 +7845,7 @@ const citiesData = [
       longitude: -82.92906959999999,
       rank: "981",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Northglenn",
@@ -6872,6 +7853,7 @@ const citiesData = [
       longitude: -104.9811468,
       rank: "982",
       state: "Colorado",
+      timezone: "America/Denver",
     },
     {
       city: "Phenix City",
@@ -6879,6 +7861,7 @@ const citiesData = [
       longitude: -85.0007653,
       rank: "983",
       state: "Alabama",
+      timezone: "America/Chicago",
     },
     {
       city: "Grove City",
@@ -6886,6 +7869,7 @@ const citiesData = [
       longitude: -83.0929644,
       rank: "984",
       state: "Ohio",
+      timezone: "America/New_York",
     },
     {
       city: "Texarkana",
@@ -6893,6 +7877,7 @@ const citiesData = [
       longitude: -94.04768820000001,
       rank: "985",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Addison",
@@ -6900,6 +7885,7 @@ const citiesData = [
       longitude: -87.9889556,
       rank: "986",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Dover",
@@ -6907,6 +7893,7 @@ const citiesData = [
       longitude: -75.5243682,
       rank: "987",
       state: "Delaware",
+      timezone: "America/New_York",
     },
     {
       city: "Lincoln Park",
@@ -6914,6 +7901,7 @@ const citiesData = [
       longitude: -83.1785361,
       rank: "988",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Calumet City",
@@ -6921,6 +7909,7 @@ const citiesData = [
       longitude: -87.5294871,
       rank: "989",
       state: "Illinois",
+      timezone: "America/Chicago",
     },
     {
       city: "Muskegon",
@@ -6928,6 +7917,7 @@ const citiesData = [
       longitude: -86.24839209999999,
       rank: "990",
       state: "Michigan",
+      timezone: "America/New_York",
     },
     {
       city: "Aventura",
@@ -6935,6 +7925,7 @@ const citiesData = [
       longitude: -80.1392121,
       rank: "991",
       state: "Florida",
+      timezone: "America/New_York",
     },
     {
       city: "Martinez",
@@ -6942,6 +7933,7 @@ const citiesData = [
       longitude: -122.1341321,
       rank: "992",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Greenfield",
@@ -6949,6 +7941,7 @@ const citiesData = [
       longitude: -88.0125865,
       rank: "993",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Apache Junction",
@@ -6956,6 +7949,7 @@ const citiesData = [
       longitude: -111.5495777,
       rank: "994",
       state: "Arizona",
+      timezone: "America/Phoenix",
     },
     {
       city: "Monrovia",
@@ -6963,6 +7957,7 @@ const citiesData = [
       longitude: -118.0019482,
       rank: "995",
       state: "California",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Weslaco",
@@ -6970,6 +7965,7 @@ const citiesData = [
       longitude: -97.9908366,
       rank: "996",
       state: "Texas",
+      timezone: "America/Chicago",
     },
     {
       city: "Keizer",
@@ -6977,6 +7973,7 @@ const citiesData = [
       longitude: -123.0262077,
       rank: "997",
       state: "Oregon",
+      timezone: "America/Los_Angeles",
     },
     {
       city: "Spanish Fork",
@@ -6984,6 +7981,7 @@ const citiesData = [
       longitude: -111.654923,
       rank: "998",
       state: "Utah",
+      timezone: "America/Denver",
     },
     {
       city: "Beloit",
@@ -6991,6 +7989,7 @@ const citiesData = [
       longitude: -89.03177649999999,
       rank: "999",
       state: "Wisconsin",
+      timezone: "America/Chicago",
     },
     {
       city: "Panama City",
@@ -6998,6 +7997,7 @@ const citiesData = [
       longitude: -85.6602058,
       rank: "1000",
       state: "Florida",
+      timezone: "America/New_York",
     },
   ];
   

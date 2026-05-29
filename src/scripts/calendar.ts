@@ -1,11 +1,14 @@
 import getWeatherEmoji, { getFailureIndicator } from "./emoji.ts";
 import { START_HOUR, END_HOUR } from "./hours.ts";
+import { dateCellIdInTimezone, formatDateLabelInTimezone } from "./timezone.ts";
 
 const DAYS_SHOWN: number = 7;
 const $details = document.getElementById("details");
 const $summary = document.getElementById("summary");
 const $thead = document.getElementById("thead");
 const $tbody = document.getElementById("tbody");
+
+let currentTimezone: string = "America/New_York";
 
 /**
  * Creates an array of dates, each incremented by one day.
@@ -27,7 +30,7 @@ function incrementedDates(): Date[] {
  * @returns {String} - YYYY-MM-DDTHH.
  */
 function dateCellId(date: Date): string {
-  return date.toISOString().replace(/:.+/g, "");
+  return dateCellIdInTimezone(date, currentTimezone);
 }
 
 /**
@@ -41,11 +44,7 @@ function generateHeaders(dates: Date[]): string {
     `<th></th>` +
     dates
       .map((d) => {
-        const label = d.toLocaleDateString("en-US", {
-          weekday: "short",
-          month: "short",
-          day: "numeric",
-        });
+        const label = formatDateLabelInTimezone(d, currentTimezone);
         return `<th>${label}</th>`;
       })
       .join("")
@@ -132,12 +131,14 @@ interface Forecast {
 }
 
 interface AllForecastsEvent extends CustomEvent {
-  detail: Forecast[];
+  detail: { forecasts: Forecast[]; timezone: string };
 }
 
 window.addEventListener(
   "allForecasts",
-  ({ detail: forecasts }: AllForecastsEvent) => {
+  ({ detail }: AllForecastsEvent) => {
+    const { forecasts, timezone } = detail;
+    currentTimezone = timezone;
     clearCalendar();
     forecasts.forEach((forecast: Forecast) => {
       const { startTime, temperature, shortForecast, isGood, failureReasons, sunEvent } =
