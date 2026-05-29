@@ -128,6 +128,7 @@ interface Forecast {
   shortForecast: string;
   isGood: boolean;
   failureReasons: string[];
+  sunEvent: "sunrise" | "sunset" | null;
 }
 
 interface AllForecastsEvent extends CustomEvent {
@@ -139,19 +140,23 @@ window.addEventListener(
   ({ detail: forecasts }: AllForecastsEvent) => {
     clearCalendar();
     forecasts.forEach((forecast: Forecast) => {
-      const { startTime, temperature, shortForecast, isGood, failureReasons } =
+      const { startTime, temperature, shortForecast, isGood, failureReasons, sunEvent } =
         forecast;
       const id = dateCellId(new Date(startTime));
       const cell = document.getElementById(id);
       if (!cell) return;
 
-      if (isGood) {
+      if (sunEvent) {
+        // Sun event: always show sunrise/sunset, style based on weather
+        const { emoji, label } = getFailureIndicator(sunEvent);
+        cell.textContent = `${emoji} ${label}`;
+        cell.classList.add(isGood ? "ideal" : "not-ideal");
+      } else if (isGood) {
         // Ideal conditions: show emoji and temperature
         cell.textContent = `${getWeatherEmoji(shortForecast)} ${temperature}`;
         cell.classList.add("ideal");
       } else {
         // Bad conditions: show failure indicator
-        // Use the first failure reason as the primary one
         const primaryReason = failureReasons[0];
         const { emoji, label } = getFailureIndicator(primaryReason);
         cell.textContent = `${emoji} ${label}`;
