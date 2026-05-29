@@ -209,11 +209,11 @@ $input.addEventListener("input", (ev) => {
   // Show the flyout of options.
   $input.setAttribute("aria-expanded", String(Boolean(ev.target.value)));
   // Show or hide the options based on the input value.
-  const rgx = new RegExp(`${ev.target.value}`, "gmisu");
   const visible = [...$locations.children].filter(($btn: HTMLElement) => {
     if (!(ev.target instanceof HTMLInputElement)) return;
     const exclude =
-      Boolean(ev.target.value) && !rgx.test($btn.textContent as string);
+      Boolean(ev.target.value) &&
+      !$btn.textContent?.toLowerCase().includes(ev.target.value.toLowerCase());
     $btn.style.display = exclude ? "none" : "block";
     return exclude;
   });
