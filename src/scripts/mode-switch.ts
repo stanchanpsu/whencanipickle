@@ -20,7 +20,12 @@ function update(mode: string) {
  * @param {MediaEvent} ev - Media Event object
  */
 function init(ev: MediaQueryList) {
-    const storage = localStorage.getItem(MODE_LOCALSTORAGE_KEY);
+    let storage: string | null = null;
+    try {
+        storage = localStorage.getItem(MODE_LOCALSTORAGE_KEY);
+    } catch (e) {
+        console.warn('Failed to read mode from localStorage:', e);
+    }
     if (typeof storage === 'string') return update(storage);
     else if (ev.matches) return update('light');
     else return update('dark');
@@ -29,7 +34,11 @@ function init(ev: MediaQueryList) {
 if ($button !== null) {
     $button.addEventListener('click', () => {
         const mode = ['light', 'dark'].find((m) => $button.dataset.mode !== m) || 'light';
-        localStorage.setItem(MODE_LOCALSTORAGE_KEY, mode);
+        try {
+            localStorage.setItem(MODE_LOCALSTORAGE_KEY, mode);
+        } catch (e) {
+            console.warn('Failed to save mode to localStorage:', e);
+        }
         update(mode);
     });
 }
