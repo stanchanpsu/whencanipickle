@@ -1,4 +1,5 @@
 import SunCalc from "suncalc";
+import type { Location, RawForecast, ForecastEvaluation, FailureReason, SunEvent } from "./types.ts";
 
 const $form = document.getElementById("form") as HTMLFormElement;
 const $input = document.getElementById("input") as HTMLInputElement;
@@ -12,78 +13,43 @@ const highTempThreshold = 85;
 const humidityThreshold = 55;
 const windSpeedThreshold = 12;
 
-/**
- * Creates a normalized location name.
- *
- * @param {Object} location - A location entry.
- * @returns {String} - A normalized location name.
- */
-function formatLabel(location) {
+function formatLabel(location: Location): string {
   return `${location.city}, ${location.state}`;
 }
 
-/**
- * Determines a good time to play.
- *
- * @param {String} startTime - ISO8601 Datetime string.
- * @returns {Boolean}
- */
-function isFuture(startTime) {
+function isFuture(startTime: string): boolean {
   return new Date(startTime) >= new Date();
 }
 
-/**
- * Determines a good temperature to play.
- *
- * @param {Number} temp - Temperature.
- * @returns {Boolean}
- */
-function goodTemperature(temp) {
+function goodTemperature(temp: number): boolean {
   return temp >= lowTempThreshold && temp <= highTempThreshold;
 }
 
-/**
- * Determines if precipitation is adequate.
- *
- * @param {String} shortForecast - Forecast description.
- * @returns {Boolean}
- */
-function goodPrecip(shortForecast) {
+function goodPrecip(shortForecast: string): boolean {
   const exclude = ["rain", "shower", "storm", "snow", "hail"];
   return !exclude.some((word) =>
     shortForecast.toLowerCase().includes(word.toLowerCase()),
   );
 }
 
-/**
- * Determines if the humidity is adequate.
- *
- * @param {Number} - The relativeHumidity value from the forecast.
- * @returns {Boolean}
- */
-function goodHumidity(relativeHumidity) {
+function goodHumidity(relativeHumidity: { value: number }): boolean {
   return relativeHumidity.value <= humidityThreshold;
 }
 
-/**
- * Determines if the windspeed is adequate.
- *
- * @param {String} windspeed - The windspeed from the forecast.
- * @returns {Boolean}
- */
-function goodWindspeed(windspeed) {
+function goodWindspeed(windspeed: string): boolean {
   return parseInt(windspeed.replace(/\D+/, ""), 10) < windSpeedThreshold;
 }
 
-/**
- * Evaluates a forecast and returns its quality and failure reasons.
- *
- * @param {Object} forecast - A forecast to check.
- * @param {Number} latitude - Location latitude.
- * @param {Number} longitude - Location longitude.
- * @returns {Object} - { isGood: boolean, failureReasons: string[], sunEvent: string|null }
- */
-function evaluateForecast(forecast, latitude, longitude) {
+interface SunCalcTimes {
+  sunrise: Date;
+  sunset: Date;
+}
+
+function evaluateForecast(
+  forecast: RawForecast,
+  latitude: number,
+  longitude: number,
+): ForecastEvaluation {
   const {
     temperature,
     startTime,
@@ -92,9 +58,9 @@ function evaluateForecast(forecast, latitude, longitude) {
     windSpeed,
   } = forecast;
 
-  const failureReasons = [];
+  const failureReasons: FailureReason[] = [];
   const date = new Date(startTime);
-  const sunTimes = SunCalc.getTimes(date, latitude, longitude);
+  const sunTimes: SunCalcTimes = SunCalc.getTimes(date, latitude, longitude);
 
   // Determine if hour contains sunrise or sunset
   const hourStart = new Date(date);
@@ -102,7 +68,7 @@ function evaluateForecast(forecast, latitude, longitude) {
   const hourEnd = new Date(hourStart);
   hourEnd.setHours(hourEnd.getHours() + 1);
 
-  let sunEvent = null;
+  let sunEvent: SunEvent | null = null;
   if (sunTimes.sunrise >= hourStart && sunTimes.sunrise < hourEnd) {
     sunEvent = "sunrise";
   } else if (sunTimes.sunset >= hourStart && sunTimes.sunset < hourEnd) {
@@ -127,16 +93,10 @@ function evaluateForecast(forecast, latitude, longitude) {
   };
 }
 
-/**
- * Moves the tabindex between buttons in the flyout using the up/down arrow keys.
- *
- * @param {KeyboardEvent} ev - Native DOM keyboard event
- * @returns {Element|undefined} The next element to focus
- */
-function keyboardTraverse(ev) {
+function keyboardTraverse(ev: KeyboardEvent): Element | undefined {
   if (!ARROW_KEYS.includes(ev.key)) return;
   ev.stopPropagation();
-  const visible = [
+  const visible: HTMLElement[] = [
     ...$locations.querySelectorAll('button:not([style*="none"])'),
   ];
   const current = visible.findIndex(($btn: HTMLElement) => $btn.tabIndex === 0);
@@ -146,13 +106,7 @@ function keyboardTraverse(ev) {
   return updateTabIndex(visible.at(next));
 }
 
-/**
- * Updates the tabIndex of all buttons in the flyout.
- *
- * @param {Element} $current - The element meant to be newly tabbable
- * @returns {Element} - The element meant to be newly tabbable
- */
-function updateTabIndex($current) {
+function updateTabIndex($current: Element | undefined): Element | undefined {
   if (!$current) return;
   [...$locations.children].forEach(($btn: HTMLElement) => {
     $btn.tabIndex = $btn === $current ? 0 : -1;
@@ -161,49 +115,40 @@ function updateTabIndex($current) {
   return $current;
 }
 
-// Show or hide the flyout depending on if the input has a value.
-$input.addEventListener("click", (ev) => {
+$input.addEventListener("click", (ev: MouseEvent) => {
   if (!(ev.target instanceof HTMLInputElement)) return;
   $input.setAttribute("aria-expanded", String(Boolean(ev.target.value)));
 });
 
-// Filter the list of options during input.
-$input.addEventListener("input", (ev) => {
+$input.addEventListener("input", (ev: Event) => {
   if (!(ev.target instanceof HTMLInputElement)) return;
-  // Update the size of the input to accommodate the value.
   $input.style.minWidth = `${ev.target.value.length}ch`;
-  // Show the flyout of options.
   $input.setAttribute("aria-expanded", String(Boolean(ev.target.value)));
-  // Show or hide the options based on the input value.
-  const visible = [...$locations.children].filter(($btn: HTMLElement) => {
-    if (!(ev.target instanceof HTMLInputElement)) return;
+  const visible: HTMLElement[] = [...$locations.children].filter(($btn: HTMLElement) => {
+    if (!(ev.target instanceof HTMLInputElement)) return false;
     const exclude =
       Boolean(ev.target.value) &&
       !$btn.textContent?.toLowerCase().includes(ev.target.value.toLowerCase());
     $btn.style.display = exclude ? "none" : "block";
     return exclude;
   });
-  // Ensure something is tabbable, otherwise set the first visible option as tabbable.
   if (!visible.some(($btn: HTMLElement) => $btn.tabIndex === 0))
     updateTabIndex(visible.at(0));
 });
 
-// If tabbed into the list, continues to move up/down with arrow keys.
-$locations.addEventListener("keydown", (ev) => keyboardTraverse(ev)?.focus());
+$locations.addEventListener("keydown", (ev: KeyboardEvent) => keyboardTraverse(ev)?.focus());
 
-// If flyout is open and outside click, close flyout.
-document.body.addEventListener("click", (ev) => {
+document.body.addEventListener("click", (ev: MouseEvent) => {
   const isExpanded = $input.getAttribute("aria-expanded");
   const outsideForm = ![...ev.composedPath()].includes($form);
   if (isExpanded && outsideForm) $input.setAttribute("aria-expanded", "false");
 });
 
-// On load, fetch locations.json for input field, render as options.
 fetch("/locations.json")
-  .then((res) => res.json())
-  .then((locations) => {
+  .then((res: Response) => res.json())
+  .then((locations: Location[]) => {
     $locations.innerHTML = locations
-      .map((entry, index) => {
+      .map((entry: Location, index: number) => {
         return `<button 
             tabIndex="-1"
             type="button"
@@ -213,77 +158,65 @@ fetch("/locations.json")
       })
       .join("");
 
-    /**
-     * Triggers series of requests to fetch weather data.
-     *
-     * @param {Number} index - The index of the target in the locations array
-     * @returns {void}
-     */
-    function onLocationSelect(index) {
+    function onLocationSelect(index: number): void {
       if (!locations?.[index]) return;
       const location = locations[index];
       
-      // Safely store location in localStorage
       try {
-        localStorage.setItem(LOCATION_LOCALSTORAGE_KEY, index);
-      } catch (e) {
+        localStorage.setItem(LOCATION_LOCALSTORAGE_KEY, index.toString());
+      } catch (e: unknown) {
         console.warn('Failed to save location to localStorage:', e);
       }
 
-      // Replace the input value with city alone.
       $input.value = location.city;
       $input.style.minWidth = `${location.city.length}ch`;
 
-      // Event is read by <Map/> component.
       window.dispatchEvent(
         new CustomEvent("city", { detail: formatLabel(location) }),
       );
 
-      // Construct the URL for the forecast request.
       const url = new URL(
         `/points/${location.latitude},${location.longitude}`,
         WEATHER_GOV_BASE,
       );
 
-      // Execute the fetch request with error handling.
       fetch(url.toString())
-        .then((res) => {
+        .then((res: Response) => {
           if (!res.ok) throw new Error(`Weather API error: ${res.status}`);
           return res.json();
         })
-        .then(({ properties }) => fetch(properties.forecastHourly))
-        .then((res) => {
+        .then(({ properties }: { properties: { forecastHourly: string } }) =>
+          fetch(properties.forecastHourly),
+        )
+        .then((res: Response) => {
           if (!res.ok) throw new Error(`Forecast API error: ${res.status}`);
           return res.json();
         })
-        .then(({ properties }) => {
+        .then(({ properties }: { properties: { periods: RawForecast[] } }) => {
           const goodForecastsArray = properties.periods
-            .filter((forecast) => {
+            .filter((forecast: RawForecast) => {
               const { isGood } = evaluateForecast(forecast, location.latitude, location.longitude);
               return isGood && isFuture(forecast.startTime);
             });
           const allForecasts = properties.periods
-            .filter((forecast) => isFuture(forecast.startTime))
-            .map((forecast) => ({
+            .filter((forecast: RawForecast) => isFuture(forecast.startTime))
+            .map((forecast: RawForecast) => ({
               ...forecast,
               ...evaluateForecast(forecast, location.latitude, location.longitude),
             }));
-          // Event is read by <Results/> component.
           window.dispatchEvent(
             new CustomEvent("forecasts", { 
               detail: { forecasts: goodForecastsArray, timezone: location.timezone } 
             }),
           );
-          // Event is read by <Calendar/> component.
           window.dispatchEvent(
             new CustomEvent("allForecasts", { 
               detail: { forecasts: allForecasts, timezone: location.timezone } 
             }),
           );
         })
-        .catch((error) => {
+        .catch((error: Error) => {
           console.error('Failed to fetch weather data:', error);
-          // Dispatch empty forecasts to prevent UI from hanging
           window.dispatchEvent(
             new CustomEvent("forecasts", { 
               detail: { forecasts: [], timezone: location.timezone } 
@@ -297,45 +230,37 @@ fetch("/locations.json")
         });
     }
 
-    /**
-     * Triggers several functions when a location is selected.
-     *
-     * @param {Element} $btn - The element selected by the user
-     */
     function userChosen(
-      $btn = $locations.querySelector('button[tabIndex="0"]'),
-    ) {
+      $btn: Element | null = $locations.querySelector('button[tabIndex="0"]'),
+    ): void {
       if (!($btn instanceof HTMLButtonElement)) return;
       $input.setAttribute("aria-expanded", "false");
       updateTabIndex($btn);
       onLocationSelect(Number($btn.value));
     }
 
-    // Listen for keyboard events in the input field.
-    $input.addEventListener("keydown", (ev) => {
+    $input.addEventListener("keydown", (ev: KeyboardEvent) => {
       if (["Enter"].includes(ev.key)) return userChosen();
       keyboardTraverse(ev);
     });
 
-    // When an option in the dropdown is clicked, target the element.
-    $locations.addEventListener("click", (ev) =>
+    $locations.addEventListener("click", (ev: MouseEvent) =>
       userChosen(ev.target as Element),
     );
 
-    // Safely get loaded item from storage if it exists, otherwise default to first item.
     let idx = 0;
     try {
       const storage = localStorage.getItem(LOCATION_LOCALSTORAGE_KEY);
       if (typeof storage === "string") {
         idx = parseInt(storage, 10);
       }
-    } catch (e) {
+    } catch (e: unknown) {
       console.warn('Failed to read location from localStorage:', e);
     }
 
     onLocationSelect(idx);
   })
-  .catch((error) => {
+  .catch((error: Error) => {
     console.error('Failed to load locations:', error);
     $locations.innerHTML = '<p class="error">Failed to load locations. Please refresh the page.</p>';
   });

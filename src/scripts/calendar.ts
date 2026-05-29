@@ -1,6 +1,7 @@
 import getWeatherEmoji, { getFailureIndicator } from "./emoji.ts";
 import { START_HOUR, END_HOUR } from "./hours.ts";
 import { dateCellIdInTimezone, formatDateLabelInTimezone } from "./timezone.ts";
+import type { Forecast, AllForecastsEvent } from "./types.ts";
 
 const DAYS_SHOWN: number = 7;
 const $details = document.getElementById("details");
@@ -120,19 +121,6 @@ function detailsToggle(ev: MediaQueryListEvent | MediaQueryList): void {
 }
 
 renderCalendar();
-
-interface Forecast {
-  startTime: string;
-  temperature: number;
-  shortForecast: string;
-  isGood: boolean;
-  failureReasons: string[];
-  sunEvent: "sunrise" | "sunset" | null;
-}
-
-interface AllForecastsEvent extends CustomEvent {
-  detail: { forecasts: Forecast[]; timezone: string };
-}
 
 window.addEventListener(
   "allForecasts",
