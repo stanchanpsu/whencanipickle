@@ -1,5 +1,6 @@
 import getWeatherEmoji from "./emoji.ts";
 import { formatDistanceToNowStrict } from "date-fns";
+import { formatTimeInTimezone, formatDateInTimezone, formatWeekdayInTimezone } from "./timezone.ts";
 
 const $results = document.getElementById("results");
 
@@ -19,16 +20,17 @@ function sentenceCase(str: string): string {
  * Creates a human readable datetime description.
  *
  * @param {String} startTime - ISO8601 Datetime format.
+ * @param {String} timezone - IANA timezone identifier.
  * @returns {String} - Human readable datetime description.
  */
-function formatTime(startTime: string): string {
+function formatTime(startTime: string, timezone: string): string {
   const date = new Date(startTime);
   const relativeTimeFuture = sentenceCase(
     formatDistanceToNowStrict(date, { addSuffix: true })
   );
-  const weekday = date.toLocaleDateString("en-US", { weekday: "long" });
-  const localeDate = date.toLocaleDateString("en-US");
-  const localeTime = date.toLocaleTimeString("en-US", { hour: "numeric" });
+  const weekday = formatWeekdayInTimezone(startTime, timezone);
+  const localeDate = formatDateInTimezone(startTime, timezone);
+  const localeTime = formatTimeInTimezone(startTime, timezone);
   return `${relativeTimeFuture} - ${weekday}, ${localeDate} at ${localeTime}`;
 }
 
@@ -55,16 +57,17 @@ interface Forecast {
 }
 
 interface ForecastEvent extends CustomEvent {
-  detail: Forecast[];
+  detail: { forecasts: Forecast[]; timezone: string };
 }
 
-window.addEventListener("forecasts", ({ detail: forecasts }: ForecastEvent) => {
+window.addEventListener("forecasts", ({ detail }: ForecastEvent) => {
   if (!$results) return;
+  const { forecasts, timezone } = detail;
   $results.textContent = `😔 Darn! No good pickleball weather in the next week.  Check back later! 🥒`;
   if (forecasts.length) {
     const [forecast] = forecasts;
     $results.textContent = `🎾 Good news! You can play pickleball
-        📅 ${formatTime(forecast.startTime)}
+        📅 ${formatTime(forecast.startTime, timezone)}
 
         🌡️ Temperature: ${forecast.temperature}°F
         💧 Humidity: ${forecast.relativeHumidity.value}%

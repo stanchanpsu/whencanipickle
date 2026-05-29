@@ -1,11 +1,14 @@
 import getWeatherEmoji, { getFailureIndicator } from "./emoji.ts";
 import { START_HOUR, END_HOUR } from "./hours.ts";
+import { dateCellIdInTimezone, formatDateLabelInTimezone } from "./timezone.ts";
 
 const DAYS_SHOWN: number = 7;
 const $details = document.getElementById("details");
 const $summary = document.getElementById("summary");
 const $thead = document.getElementById("thead");
 const $tbody = document.getElementById("tbody");
+
+let currentTimezone: string = "America/New_York";
 
 /**
  * Creates an array of dates, each incremented by one day.
@@ -27,7 +30,7 @@ function incrementedDates(): Date[] {
  * @returns {String} - YYYY-MM-DDTHH.
  */
 function dateCellId(date: Date): string {
-  return date.toISOString().replace(/:.+/g, "");
+  return dateCellIdInTimezone(date, currentTimezone);
 }
 
 /**
@@ -41,11 +44,7 @@ function generateHeaders(dates: Date[]): string {
     `<th></th>` +
     dates
       .map((d) => {
-        const label = d.toLocaleDateString("en-US", {
-          weekday: "short",
-          month: "short",
-          day: "numeric",
-        });
+        const label = formatDateLabelInTimezone(d, currentTimezone);
         return `<th>${label}</th>`;
       })
       .join("")
@@ -102,6 +101,7 @@ function clearCalendar(): void {
   const eventCells = document.getElementsByClassName("event-cell");
   Array.from(eventCells).forEach((cell) => {
     cell.textContent = "";
+    cell.classList.remove("ideal", "not-ideal");
   });
 }
 
@@ -127,30 +127,37 @@ interface Forecast {
   shortForecast: string;
   isGood: boolean;
   failureReasons: string[];
+  sunEvent: "sunrise" | "sunset" | null;
 }
 
 interface AllForecastsEvent extends CustomEvent {
-  detail: Forecast[];
+  detail: { forecasts: Forecast[]; timezone: string };
 }
 
 window.addEventListener(
   "allForecasts",
-  ({ detail: forecasts }: AllForecastsEvent) => {
+  ({ detail }: AllForecastsEvent) => {
+    const { forecasts, timezone } = detail;
+    currentTimezone = timezone;
     clearCalendar();
     forecasts.forEach((forecast: Forecast) => {
-      const { startTime, temperature, shortForecast, isGood, failureReasons } =
+      const { startTime, temperature, shortForecast, isGood, failureReasons, sunEvent } =
         forecast;
       const id = dateCellId(new Date(startTime));
       const cell = document.getElementById(id);
       if (!cell) return;
 
-      if (isGood) {
+      if (sunEvent) {
+        // Sun event: always show sunrise/sunset, style based on weather
+        const { emoji, label } = getFailureIndicator(sunEvent);
+        cell.textContent = `${emoji} ${label}`;
+        cell.classList.add(isGood ? "ideal" : "not-ideal");
+      } else if (isGood) {
         // Ideal conditions: show emoji and temperature
         cell.textContent = `${getWeatherEmoji(shortForecast)} ${temperature}`;
         cell.classList.add("ideal");
       } else {
         // Bad conditions: show failure indicator
-        // Use the first failure reason as the primary one
         const primaryReason = failureReasons[0];
         const { emoji, label } = getFailureIndicator(primaryReason);
         cell.textContent = `${emoji} ${label}`;

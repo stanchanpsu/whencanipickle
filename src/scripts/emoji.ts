@@ -44,6 +44,8 @@ export function getFailureIndicator(reason: string): {
     humidity: { emoji: "💧", label: "humid" },
     precipitation: { emoji: "🌧️", label: "rainy" },
     nighttime: { emoji: "🌙", label: "night" },
+    sunrise: { emoji: "🌅", label: "sunrise" },
+    sunset: { emoji: "🌇", label: "sunset" },
   };
   return indicatorMap[reason] || { emoji: "❓", label: "unknown" };
 }

@@ -1,3 +1,5 @@
+import SunCalc from "suncalc";
+
 const $form = document.getElementById("form") as HTMLFormElement;
 const $input = document.getElementById("input") as HTMLInputElement;
 const $locations = document.getElementById("locations") as Element;
@@ -77,21 +79,38 @@ function goodWindspeed(windspeed) {
  * Evaluates a forecast and returns its quality and failure reasons.
  *
  * @param {Object} forecast - A forecast to check.
- * @returns {Object} - { isGood: boolean, failureReasons: string[] }
+ * @param {Number} latitude - Location latitude.
+ * @param {Number} longitude - Location longitude.
+ * @returns {Object} - { isGood: boolean, failureReasons: string[], sunEvent: string|null }
  */
-function evaluateForecast(forecast) {
+function evaluateForecast(forecast, latitude, longitude) {
   const {
     temperature,
     startTime,
-    isDaytime,
     shortForecast,
     relativeHumidity,
     windSpeed,
   } = forecast;
 
   const failureReasons = [];
+  const date = new Date(startTime);
+  const sunTimes = SunCalc.getTimes(date, latitude, longitude);
 
-  if (!isDaytime) failureReasons.push("nighttime");
+  // Determine if hour contains sunrise or sunset
+  const hourStart = new Date(date);
+  hourStart.setMinutes(0, 0, 0);
+  const hourEnd = new Date(hourStart);
+  hourEnd.setHours(hourEnd.getHours() + 1);
+
+  let sunEvent = null;
+  if (sunTimes.sunrise >= hourStart && sunTimes.sunrise < hourEnd) {
+    sunEvent = "sunrise";
+  } else if (sunTimes.sunset >= hourStart && sunTimes.sunset < hourEnd) {
+    sunEvent = "sunset";
+  } else if (!(date > sunTimes.sunrise && date < sunTimes.sunset)) {
+    failureReasons.push("nighttime");
+  }
+
   if (!goodTemperature(temperature)) {
     failureReasons.push(
       temperature < lowTempThreshold ? "temperature-low" : "temperature-high",
@@ -104,25 +123,31 @@ function evaluateForecast(forecast) {
   return {
     isGood: failureReasons.length === 0,
     failureReasons,
+    sunEvent,
   };
 }
 
 /**
  * Determines which of the given forecasts are adequate using Array.reduce().
  *
+ * @param {Number} latitude - Location latitude.
+ * @param {Number} longitude - Location longitude.
  * @param {Array<Object>} acc - Accumulation of good forecasts.
  * @param {Object} forecast - A forecast to check.
  * @returns {Array<Object>} - The final accumulation of good forecasts.
  */
-function goodForecasts(acc, forecast) {
+function goodForecasts(latitude, longitude, acc, forecast) {
   const {
     temperature,
     startTime,
-    isDaytime,
     shortForecast,
     relativeHumidity,
     windSpeed,
   } = forecast;
+
+  const date = new Date(startTime);
+  const sunTimes = SunCalc.getTimes(date, latitude, longitude);
+  const isDaytime = date > sunTimes.sunrise && date < sunTimes.sunset;
 
   if (
     !isDaytime ||
@@ -255,22 +280,27 @@ fetch("/locations.json")
         .then((res) => res.json())
         .then(({ properties }) => {
           const goodForecastsArray = properties.periods.reduce(
-            goodForecasts,
+            (acc, forecast) =>
+              goodForecasts(location.latitude, location.longitude, acc, forecast),
             [],
           );
           const allForecasts = properties.periods
             .filter((forecast) => isFuture(forecast.startTime))
             .map((forecast) => ({
               ...forecast,
-              ...evaluateForecast(forecast),
+              ...evaluateForecast(forecast, location.latitude, location.longitude),
             }));
           // Event is read by <Results/> component.
           window.dispatchEvent(
-            new CustomEvent("forecasts", { detail: goodForecastsArray }),
+            new CustomEvent("forecasts", { 
+              detail: { forecasts: goodForecastsArray, timezone: location.timezone } 
+            }),
           );
           // Event is read by <Calendar/> component.
           window.dispatchEvent(
-            new CustomEvent("allForecasts", { detail: allForecasts }),
+            new CustomEvent("allForecasts", { 
+              detail: { forecasts: allForecasts, timezone: location.timezone } 
+            }),
           );
         });
     }
