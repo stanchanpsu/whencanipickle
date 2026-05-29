@@ -16,9 +16,9 @@ import Map from '@components/Map.astro';
         <Headline/>
         <WeatherCriteria/>
         <Grid>
-            <Results/>
-            <Calendar/>
-            <Map/>
+            <Results slot="results" />
+            <Calendar slot="calendar" />
+            <Map slot="map" />
         </Grid>
     </Content>
 </Layout>
