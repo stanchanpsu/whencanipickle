@@ -128,40 +128,6 @@ function evaluateForecast(forecast, latitude, longitude) {
 }
 
 /**
- * Determines which of the given forecasts are adequate using Array.reduce().
- *
- * @param {Number} latitude - Location latitude.
- * @param {Number} longitude - Location longitude.
- * @param {Array<Object>} acc - Accumulation of good forecasts.
- * @param {Object} forecast - A forecast to check.
- * @returns {Array<Object>} - The final accumulation of good forecasts.
- */
-function goodForecasts(latitude, longitude, acc, forecast) {
-  const {
-    temperature,
-    startTime,
-    shortForecast,
-    relativeHumidity,
-    windSpeed,
-  } = forecast;
-
-  const date = new Date(startTime);
-  const sunTimes = SunCalc.getTimes(date, latitude, longitude);
-  const isDaytime = date > sunTimes.sunrise && date < sunTimes.sunset;
-
-  if (
-    !isDaytime ||
-    !isFuture(startTime) ||
-    !goodTemperature(temperature) ||
-    !goodHumidity(relativeHumidity) ||
-    !goodPrecip(shortForecast) ||
-    !goodWindspeed(windSpeed)
-  )
-    return acc;
-  return acc.concat(forecast);
-}
-
-/**
  * Moves the tabindex between buttons in the flyout using the up/down arrow keys.
  *
  * @param {KeyboardEvent} ev - Native DOM keyboard event
@@ -291,11 +257,11 @@ fetch("/locations.json")
           return res.json();
         })
         .then(({ properties }) => {
-          const goodForecastsArray = properties.periods.reduce(
-            (acc, forecast) =>
-              goodForecasts(location.latitude, location.longitude, acc, forecast),
-            [],
-          );
+          const goodForecastsArray = properties.periods
+            .filter((forecast) => {
+              const { isGood } = evaluateForecast(forecast, location.latitude, location.longitude);
+              return isGood && isFuture(forecast.startTime);
+            });
           const allForecasts = properties.periods
             .filter((forecast) => isFuture(forecast.startTime))
             .map((forecast) => ({
