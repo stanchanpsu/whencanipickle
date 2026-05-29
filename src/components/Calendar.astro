@@ -37,7 +37,6 @@
 
   table {
     border-collapse: collapse;
-    width: 800px;
   }
 
   table :global(tr:nth-child(even)) {
@@ -49,14 +48,16 @@
   }
 
   table :global(th, td) {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     background-color: inherit;
+    white-space: nowrap;
   }
 
   /* Hour Cells */
   table :global(tr td:first-child) {
     color: color-mix(in srgb, var(--foreground-color), black 20%);
+    padding: 0.5rem;
   }
 
   /* Event Cells */

@@ -102,6 +102,7 @@ function clearCalendar(): void {
   const eventCells = document.getElementsByClassName("event-cell");
   Array.from(eventCells).forEach((cell) => {
     cell.textContent = "";
+    cell.classList.remove("ideal", "not-ideal");
   });
 }
 
