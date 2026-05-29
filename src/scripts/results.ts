@@ -1,6 +1,7 @@
 import getWeatherEmoji from "./emoji.ts";
 import { formatDistanceToNowStrict } from "date-fns";
 import { formatTimeInTimezone, formatDateInTimezone, formatWeekdayInTimezone } from "./timezone.ts";
+import type { RawForecast, ForecastsEvent } from "./types.ts";
 
 const $results = document.getElementById("results");
 
@@ -45,22 +46,7 @@ function getConditions(shortForecast: string): string {
   return `${emoji} Conditions: ${shortForecast}`;
 }
 
-interface Forecast {
-  startTime: string;
-  temperature: number;
-  relativeHumidity: {
-    value: number;
-  };
-  windSpeed: number;
-  windDirection: string;
-  shortForecast: string;
-}
-
-interface ForecastEvent extends CustomEvent {
-  detail: { forecasts: Forecast[]; timezone: string };
-}
-
-window.addEventListener("forecasts", ({ detail }: ForecastEvent) => {
+window.addEventListener("forecasts", ({ detail }: ForecastsEvent) => {
   if (!$results) return;
   const { forecasts, timezone } = detail;
   $results.textContent = `😔 Darn! No good pickleball weather in the next week.  Check back later! 🥒`;
