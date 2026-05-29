@@ -1,3 +1,7 @@
+---
+import { LOW_TEMP_THRESHOLD, HIGH_TEMP_THRESHOLD, HUMIDITY_THRESHOLD, WIND_SPEED_THRESHOLD } from "../scripts/constants.ts";
+---
+
 <style>
   h2 {
     color: color-mix(in srgb, var(--foreground-color), black 20%);
@@ -56,9 +60,9 @@
     <ul>
       <li>During the daytime</li>
       <li>Not raining</li>
-      <li>Between 50°F and 85°F</li>
-      <li>Lower than 55% relative humidity</li>
-      <li>Less than 12mph windspeed</li>
+      <li>Between {LOW_TEMP_THRESHOLD}°F and {HIGH_TEMP_THRESHOLD}°F</li>
+      <li>Lower than {HUMIDITY_THRESHOLD}% relative humidity</li>
+      <li>Less than {WIND_SPEED_THRESHOLD}mph windspeed</li>
     </ul>
   </div>
 </h2>

@@ -1,5 +1,6 @@
 import SunCalc from "suncalc";
 import type { Location, RawForecast, ForecastEvaluation, FailureReason, SunEvent } from "./types.ts";
+import { LOW_TEMP_THRESHOLD as lowTempThreshold, HIGH_TEMP_THRESHOLD as highTempThreshold, HUMIDITY_THRESHOLD as humidityThreshold, WIND_SPEED_THRESHOLD as windSpeedThreshold } from "./constants.ts";
 
 const $form = document.getElementById("form") as HTMLFormElement;
 const $input = document.getElementById("input") as HTMLInputElement;
@@ -8,10 +9,6 @@ const ARROW_KEYS = ["ArrowUp", "ArrowDown"];
 const WEATHER_GOV_BASE = "https://api.weather.gov";
 
 const LOCATION_LOCALSTORAGE_KEY = "location";
-const lowTempThreshold = 50;
-const highTempThreshold = 85;
-const humidityThreshold = 55;
-const windSpeedThreshold = 12;
 
 function formatLabel(location: Location): string {
   return `${location.city}, ${location.state}`;
