@@ -1,7 +1,7 @@
-import getWeatherEmoji from "./emoji.ts";
+import getWeatherEmoji from "./emoji";
 import { formatDistanceToNowStrict } from "date-fns";
-import { formatTimeInTimezone, formatDateInTimezone, formatWeekdayInTimezone } from "./timezone.ts";
-import type { RawForecast, ForecastsEvent } from "./types.ts";
+import { formatTimeInTimezone, formatDateInTimezone, formatWeekdayInTimezone } from "./timezone";
+import type { RawForecast, ForecastsEvent } from "./types";
 
 const $results = document.getElementById("results");
 
@@ -71,7 +71,7 @@ if (shareButton) {
   shareButton.addEventListener("click", async () => {
     try {
       const resultsElem = document.getElementById("results");
-      if (resultsElem && resultsElem.textContent != null) {
+      if (resultsElem && resultsElem.textContent !== null) {
         const trimmedText = resultsElem.textContent
           .split("\n")
           .map((line) => line.trimStart())

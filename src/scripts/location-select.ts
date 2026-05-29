@@ -1,10 +1,15 @@
 import SunCalc from "suncalc";
-import type { Location, RawForecast, ForecastEvaluation, FailureReason, SunEvent } from "./types.ts";
-import { LOW_TEMP_THRESHOLD as lowTempThreshold, HIGH_TEMP_THRESHOLD as highTempThreshold, HUMIDITY_THRESHOLD as humidityThreshold, WIND_SPEED_THRESHOLD as windSpeedThreshold } from "./constants.ts";
+import type { Location, RawForecast, ForecastEvaluation, FailureReason, SunEvent } from "./types";
+import { LOW_TEMP_THRESHOLD as lowTempThreshold, HIGH_TEMP_THRESHOLD as highTempThreshold, HUMIDITY_THRESHOLD as humidityThreshold, WIND_SPEED_THRESHOLD as windSpeedThreshold } from "./constants";
 
-const $form = document.getElementById("form") as HTMLFormElement;
-const $input = document.getElementById("input") as HTMLInputElement;
-const $locations = document.getElementById("locations") as Element;
+const $form = document.getElementById("form") as HTMLFormElement | null;
+const $input = document.getElementById("input") as HTMLInputElement | null;
+const $locations = document.getElementById("locations") as Element | null;
+
+if (!$form || !$input || !$locations) {
+  throw new Error("Required form elements not found");
+}
+
 const ARROW_KEYS = ["ArrowUp", "ArrowDown"];
 const WEATHER_GOV_BASE = "https://api.weather.gov";
 
@@ -97,7 +102,7 @@ function keyboardTraverse(ev: KeyboardEvent): Element | undefined {
     ...$locations.querySelectorAll('button:not([style*="none"])'),
   ];
   const current = visible.findIndex(($btn: HTMLElement) => $btn.tabIndex === 0);
-  if (!~current) return updateTabIndex(visible.at(0));
+  if (current === -1) return updateTabIndex(visible.at(0));
   const direction = ARROW_KEYS.indexOf(ev.key) * 2 - 1;
   const next = (current + direction + visible.length) % visible.length;
   return updateTabIndex(visible.at(next));
