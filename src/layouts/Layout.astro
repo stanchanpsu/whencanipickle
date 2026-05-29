@@ -1,13 +1,40 @@
 ---
-import Head from "@components/Head.astro";
-import Body from "@components/Body.astro";
 ---
 
 <html lang="en">
-  <Head {...Astro.props} />
-  <Body>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTZ15V5DT2"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-KTZ15V5DT2");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Check when the weather is good for outdoor pickleball at your favorite courts." />
+  <meta property="og:title" content="When Can I Pickle" />
+  <meta property="og:description" content="Check when the weather is good for outdoor pickleball." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+
+  <title>when can i pickle</title>
+  <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
+</head>
+<body>
+  <main>
     <slot />
-  </Body>
+  </main>
+</body>
 </html>
 
 <style is:global>
@@ -26,5 +53,23 @@ import Body from "@components/Body.astro";
 
   html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    color-scheme: light dark;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: color-mix(in srgb, var(--background-color), black 5%);
+    color: var(--foreground-color);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  main {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: grid;
+    place-items: center;
   }
 </style>
