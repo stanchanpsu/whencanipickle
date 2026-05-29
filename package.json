@@ -1,13 +1,15 @@
 {
   "name": "whencanipickle",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Check when conditions are right for pickleball",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +18,8 @@
     "astro": "^4.13.1",
     "date-fns": "^3.6.0",
     "suncalc": "^1.9.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.7"
   }
 }
