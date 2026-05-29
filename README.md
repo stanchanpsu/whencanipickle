@@ -1,5 +1,19 @@
 # [When Can I Pickle](https://whencanipickle.com)
 
+Check when the weather is good for outdoor pickleball at your favorite courts.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org) >= 18 (tested with v20+)
+- [npm](https://npmjs.com) (included with Node.js)
+- A [Google Maps API key](https://developers.google.com/maps/documentation/embed/get-api-key) with the Maps Embed API enabled
+
+## Installation
+
+```sh
+npm install
+```
+
 ## Development
 
 ```sh
@@ -8,7 +22,55 @@ npm run start
 
 This will launch a server at `localhost:4321`.
 
-The project uses [Astro](https://astro.build) as a framework and is hosted by [Netlify](https://netlify.com). The build configuration for Netlify is handled by the `netlify.toml` which runs the `npm run build` command to create a static site in CI/CD.
+## Environment Variables
+
+The following environment variable is required:
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `GOOGLE_API_KEY` | Google Maps API key with Maps Embed API enabled | Yes |
+
+For local development, create a `.env` file in the project root:
+
+```sh
+GOOGLE_API_KEY=your_api_key_here
+```
+
+## Testing
+
+```sh
+npm test
+```
+
+Runs unit tests using [Vitest](https://vitest.dev).
+
+## Build
+
+```sh
+npm run build
+```
+
+Generates a static site in the `dist/` directory.
+
+## Deployment
+
+The site is hosted on [Netlify](https://netlify.com). Deployment is configured via `netlify.toml`:
+
+```toml
+[build]
+  publish = "dist"
+  command = "npm run build"
+```
+
+To deploy your own instance:
+
+1. Push the repository to GitHub
+2. Connect the repository on [Netlify](https://app.netlify.com)
+3. Set the build command to `npm run build` and publish directory to `dist`
+4. Add `GOOGLE_API_KEY` as an environment variable in Netlify's site settings
+5. Deploy
+
+The Astro build creates a fully static site — no server-side rendering is required.
 
 ## Anatomy
 
@@ -41,3 +103,7 @@ When a user selects a city, the `location-select.ts` script will cause a cascade
 The `<Map/>` component will also render when a city is select.
 
 Other components listen for the `forecasts` event on the `window` in order to render results, specifically the `<Results/>` and `<Calendar/>` components.
+
+## License
+
+ISC
